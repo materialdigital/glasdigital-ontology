@@ -68,3 +68,5 @@ jobs:
         #   target_branch: gh-pages
         #   build_dir: public
         uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: . # The folder the action should deploy.

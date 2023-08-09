@@ -38,7 +38,7 @@ jobs:
            java -jar widoco.jar -ontFile main/pmd_go.ttl -outFolder public -htaccess -uniteSections -includeAnnotationProperties -lang en  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
            cp public/doc/index-en.html public/doc/index.html
       - name: Move Contents to Public
-        run: sudo mv public/doc/* /public/
+        run: sudo mv public/doc/* public/
       - name: Remove Doc Folder
         run: sudo rm -rf public/doc
       - name: Setup Pages
@@ -62,4 +62,4 @@ jobs:
         # uses: actions/deploy-pages@v2
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: ./public/doc # The folder the action should deploy.
+          folder: public # The folder the action should deploy.

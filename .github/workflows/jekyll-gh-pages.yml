@@ -38,9 +38,9 @@ jobs:
            java -jar widoco.jar -ontFile main/pmd_go.ttl -outFolder public -htaccess -uniteSections -includeAnnotationProperties -lang en  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
            cp public/doc/index-en.html public/doc/index.html
       - name: Move Contents to Public
-        run: mv public/doc/* /
+        run: sudo mv public/doc/* /
       - name: Remove Doc Folder
-        run: rm -rf public
+        run: sudo rm -rf public
       # - name: Copy Index HTML
       #   run: cp /index-en.html /index.html
       - name: Setup Pages

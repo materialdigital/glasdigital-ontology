@@ -63,8 +63,8 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         if: success()
-        id: deployment
-        uses: actions/deploy-pages@v2
-        with:
-          target_branch: gh-pages
-          build_dir: public
+        # uses: actions/deploy-pages@v2
+        # with:
+        #   target_branch: gh-pages
+        #   build_dir: public
+        uses: JamesIves/github-pages-deploy-action@v4

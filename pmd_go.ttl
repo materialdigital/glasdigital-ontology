@@ -92,14 +92,6 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://wikiba.se/ontology#quantityUnit
-wikiba:quantityUnit rdf:type owl:ObjectProperty ;
-                    rdfs:domain wikiba:QuantityValue ;
-                    rdfs:range wikiba:Item ;
-                    rdfs:comment "Unit of measurement."@en ;
-                    rdfs:label "quantityUnit"@en .
-
-
 ###  https://glasdigi.cms.uni-jena.de/glass/hasCoolOven
 glass:hasCoolOven rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf pmdco:hasProcessNodeComponent ;
@@ -186,18 +178,6 @@ glass:hasValue rdf:type owl:ObjectProperty ;
 #################################################################
 #    Data properties
 #################################################################
-
-###  http://wikiba.se/ontology/quantityAmount
-<http://wikiba.se/ontology/quantityAmount> rdf:type owl:DatatypeProperty ;
-                                           rdfs:domain [ rdf:type owl:Class ;
-                                                         owl:unionOf ( wikiba:QuantityValue
-                                                                       pmdco:MaterialProperty
-                                                                     )
-                                                       ] ;
-                                           rdfs:comment "Amount of quantity."@en ,
-                                                        "In Glass ontology, 'MaterialProperty' is also associated with quantityAmount."@en ;
-                                           rdfs:label "quantityAmount"@en .
-
 
 ###  https://glasdigi.cms.uni-jena.de/hasProcessName
 <https://glasdigi.cms.uni-jena.de/hasProcessName> rdf:type owl:DatatypeProperty ;
@@ -501,22 +481,6 @@ Only two statuses, so no \" IsOvenDoorClosed\""""@en ;
 #################################################################
 #    Classes
 #################################################################
-
-###  http://wikiba.se/ontology#Item
-wikiba:Item rdf:type owl:Class .
-
-
-###  http://wikiba.se/ontology#QuantityValue
-wikiba:QuantityValue rdf:type owl:Class ;
-                     rdfs:subClassOf wikiba:Value ;
-                     rdfs:comment "Wikibase extended value representing quantity."@en ;
-                     rdfs:label "QuantityValue"@en .
-
-
-###  http://wikiba.se/ontology#Value
-wikiba:Value rdf:type owl:Class ;
-             rdfs:label "Value"@en .
-
 
 ###  https://glasdigi.cms.uni-jena.de/glass/AbbeNumber
 glass:AbbeNumber rdf:type owl:Class ;

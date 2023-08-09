@@ -30,14 +30,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          ref: main
-          path: main
+        # with:
+        #   ref: main
+        #   path: main
       - name: Build HTML for main
         run: | 
            wget -O widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.19/widoco-1.4.19-jar-with-dependencies_JDK-17.jar
            mkdir public
-           java -jar widoco.jar -ontFile main/pmd_go.ttl -outFolder public -htaccess -uniteSections -includeAnnotationProperties -lang en  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
+           java -jar widoco.jar -ontFile pmd_go.ttl -outFolder public -htaccess -uniteSections -includeAnnotationProperties -lang en  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
            cp public/doc/index-en.html public/doc/index.html
       - name: Move Contents to Public
         run: sudo mv public/doc/* public/
@@ -57,7 +57,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: gh-pages
-          path: public
+          # path: public
       - name: Deploy to GitHub Pages
         if: success()
         # uses: actions/deploy-pages@v2

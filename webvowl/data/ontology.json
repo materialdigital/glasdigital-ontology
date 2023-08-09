@@ -21,13 +21,13 @@
       } ],
       "contributor" : [ {
         "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "to be added",
+        "language" : "en",
+        "value" : "Ya-Fan Chen",
         "type" : "label"
       }, {
         "identifier" : "contributor",
-        "language" : "en",
-        "value" : "Ya-Fan Chen",
+        "language" : "undefined",
+        "value" : "to be added",
         "type" : "label"
       } ],
       "IAO_0000116" : [ {
@@ -183,13 +183,13 @@
     "id" : "186",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "75",
-    "type" : "owl:Class"
-  }, {
     "id" : "190",
     "type" : "owl:Class"
   }, {
     "id" : "191",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
     "type" : "owl:Class"
   }, {
     "id" : "193",
@@ -261,10 +261,10 @@
     "id" : "305",
     "type" : "owl:Class"
   }, {
-    "id" : "73",
+    "id" : "72",
     "type" : "owl:Class"
   }, {
-    "id" : "72",
+    "id" : "73",
     "type" : "owl:Class"
   }, {
     "id" : "320",
@@ -435,10 +435,10 @@
     "id" : "68",
     "type" : "owl:Class"
   }, {
-    "id" : "587",
+    "id" : "451",
     "type" : "owl:Class"
   }, {
-    "id" : "451",
+    "id" : "587",
     "type" : "owl:Class"
   }, {
     "id" : "122",
@@ -567,10 +567,10 @@
     "id" : "422",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "79",
+    "id" : "78",
     "type" : "owl:Class"
   }, {
-    "id" : "78",
+    "id" : "79",
     "type" : "owl:Class"
   }, {
     "id" : "345",
@@ -612,10 +612,10 @@
     "id" : "8",
     "type" : "owl:Class"
   }, {
-    "id" : "195",
+    "id" : "652",
     "type" : "owl:Class"
   }, {
-    "id" : "652",
+    "id" : "195",
     "type" : "owl:Class"
   }, {
     "id" : "376",
@@ -708,10 +708,10 @@
     "id" : "399",
     "type" : "owl:Class"
   }, {
-    "id" : "434",
+    "id" : "378",
     "type" : "owl:Class"
   }, {
-    "id" : "378",
+    "id" : "434",
     "type" : "owl:Class"
   }, {
     "id" : "397",
@@ -1153,7 +1153,7 @@
     },
     "subClasses" : [ "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "25", "76", "77", "78", "79", "80", "81", "82", "83", "84" ],
     "comment" : {
-      "en" : "In Glass ontology, 'MaterialProperty' is also associated with quantityAmount.\nThis term is mainly used for storing the data properties of the Sciglass database."
+      "en" : "Modified: Physical and chemical properties of a material"
     },
     "attributes" : [ "external" ],
     "id" : "26"
@@ -1165,23 +1165,23 @@
       "IAO_0000119" : [ {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "https://www.materials.unsw.edu.au/study-us/high-school-students-and-teachers/online-tutorials/ceramics/glass/properties",
+        "value" : "SciGlass 7.0",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "SciGlass 7.0",
+        "value" : "https://www.materials.unsw.edu.au/study-us/high-school-students-and-teachers/online-tutorials/ceramics/glass/properties",
         "type" : "label"
       } ],
       "IAO_0000118" : [ {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "lower annealing temperature point",
+        "value" : "low-temperature border of annealing range",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "low-temperature border of annealing range",
+        "value" : "lower annealing temperature point",
         "type" : "label"
       } ]
     },
@@ -1190,7 +1190,7 @@
       "en" : "strain point"
     },
     "comment" : {
-      "en" : "strain point or lower annealing temperature point is the temperature corresponding to the viscosity of 10^14.5 P. It is the temperature at which the stress in a glass is substantially removed in about 4 h. (Volf, 1961)\nunit = °C"
+      "en" : "The strain point is the maximum temperature at which a glass can be used for structural applications without undergoing creep."
     },
     "id" : "39",
     "superClasses" : [ "26" ]
@@ -1203,7 +1203,7 @@
       "en" : "cooling rate"
     },
     "comment" : {
-      "en" : "It contains two values in the raw melting json data of BAM, and it is displayed as a list."
+      "en" : "Cooling at a constant rate."
     },
     "id" : "85",
     "superClasses" : [ "86" ]
@@ -1388,7 +1388,7 @@
   }, {
     "instances" : 0,
     "union" : [ "120", "119", "148" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "147"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1515,6 +1515,26 @@
       "undefined" : "Literal"
     }
   }, {
+    "iri" : "https://glasdigi.cms.uni-jena.de/glass/ViscosityT10",
+    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ViscosityT10",
+      "en" : "viscosity T10"
+    },
+    "id" : "190",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "https://glasdigi.cms.uni-jena.de/glass/microscopy",
+    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "microscopy",
+      "en" : "microscopy"
+    },
+    "id" : "191",
+    "superClasses" : [ "192" ]
+  }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/AnnealingRange",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
     "instances" : 0,
@@ -1535,26 +1555,6 @@
     },
     "id" : "75",
     "superClasses" : [ "26" ]
-  }, {
-    "iri" : "https://glasdigi.cms.uni-jena.de/glass/ViscosityT10",
-    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "ViscosityT10",
-      "en" : "viscosity T10"
-    },
-    "id" : "190",
-    "superClasses" : [ "48" ]
-  }, {
-    "iri" : "https://glasdigi.cms.uni-jena.de/glass/microscopy",
-    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "microscopy",
-      "en" : "microscopy"
-    },
-    "id" : "191",
-    "superClasses" : [ "192" ]
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
@@ -1868,6 +1868,19 @@
     "id" : "305",
     "superClasses" : [ "163" ]
   }, {
+    "iri" : "https://glasdigi.cms.uni-jena.de/glass/BendingRate",
+    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BendingRate",
+      "en" : "bending rate"
+    },
+    "comment" : {
+      "en" : "bending rate from parallel plate & beam bending viscometry (viscometer)"
+    },
+    "id" : "72",
+    "superClasses" : [ "26" ]
+  }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/ExtinctionCoefficient",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
     "instances" : 0,
@@ -1887,19 +1900,6 @@
       "en" : "A characteristics of the influence of a certain coloring component on the optical absorption of a glass or melt at the selected wavelength. There are two kinds of extinction coefficients, one is used for determination of optical density D, the other for determination of absorbance A."
     },
     "id" : "73",
-    "superClasses" : [ "26" ]
-  }, {
-    "iri" : "https://glasdigi.cms.uni-jena.de/glass/BendingRate",
-    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "BendingRate",
-      "en" : "bending rate"
-    },
-    "comment" : {
-      "en" : "bending rate from parallel plate & beam bending viscometry (viscometer)"
-    },
-    "id" : "72",
     "superClasses" : [ "26" ]
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
@@ -2037,12 +2037,12 @@
       "IAO_0000119" : [ {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "SciGlass 7.0",
+        "value" : "https://en.wikipedia.org/wiki/Thermal_conductivity",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "https://en.wikipedia.org/wiki/Thermal_conductivity",
+        "value" : "SciGlass 7.0",
         "type" : "label"
       } ]
     },
@@ -2083,12 +2083,12 @@
       "IAO_0000119" : [ {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "Sciglass 7.0",
+        "value" : "https://en.wikipedia.org/wiki/Viscosity",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "https://en.wikipedia.org/wiki/Viscosity",
+        "value" : "Sciglass 7.0",
         "type" : "label"
       } ]
     },
@@ -2197,12 +2197,12 @@
       "IAO_0000119" : [ {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "https://en.wikipedia.org/wiki/Shear_modulus",
+        "value" : "Sciglass 7.0",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "Sciglass 7.0",
+        "value" : "https://en.wikipedia.org/wiki/Shear_modulus",
         "type" : "label"
       } ],
       "IAO_0000118" : [ {
@@ -2403,12 +2403,12 @@
       "IAO_0000118" : [ {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "molar attenuation coefficient",
+        "value" : "molar absorptivity",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "molar absorptivity",
+        "value" : "molar attenuation coefficient",
         "type" : "label"
       } ]
     },
@@ -2444,12 +2444,12 @@
       "IAO_0000119" : [ {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "https://en.wikipedia.org/wiki/Specific_heat_capacity",
+        "value" : "SciGlass 7.0",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "SciGlass 7.0",
+        "value" : "https://en.wikipedia.org/wiki/Specific_heat_capacity",
         "type" : "label"
       } ]
     },
@@ -2459,7 +2459,7 @@
     },
     "subClasses" : [ "234", "256", "230", "226", "233", "227", "236" ],
     "comment" : {
-      "en" : "(Specific) Heat capacity is the amount of heat (joules or calories) required to increase the temperature of a body by 1 K. Heat capacity can be either specific (related to a unit mass) or molar (related to a unit mole). In most cases it is measured at constant pressure and in this case is denoted by Cp."
+      "en" : "In thermodynamics, the specific heat capacity (symbol c_p) of a substance is the heat capacity of a sample of the substance divided by the mass of the sample."
     },
     "id" : "46",
     "superClasses" : [ "26" ]
@@ -2640,17 +2640,6 @@
     "id" : "68",
     "superClasses" : [ "26" ]
   }, {
-    "iri" : "https://glasdigi.cms.uni-jena.de/glass/coolingProcess",
-    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "coolingProcess",
-      "en" : "cooling process"
-    },
-    "subClasses" : [ "586" ],
-    "id" : "587",
-    "superClasses" : [ "553" ]
-  }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/MeltTemperature",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
     "instances" : 0,
@@ -2664,17 +2653,12 @@
       "IAO_0000118" : [ {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "melt point",
-        "type" : "label"
-      }, {
-        "identifier" : "IAO_0000118",
-        "language" : "en",
-        "value" : "liquefaction temperature",
-        "type" : "label"
-      }, {
-        "identifier" : "IAO_0000118",
-        "language" : "en",
         "value" : "melting point",
+        "type" : "label"
+      }, {
+        "identifier" : "IAO_0000118",
+        "language" : "en",
+        "value" : "liquefaction point",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000118",
@@ -2684,7 +2668,12 @@
       }, {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "liquefaction point",
+        "value" : "liquefaction temperature",
+        "type" : "label"
+      }, {
+        "identifier" : "IAO_0000118",
+        "language" : "en",
+        "value" : "melt point",
         "type" : "label"
       } ]
     },
@@ -2697,6 +2686,17 @@
     },
     "id" : "451",
     "superClasses" : [ "452" ]
+  }, {
+    "iri" : "https://glasdigi.cms.uni-jena.de/glass/coolingProcess",
+    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "coolingProcess",
+      "en" : "cooling process"
+    },
+    "subClasses" : [ "586" ],
+    "id" : "587",
+    "superClasses" : [ "553" ]
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/meltingProcess",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
@@ -2780,7 +2780,7 @@
       "en" : "thermal diffusivity"
     },
     "comment" : {
-      "en" : "In heat transfer analysis, thermal diffusivity is the thermal conductivity divided by density and specific heat capacity at constant pressure."
+      "en" : "For solution of problems of non-stationary heat transfer it is more convenient to use instead of thermal conductivity values."
     },
     "id" : "33",
     "superClasses" : [ "26" ]
@@ -3247,6 +3247,27 @@
       "IRI-based" : "integer"
     }
   }, {
+    "iri" : "https://glasdigi.cms.uni-jena.de/glass/HeatingRate",
+    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000119" : [ {
+        "identifier" : "IAO_0000119",
+        "language" : "en",
+        "value" : "SciGlass 7.0",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HeatingRate",
+      "en" : "heating rate"
+    },
+    "comment" : {
+      "en" : "Heating with a constant rate."
+    },
+    "id" : "78",
+    "superClasses" : [ "26" ]
+  }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/ThermalExpansionCoefficient",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
     "instances" : 0,
@@ -3267,27 +3288,6 @@
       "en" : "Kinds of thermal expansion coefficient"
     },
     "id" : "79",
-    "superClasses" : [ "26" ]
-  }, {
-    "iri" : "https://glasdigi.cms.uni-jena.de/glass/HeatingRate",
-    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
-    "instances" : 0,
-    "annotations" : {
-      "IAO_0000119" : [ {
-        "identifier" : "IAO_0000119",
-        "language" : "en",
-        "value" : "SciGlass 7.0",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "HeatingRate",
-      "en" : "heating rate"
-    },
-    "comment" : {
-      "en" : "Heating with a constant rate."
-    },
-    "id" : "78",
     "superClasses" : [ "26" ]
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/LogSpecificElectricalResistivityAt300C",
@@ -3329,12 +3329,12 @@
   }, {
     "instances" : 0,
     "union" : [ "119", "148" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "644"
   }, {
     "instances" : 0,
     "union" : [ "26", "269" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "645"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -3410,6 +3410,15 @@
     "id" : "8",
     "superClasses" : [ "59" ]
   }, {
+    "iri" : "http://wikiba.se/ontology#Item",
+    "baseIri" : "http://wikiba.se/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Item"
+    },
+    "attributes" : [ "external" ],
+    "id" : "652"
+  }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/DosingSpeed",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
     "instances" : 0,
@@ -3422,15 +3431,6 @@
     },
     "id" : "195",
     "superClasses" : [ "86" ]
-  }, {
-    "iri" : "http://wikiba.se/ontology#Item",
-    "baseIri" : "http://wikiba.se/ontology",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Item"
-    },
-    "attributes" : [ "external" ],
-    "id" : "652"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/LogSpecificElectricalResistivityAt100C",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
@@ -3768,7 +3768,7 @@
       "en" : "target weight"
     },
     "comment" : {
-      "en" : "The target weight of each raw material or filling step"
+      "en" : "If time series values are contained, they are displayed as a list."
     },
     "id" : "172",
     "superClasses" : [ "86" ]
@@ -3806,17 +3806,17 @@
   }, {
     "instances" : 0,
     "union" : [ "269", "272" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "762"
   }, {
     "instances" : 0,
     "union" : [ "120", "119" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "598"
   }, {
     "instances" : 0,
     "union" : [ "269", "272" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "599"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/GlassAnalysisEquipment",
@@ -3843,6 +3843,19 @@
     "id" : "399",
     "superClasses" : [ "274" ]
   }, {
+    "iri" : "https://glasdigi.cms.uni-jena.de/glass/LinearThermalExpansionCoefficientAt210C",
+    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LinearThermalExpansionCoefficientAt210C",
+      "en" : "linear thermal expansion coefficient at 210C"
+    },
+    "comment" : {
+      "en" : "α*1e7  at 210°C"
+    },
+    "id" : "378",
+    "superClasses" : [ "210" ]
+  }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/RefractiveIndex",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
     "instances" : 0,
@@ -3856,12 +3869,12 @@
       "IAO_0000118" : [ {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "refraction index",
+        "value" : "index of refraction",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "index of refraction",
+        "value" : "refraction index",
         "type" : "label"
       } ]
     },
@@ -3876,19 +3889,6 @@
     "id" : "434",
     "superClasses" : [ "25" ]
   }, {
-    "iri" : "https://glasdigi.cms.uni-jena.de/glass/LinearThermalExpansionCoefficientAt210C",
-    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "LinearThermalExpansionCoefficientAt210C",
-      "en" : "linear thermal expansion coefficient at 210C"
-    },
-    "comment" : {
-      "en" : "α*1e7  at 210°C"
-    },
-    "id" : "378",
-    "superClasses" : [ "210" ]
-  }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/beamBendingViscometer",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
     "instances" : 0,
@@ -3901,57 +3901,57 @@
   }, {
     "instances" : 0,
     "union" : [ "120", "119" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "626"
   }, {
     "instances" : 0,
     "union" : [ "269", "272" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "627"
   }, {
     "instances" : 0,
     "union" : [ "120", "119" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "639"
   }, {
     "instances" : 0,
     "union" : [ "269", "272" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "640"
   }, {
     "instances" : 0,
     "union" : [ "120", "119" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "616"
   }, {
     "instances" : 0,
     "union" : [ "269", "272" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "617"
   }, {
     "instances" : 0,
     "union" : [ "120", "119" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "767"
   }, {
     "instances" : 0,
     "union" : [ "120", "119" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "768"
   }, {
     "instances" : 0,
     "union" : [ "269", "272" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "769"
   }, {
     "instances" : 0,
     "union" : [ "120", "119" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "770"
   }, {
     "instances" : 0,
     "union" : [ "269", "272" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "771"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/LogSpecificElectricalResistivityAt1400C",
@@ -4013,22 +4013,22 @@
   }, {
     "instances" : 0,
     "union" : [ "269", "272" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "773"
   }, {
     "instances" : 0,
     "union" : [ "120", "119" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "280"
   }, {
     "instances" : 0,
     "union" : [ "269", "272" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "281"
   }, {
     "instances" : 0,
     "union" : [ "120", "119" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "601"
   }, {
     "iri" : "https://material-digital.de/pmdco/DataResource",
@@ -4046,7 +4046,7 @@
   }, {
     "instances" : 0,
     "union" : [ "269", "272" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "602"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/RelativePermittivity",
@@ -4115,23 +4115,23 @@
       "IAO_0000119" : [ {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "https://en.wikipedia.org/wiki/Softening_point",
+        "value" : "https://www.manufacturingterms.com/Softening-point-(glass).html",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "https://www.manufacturingterms.com/Softening-point-(glass).html",
+        "value" : "https://en.wikipedia.org/wiki/Softening_point",
         "type" : "label"
       } ],
       "IAO_0000118" : [ {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "Littleton softening point",
+        "value" : "Littleton point",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "Littleton point",
+        "value" : "Littleton softening point",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000118",
@@ -4141,12 +4141,12 @@
       }, {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "Littleton temperature",
+        "value" : "Littleton softening temperature",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "Littleton softening temperature",
+        "value" : "Littleton temperature",
         "type" : "label"
       } ]
     },
@@ -4155,7 +4155,7 @@
       "en" : "softening point"
     },
     "comment" : {
-      "en" : "The softening point is the temperature at which a material softens beyond some arbitrary softness."
+      "en" : "The maximum temperature at which a glass piece may be handled without permanent deformation; this corresponds to a viscosity of approximately 4x 10^6 Pa -s ( 4X 10^7 or 10^7.6 P).\nunit = °C"
     },
     "id" : "74",
     "superClasses" : [ "26" ]
@@ -4326,12 +4326,12 @@
       "IAO_0000118" : [ {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "elastic modulus",
+        "value" : "modulus of elasticity",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "modulus of elasticity",
+        "value" : "elastic modulus",
         "type" : "label"
       } ]
     },
@@ -4454,7 +4454,7 @@
       "en" : "absorbance"
     },
     "comment" : {
-      "en" : "In optics, absorbance or decadic absorbance is the common logarithm of the ratio of incident to transmitted radiant power through a material, and spectral absorbance or spectral decadic absorbance is the common logarithm of the ratio of incident to transmitted spectral radiant power through a material. Absorbance is dimensionless, and in particular is not a length, though it is a monotonically increasing function of path length, and approaches zero as the path length approaches zero. The use of the term \"optical density\" for absorbance is discouraged."
+      "en" : "Though optical density and absorbance both measure the absorption of light when that light passes through an optical component, these two terms are not the same. Optical density measures the amount of attenuation, or intensity lost, when light passes through an optical component. It also tracks attenuation based on the scattering of light, whereas absorbance considers only the absorption of light within the optical component. Both optical density and absorbance can be tracked through the use of a spectrometer.\nsee https://sciencing.com/difference-between-optical-density-absorbance-7842652.html"
     },
     "id" : "383",
     "superClasses" : [ "25" ]
@@ -4879,7 +4879,7 @@
       "en" : "optical density"
     },
     "comment" : {
-      "en" : "Though optical density and absorbance both measure the absorption of light when that light passes through an optical component, these two terms are not the same. Optical density measures the amount of attenuation, or intensity lost, when light passes through an optical component. It also tracks attenuation based on the scattering of light, whereas absorbance considers only the absorption of light within the optical component. Both optical density and absorbance can be tracked through the use of a spectrometer.\nsee https://sciencing.com/difference-between-optical-density-absorbance-7842652.html"
+      "en" : "D=-log(I/I_0)\nwhere\nOPTICAL DENSITY\nwhere I is the intensity of light transmitted through the medium, Io the intensity of incident light, D the optical density. D = 0.4343k/d = α/d where k is the absorption coefficient, α the decimal absorption coefficient, and d the distance of transmission of light through the medium."
     },
     "id" : "574",
     "superClasses" : [ "25" ]
@@ -5306,23 +5306,23 @@
       "IAO_0000119" : [ {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "Sciglass 7.0",
+        "value" : "https://en.wikipedia.org/wiki/Abbe_number",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "https://en.wikipedia.org/wiki/Abbe_number",
+        "value" : "Sciglass 7.0",
         "type" : "label"
       } ],
       "IAO_0000118" : [ {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "V-number",
+        "value" : "nu-value",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "nu-value",
+        "value" : "V-number",
         "type" : "label"
       } ]
     },
@@ -7478,117 +7478,117 @@
   "propertyAttribute" : [ {
     "range" : "2",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "0"
   }, {
     "range" : "5",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "4"
   }, {
     "range" : "8",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "7"
   }, {
     "range" : "11",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "10"
   }, {
     "range" : "15",
     "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "13"
   }, {
     "range" : "18",
     "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "17"
   }, {
     "range" : "21",
     "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "20"
   }, {
     "range" : "23",
     "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "22"
   }, {
     "range" : "21",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "89"
   }, {
     "range" : "23",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "91"
   }, {
     "range" : "21",
     "domain" : "94",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "93"
   }, {
     "range" : "84",
     "domain" : "97",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "96"
   }, {
     "range" : "23",
     "domain" : "94",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "98"
   }, {
     "range" : "84",
     "domain" : "101",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "100"
   }, {
     "range" : "2",
     "domain" : "94",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "102"
   }, {
     "range" : "84",
     "domain" : "105",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "104"
   }, {
     "range" : "5",
     "domain" : "94",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "106"
   }, {
     "range" : "84",
     "domain" : "109",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "108"
   }, {
     "range" : "8",
     "domain" : "94",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "110"
   }, {
     "range" : "11",
     "domain" : "94",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "112"
   }, {
     "range" : "14",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "114"
   }, {
     "range" : "15",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "116"
   }, {
     "range" : "18",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "117"
   }, {
     "iri" : "https://material-digital.de/pmdco/hasInputObject",
@@ -7607,42 +7607,42 @@
   }, {
     "range" : "86",
     "domain" : "124",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "123"
   }, {
     "range" : "86",
     "domain" : "126",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "125"
   }, {
     "range" : "130",
     "domain" : "129",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "128"
   }, {
     "range" : "134",
     "domain" : "133",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "132"
   }, {
     "range" : "18",
     "domain" : "94",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "135"
   }, {
     "range" : "84",
     "domain" : "138",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "137"
   }, {
     "range" : "86",
     "domain" : "141",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "140"
   }, {
     "range" : "86",
     "domain" : "144",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "143"
   }, {
     "iri" : "https://material-digital.de/pmdco/hasNominalEndPosixTimestamp",
@@ -7661,22 +7661,22 @@
   }, {
     "range" : "86",
     "domain" : "150",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "149"
   }, {
     "range" : "86",
     "domain" : "85",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "152"
   }, {
     "range" : "86",
     "domain" : "155",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "154"
   }, {
     "range" : "86",
     "domain" : "158",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "157"
   }, {
     "iri" : "https://material-digital.de/pmdco/compose",
@@ -7695,57 +7695,57 @@
   }, {
     "range" : "86",
     "domain" : "165",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "164"
   }, {
     "range" : "86",
     "domain" : "169",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "168"
   }, {
     "range" : "86",
     "domain" : "172",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "171"
   }, {
     "range" : "86",
     "domain" : "175",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "174"
   }, {
     "range" : "179",
     "domain" : "178",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "177"
   }, {
     "range" : "120",
     "domain" : "182",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "181"
   }, {
     "range" : "120",
     "domain" : "185",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "184"
   }, {
     "range" : "189",
     "domain" : "188",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "187"
   }, {
     "range" : "86",
     "domain" : "195",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "194"
   }, {
     "range" : "86",
     "domain" : "199",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "198"
   }, {
     "range" : "86",
     "domain" : "203",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "202"
   }, {
     "iri" : "https://material-digital.de/pmdco/hasUnitLabel",
@@ -7764,77 +7764,77 @@
   }, {
     "range" : "219",
     "domain" : "218",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "217"
   }, {
     "range" : "179",
     "domain" : "221",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "220"
   }, {
     "range" : "179",
     "domain" : "224",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "223"
   }, {
     "range" : "227",
     "domain" : "226",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "225"
   }, {
     "range" : "26",
     "domain" : "54",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "228"
   }, {
     "range" : "230",
     "domain" : "226",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "229"
   }, {
     "range" : "26",
     "domain" : "55",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "231"
   }, {
     "range" : "234",
     "domain" : "233",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "232"
   }, {
     "range" : "236",
     "domain" : "233",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "235"
   }, {
     "range" : "26",
     "domain" : "46",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "238"
   }, {
     "range" : "26",
     "domain" : "47",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "239"
   }, {
     "range" : "11",
     "domain" : "5",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "240"
   }, {
     "range" : "26",
     "domain" : "48",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "241"
   }, {
     "range" : "11",
     "domain" : "8",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "242"
   }, {
     "range" : "26",
     "domain" : "49",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "243"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/hasOvenNumber",
@@ -7867,12 +7867,12 @@
   }, {
     "range" : "233",
     "domain" : "226",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "248"
   }, {
     "range" : "26",
     "domain" : "50",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "249"
   }, {
     "iri" : "https://material-digital.de/pmdco/executedBy",
@@ -7891,52 +7891,52 @@
   }, {
     "range" : "234",
     "domain" : "226",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "251"
   }, {
     "range" : "26",
     "domain" : "51",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "252"
   }, {
     "range" : "236",
     "domain" : "226",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "253"
   }, {
     "range" : "26",
     "domain" : "52",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "254"
   }, {
     "range" : "256",
     "domain" : "226",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "255"
   }, {
     "range" : "26",
     "domain" : "53",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "257"
   }, {
     "range" : "11",
     "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "258"
   }, {
     "range" : "26",
     "domain" : "43",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "259"
   }, {
     "range" : "5",
     "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "260"
   }, {
     "range" : "26",
     "domain" : "44",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "261"
   }, {
     "iri" : "https://material-digital.de/pmdco/hasStartingTime",
@@ -7952,22 +7952,22 @@
   }, {
     "range" : "8",
     "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "263"
   }, {
     "range" : "26",
     "domain" : "45",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "264"
   }, {
     "range" : "11",
     "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "265"
   }, {
     "range" : "8",
     "domain" : "5",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "266"
   }, {
     "iri" : "https://material-digital.de/pmdco/hasInitialProcess",
@@ -8014,22 +8014,22 @@
   }, {
     "range" : "26",
     "domain" : "36",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "275"
   }, {
     "range" : "26",
     "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "276"
   }, {
     "range" : "8",
     "domain" : "21",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "277"
   }, {
     "range" : "26",
     "domain" : "38",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "278"
   }, {
     "iri" : "https://material-digital.de/pmdco/hasQuantitativeMeasurement",
@@ -8050,92 +8050,92 @@
   }, {
     "range" : "11",
     "domain" : "21",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "286"
   }, {
     "range" : "26",
     "domain" : "39",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "287"
   }, {
     "range" : "2",
     "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "288"
   }, {
     "range" : "26",
     "domain" : "40",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "289"
   }, {
     "range" : "5",
     "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "290"
   }, {
     "range" : "26",
     "domain" : "41",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "291"
   }, {
     "range" : "8",
     "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "292"
   }, {
     "range" : "26",
     "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "293"
   }, {
     "range" : "5",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "294"
   }, {
     "range" : "26",
     "domain" : "32",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "295"
   }, {
     "range" : "8",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "296"
   }, {
     "range" : "26",
     "domain" : "33",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "297"
   }, {
     "range" : "11",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "298"
   }, {
     "range" : "26",
     "domain" : "34",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "299"
   }, {
     "range" : "23",
     "domain" : "21",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "301"
   }, {
     "range" : "26",
     "domain" : "35",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "302"
   }, {
     "range" : "2",
     "domain" : "21",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "303"
   }, {
     "range" : "5",
     "domain" : "21",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "304"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/hasDataResourceDatetime",
@@ -8154,107 +8154,107 @@
   }, {
     "range" : "216",
     "domain" : "309",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "308"
   }, {
     "range" : "26",
     "domain" : "27",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "310"
   }, {
     "range" : "11",
     "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "311"
   }, {
     "range" : "26",
     "domain" : "28",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "312"
   }, {
     "range" : "21",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "313"
   }, {
     "range" : "26",
     "domain" : "29",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "314"
   }, {
     "range" : "23",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "315"
   }, {
     "range" : "26",
     "domain" : "30",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "316"
   }, {
     "range" : "2",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "317"
   }, {
     "range" : "26",
     "domain" : "31",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "318"
   }, {
     "range" : "11",
     "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "319"
   }, {
     "range" : "18",
     "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "321"
   }, {
     "range" : "216",
     "domain" : "323",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "322"
   }, {
     "range" : "21",
     "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "324"
   }, {
     "range" : "216",
     "domain" : "237",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "325"
   }, {
     "range" : "23",
     "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "326"
   }, {
     "range" : "216",
     "domain" : "328",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "327"
   }, {
     "range" : "2",
     "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "329"
   }, {
     "range" : "216",
     "domain" : "215",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "330"
   }, {
     "range" : "5",
     "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "331"
   }, {
     "range" : "8",
     "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "332"
   }, {
     "iri" : "https://material-digital.de/pmdco/hasPrimaryMeasurement",
@@ -8270,37 +8270,37 @@
   }, {
     "range" : "2",
     "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "337"
   }, {
     "range" : "5",
     "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "339"
   }, {
     "range" : "8",
     "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "341"
   }, {
     "range" : "345",
     "domain" : "344",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "343"
   }, {
     "range" : "48",
     "domain" : "190",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "346"
   }, {
     "range" : "48",
     "domain" : "196",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "347"
   }, {
     "range" : "48",
     "domain" : "200",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "348"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/hasDataResourceProvider",
@@ -8319,137 +8319,137 @@
   }, {
     "range" : "48",
     "domain" : "204",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "350"
   }, {
     "range" : "48",
     "domain" : "352",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "351"
   }, {
     "range" : "48",
     "domain" : "354",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "353"
   }, {
     "range" : "48",
     "domain" : "356",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "355"
   }, {
     "range" : "48",
     "domain" : "358",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "357"
   }, {
     "range" : "48",
     "domain" : "360",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "359"
   }, {
     "range" : "48",
     "domain" : "362",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "361"
   }, {
     "range" : "365",
     "domain" : "344",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "364"
   }, {
     "range" : "367",
     "domain" : "344",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "366"
   }, {
     "range" : "370",
     "domain" : "369",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "368"
   }, {
     "range" : "370",
     "domain" : "209",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "371"
   }, {
     "range" : "373",
     "domain" : "344",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "372"
   }, {
     "range" : "376",
     "domain" : "344",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "375"
   }, {
     "range" : "369",
     "domain" : "378",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "377"
   }, {
     "range" : "209",
     "domain" : "378",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "379"
   }, {
     "range" : "369",
     "domain" : "209",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "380"
   }, {
     "range" : "370",
     "domain" : "378",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "381"
   }, {
     "range" : "25",
     "domain" : "383",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "382"
   }, {
     "range" : "386",
     "domain" : "385",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "384"
   }, {
     "range" : "386",
     "domain" : "388",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "387"
   }, {
     "range" : "386",
     "domain" : "163",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "389"
   }, {
     "range" : "386",
     "domain" : "391",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "390"
   }, {
     "range" : "386",
     "domain" : "393",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "392"
   }, {
     "range" : "274",
     "domain" : "273",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "394"
   }, {
     "range" : "274",
     "domain" : "300",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "395"
   }, {
     "range" : "274",
     "domain" : "397",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "396"
   }, {
     "range" : "274",
     "domain" : "399",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "398"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/hasValue",
@@ -8465,67 +8465,67 @@
   }, {
     "range" : "369",
     "domain" : "403",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "402"
   }, {
     "range" : "209",
     "domain" : "403",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "404"
   }, {
     "range" : "370",
     "domain" : "403",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "405"
   }, {
     "range" : "369",
     "domain" : "407",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "406"
   }, {
     "range" : "209",
     "domain" : "407",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "408"
   }, {
     "range" : "378",
     "domain" : "403",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "409"
   }, {
     "range" : "370",
     "domain" : "407",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "410"
   }, {
     "range" : "97",
     "domain" : "109",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "411"
   }, {
     "range" : "378",
     "domain" : "407",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "416"
   }, {
     "range" : "403",
     "domain" : "407",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "417"
   }, {
     "range" : "94",
     "domain" : "415",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "418"
   }, {
     "range" : "14",
     "domain" : "415",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "419"
   }, {
     "range" : "1",
     "domain" : "415",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "420"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/hasFillNumber",
@@ -8541,147 +8541,147 @@
   }, {
     "range" : "413",
     "domain" : "415",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "423"
   }, {
     "range" : "400",
     "domain" : "345",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "424"
   }, {
     "range" : "412",
     "domain" : "415",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "425"
   }, {
     "range" : "414",
     "domain" : "415",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "426"
   }, {
     "range" : "400",
     "domain" : "367",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "427"
   }, {
     "range" : "345",
     "domain" : "367",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "428"
   }, {
     "range" : "400",
     "domain" : "365",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "429"
   }, {
     "range" : "345",
     "domain" : "365",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "430"
   }, {
     "range" : "365",
     "domain" : "367",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "431"
   }, {
     "range" : "400",
     "domain" : "373",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "432"
   }, {
     "range" : "345",
     "domain" : "373",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "435"
   }, {
     "range" : "400",
     "domain" : "376",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "436"
   }, {
     "range" : "345",
     "domain" : "376",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "437"
   }, {
     "range" : "365",
     "domain" : "373",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "438"
   }, {
     "range" : "367",
     "domain" : "373",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "439"
   }, {
     "range" : "373",
     "domain" : "376",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "440"
   }, {
     "range" : "400",
     "domain" : "344",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "441"
   }, {
     "range" : "365",
     "domain" : "376",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "442"
   }, {
     "range" : "367",
     "domain" : "376",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "443"
   }, {
     "range" : "8",
     "domain" : "413",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "444"
   }, {
     "range" : "79",
     "domain" : "447",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "446"
   }, {
     "range" : "5",
     "domain" : "413",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "448"
   }, {
     "range" : "452",
     "domain" : "451",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "450"
   }, {
     "range" : "412",
     "domain" : "414",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "453"
   }, {
     "range" : "452",
     "domain" : "456",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "455"
   }, {
     "range" : "11",
     "domain" : "413",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "457"
   }, {
     "range" : "452",
     "domain" : "460",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "459"
   }, {
     "range" : "452",
     "domain" : "463",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "462"
   }, {
     "range" : "452",
     "domain" : "467",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "466"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/hasEndingTime",
@@ -8700,17 +8700,17 @@
   }, {
     "range" : "2",
     "domain" : "413",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "470"
   }, {
     "range" : "452",
     "domain" : "473",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "472"
   }, {
     "range" : "219",
     "domain" : "363",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "475"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/isOvenDoorOpen",
@@ -8729,107 +8729,107 @@
   }, {
     "range" : "23",
     "domain" : "413",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "479"
   }, {
     "range" : "21",
     "domain" : "413",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "480"
   }, {
     "range" : "14",
     "domain" : "413",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "481"
   }, {
     "range" : "1",
     "domain" : "413",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "482"
   }, {
     "range" : "18",
     "domain" : "413",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "485"
   }, {
     "range" : "148",
     "domain" : "130",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "486"
   }, {
     "range" : "15",
     "domain" : "413",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "487"
   }, {
     "range" : "79",
     "domain" : "210",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "488"
   }, {
     "range" : "414",
     "domain" : "413",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "489"
   }, {
     "range" : "192",
     "domain" : "134",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "490"
   }, {
     "range" : "11",
     "domain" : "415",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "491"
   }, {
     "range" : "192",
     "domain" : "494",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "493"
   }, {
     "range" : "94",
     "domain" : "413",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "495"
   }, {
     "range" : "188",
     "domain" : "498",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "497"
   }, {
     "range" : "412",
     "domain" : "413",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "499"
   }, {
     "range" : "503",
     "domain" : "502",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "501"
   }, {
     "range" : "133",
     "domain" : "374",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "505"
   }, {
     "range" : "133",
     "domain" : "508",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "507"
   }, {
     "range" : "119",
     "domain" : "511",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "510"
   }, {
     "range" : "119",
     "domain" : "192",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "514"
   }, {
     "range" : "148",
     "domain" : "189",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "515"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/hasPatentNumber",
@@ -8848,127 +8848,127 @@
   }, {
     "range" : "5",
     "domain" : "415",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "519"
   }, {
     "range" : "2",
     "domain" : "415",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "520"
   }, {
     "range" : "8",
     "domain" : "415",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "521"
   }, {
     "range" : "18",
     "domain" : "415",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "522"
   }, {
     "range" : "15",
     "domain" : "415",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "523"
   }, {
     "range" : "23",
     "domain" : "415",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "524"
   }, {
     "range" : "21",
     "domain" : "415",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "525"
   }, {
     "range" : "192",
     "domain" : "527",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "526"
   }, {
     "range" : "5",
     "domain" : "412",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "528"
   }, {
     "range" : "122",
     "domain" : "121",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "529"
   }, {
     "range" : "2",
     "domain" : "412",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "531"
   }, {
     "range" : "214",
     "domain" : "533",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "532"
   }, {
     "range" : "11",
     "domain" : "412",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "534"
   }, {
     "range" : "214",
     "domain" : "213",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "535"
   }, {
     "range" : "8",
     "domain" : "412",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "536"
   }, {
     "range" : "35",
     "domain" : "538",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "537"
   }, {
     "range" : "18",
     "domain" : "412",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "539"
   }, {
     "range" : "35",
     "domain" : "541",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "540"
   }, {
     "range" : "544",
     "domain" : "543",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "542"
   }, {
     "range" : "23",
     "domain" : "412",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "545"
   }, {
     "range" : "192",
     "domain" : "547",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "546"
   }, {
     "range" : "21",
     "domain" : "412",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "548"
   }, {
     "range" : "192",
     "domain" : "191",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "549"
   }, {
     "range" : "192",
     "domain" : "219",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "550"
   }, {
     "range" : "192",
     "domain" : "179",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "551"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/hasNumberOfComponent",
@@ -9015,102 +9015,102 @@
   }, {
     "range" : "1",
     "domain" : "412",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "558"
   }, {
     "range" : "94",
     "domain" : "412",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "559"
   }, {
     "range" : "15",
     "domain" : "412",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "560"
   }, {
     "range" : "14",
     "domain" : "412",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "561"
   }, {
     "range" : "5",
     "domain" : "414",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "562"
   }, {
     "range" : "2",
     "domain" : "414",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "563"
   }, {
     "range" : "48",
     "domain" : "565",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "564"
   }, {
     "range" : "11",
     "domain" : "414",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "566"
   }, {
     "range" : "48",
     "domain" : "568",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "567"
   }, {
     "range" : "8",
     "domain" : "414",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "569"
   }, {
     "range" : "48",
     "domain" : "571",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "570"
   }, {
     "range" : "53",
     "domain" : "573",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "572"
   }, {
     "range" : "53",
     "domain" : "576",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "575"
   }, {
     "range" : "23",
     "domain" : "414",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "577"
   }, {
     "range" : "53",
     "domain" : "579",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "578"
   }, {
     "range" : "21",
     "domain" : "414",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "580"
   }, {
     "range" : "53",
     "domain" : "582",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "581"
   }, {
     "range" : "53",
     "domain" : "584",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "583"
   }, {
     "range" : "587",
     "domain" : "586",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "585"
   }, {
     "range" : "122",
     "domain" : "589",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "588"
   }, {
     "iri" : "https://material-digital.de/pmdco/hasQualifyingProcessAnnotation",
@@ -9126,27 +9126,27 @@
   }, {
     "range" : "18",
     "domain" : "414",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "591"
   }, {
     "range" : "1",
     "domain" : "414",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "593"
   }, {
     "range" : "94",
     "domain" : "414",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "594"
   }, {
     "range" : "15",
     "domain" : "414",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "595"
   }, {
     "range" : "14",
     "domain" : "414",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "596"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/hasPatentCharacteristic",
@@ -9200,17 +9200,17 @@
   }, {
     "range" : "14",
     "domain" : "94",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "603"
   }, {
     "range" : "1",
     "domain" : "94",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "604"
   }, {
     "range" : "15",
     "domain" : "94",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "605"
   }, {
     "iri" : "https://material-digital.de/pmdco/hasProcessNodeVersion",
@@ -9426,7 +9426,7 @@
     },
     "domain" : "148",
     "comment" : {
-      "en" : "In pre-release of heat-treatment ontology, \"hasTypeDescription\" has been moved to the \"Annotation properties\" section.\nReplaced by type description, and moved under \"heattreatmentProcessNodeParameter\"\nNot included in pre-release of pmd core ontology."
+      "en" : "Description for Process Node's utility, e.g. \"Rear Vacuum Furnace Oil Quenching\""
     },
     "attributes" : [ "external", "datatype" ],
     "id" : "636"
@@ -9503,12 +9503,12 @@
   }, {
     "range" : "101",
     "domain" : "105",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "654"
   }, {
     "range" : "109",
     "domain" : "105",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "655"
   }, {
     "iri" : "https://material-digital.de/pmdco/hasProcessNodeName",
@@ -9527,17 +9527,17 @@
   }, {
     "range" : "97",
     "domain" : "105",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "658"
   }, {
     "range" : "101",
     "domain" : "138",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "659"
   }, {
     "range" : "109",
     "domain" : "138",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "660"
   }, {
     "iri" : "http://wikiba.se/ontology/quantityAmount",
@@ -9549,34 +9549,34 @@
     },
     "domain" : "645",
     "comment" : {
-      "en" : "In Glass ontology, 'MaterialProperty' is also associated with quantityAmount."
+      "en" : "Amount of quantity."
     },
     "attributes" : [ "external", "datatype" ],
     "id" : "661"
   }, {
     "range" : "97",
     "domain" : "138",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "662"
   }, {
     "range" : "109",
     "domain" : "101",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "663"
   }, {
     "range" : "97",
     "domain" : "101",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "664"
   }, {
     "range" : "512",
     "domain" : "592",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "665"
   }, {
     "range" : "138",
     "domain" : "105",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "666"
   }, {
     "iri" : "https://material-digital.de/pmdco/hasHeaderFieldDescription",
@@ -9595,62 +9595,62 @@
   }, {
     "range" : "354",
     "domain" : "356",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "670"
   }, {
     "range" : "210",
     "domain" : "403",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "671"
   }, {
     "range" : "352",
     "domain" : "356",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "672"
   }, {
     "range" : "210",
     "domain" : "407",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "673"
   }, {
     "range" : "568",
     "domain" : "356",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "674"
   }, {
     "range" : "210",
     "domain" : "378",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "675"
   }, {
     "range" : "565",
     "domain" : "356",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "676"
   }, {
     "range" : "210",
     "domain" : "370",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "677"
   }, {
     "range" : "362",
     "domain" : "356",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "679"
   }, {
     "range" : "210",
     "domain" : "369",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "680"
   }, {
     "range" : "360",
     "domain" : "356",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "681"
   }, {
     "range" : "571",
     "domain" : "356",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "682"
   }, {
     "iri" : "https://material-digital.de/pmdco/hasNominalStartPosixTimestamp",
@@ -9683,112 +9683,112 @@
   }, {
     "range" : "32",
     "domain" : "365",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "686"
   }, {
     "range" : "32",
     "domain" : "367",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "687"
   }, {
     "range" : "362",
     "domain" : "204",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "688"
   }, {
     "range" : "32",
     "domain" : "344",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "689"
   }, {
     "range" : "360",
     "domain" : "204",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "690"
   }, {
     "range" : "32",
     "domain" : "400",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "691"
   }, {
     "range" : "571",
     "domain" : "204",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "692"
   }, {
     "range" : "210",
     "domain" : "209",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "693"
   }, {
     "range" : "362",
     "domain" : "200",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "694"
   }, {
     "range" : "59",
     "domain" : "413",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "695"
   }, {
     "range" : "360",
     "domain" : "200",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "696"
   }, {
     "range" : "59",
     "domain" : "414",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "697"
   }, {
     "range" : "571",
     "domain" : "200",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "698"
   }, {
     "range" : "59",
     "domain" : "415",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "699"
   }, {
     "range" : "356",
     "domain" : "204",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "700"
   }, {
     "range" : "32",
     "domain" : "345",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "701"
   }, {
     "range" : "354",
     "domain" : "204",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "702"
   }, {
     "range" : "32",
     "domain" : "376",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "703"
   }, {
     "range" : "352",
     "domain" : "204",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "704"
   }, {
     "range" : "32",
     "domain" : "373",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "705"
   }, {
     "range" : "568",
     "domain" : "204",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "706"
   }, {
     "range" : "565",
     "domain" : "204",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "707"
   }, {
     "iri" : "https://material-digital.de/pmdco/hasNextProcess",
@@ -9807,112 +9807,112 @@
   }, {
     "range" : "59",
     "domain" : "8",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "709"
   }, {
     "range" : "59",
     "domain" : "21",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "710"
   }, {
     "range" : "568",
     "domain" : "200",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "711"
   }, {
     "range" : "59",
     "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "712"
   }, {
     "range" : "565",
     "domain" : "200",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "713"
   }, {
     "range" : "59",
     "domain" : "5",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "714"
   }, {
     "range" : "568",
     "domain" : "196",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "715"
   }, {
     "range" : "59",
     "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "716"
   }, {
     "range" : "565",
     "domain" : "196",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "717"
   }, {
     "range" : "59",
     "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "718"
   }, {
     "range" : "362",
     "domain" : "196",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "719"
   }, {
     "range" : "59",
     "domain" : "94",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "720"
   }, {
     "range" : "360",
     "domain" : "196",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "721"
   }, {
     "range" : "59",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "722"
   }, {
     "range" : "571",
     "domain" : "196",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "723"
   }, {
     "range" : "59",
     "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "724"
   }, {
     "range" : "204",
     "domain" : "200",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "725"
   }, {
     "range" : "59",
     "domain" : "11",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "726"
   }, {
     "range" : "356",
     "domain" : "200",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "727"
   }, {
     "range" : "59",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "728"
   }, {
     "range" : "354",
     "domain" : "200",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "729"
   }, {
     "range" : "352",
     "domain" : "200",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "730"
   }, {
     "iri" : "https://material-digital.de/pmdco/hasNominalParameter",
@@ -9924,119 +9924,119 @@
     },
     "domain" : "107",
     "comment" : {
-      "en" : "A qualitative nominal variable is a qualitative variable where no ordering is possible or implied in the levels. For example, the variable gender is nominal because there is no order in the levels female/male. Eye color is another example of a nominal variable because there is no order among blue, brown or green eyes.\nhttps://statsandr.com/blog/variable-types-and-examples/"
+      "en" : "This property is used to describe nominal parameters that are not associated to a quantity value."
     },
     "attributes" : [ "external", "datatype" ],
     "id" : "731"
   }, {
     "range" : "51",
     "domain" : "733",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "732"
   }, {
     "range" : "51",
     "domain" : "735",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "734"
   }, {
     "range" : "352",
     "domain" : "196",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "736"
   }, {
     "range" : "59",
     "domain" : "412",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "737"
   }, {
     "range" : "352",
     "domain" : "190",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "738"
   }, {
     "range" : "434",
     "domain" : "433",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "739"
   }, {
     "range" : "568",
     "domain" : "190",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "740"
   }, {
     "range" : "434",
     "domain" : "592",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "741"
   }, {
     "range" : "565",
     "domain" : "190",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "742"
   }, {
     "range" : "218",
     "domain" : "530",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "743"
   }, {
     "range" : "362",
     "domain" : "190",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "744"
   }, {
     "range" : "511",
     "domain" : "553",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "745"
   }, {
     "range" : "360",
     "domain" : "190",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "746"
   }, {
     "range" : "28",
     "domain" : "623",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "747"
   }, {
     "range" : "571",
     "domain" : "190",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "748"
   }, {
     "range" : "667",
     "domain" : "269",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "749"
   }, {
     "range" : "200",
     "domain" : "196",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "750"
   }, {
     "range" : "51",
     "domain" : "464",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "751"
   }, {
     "range" : "204",
     "domain" : "196",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "752"
   }, {
     "range" : "51",
     "domain" : "754",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "753"
   }, {
     "range" : "356",
     "domain" : "196",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "755"
   }, {
     "range" : "354",
     "domain" : "196",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "756"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/hasTotalMolePercent",
@@ -10063,12 +10063,12 @@
   }, {
     "range" : "163",
     "domain" : "760",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "759"
   }, {
     "range" : "434",
     "domain" : "512",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "761"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/hasPatentTitle",
@@ -10113,47 +10113,47 @@
   }, {
     "range" : "571",
     "domain" : "360",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "772"
   }, {
     "range" : "362",
     "domain" : "565",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "774"
   }, {
     "range" : "25",
     "domain" : "574",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "775"
   }, {
     "range" : "360",
     "domain" : "565",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "776"
   }, {
     "range" : "25",
     "domain" : "434",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "777"
   }, {
     "range" : "571",
     "domain" : "565",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "778"
   }, {
     "range" : "25",
     "domain" : "211",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "779"
   }, {
     "range" : "360",
     "domain" : "362",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "780"
   }, {
     "range" : "571",
     "domain" : "362",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "781"
   }, {
     "iri" : "https://material-digital.de/pmdco/hasMaterialStructure",
@@ -10172,112 +10172,112 @@
   }, {
     "range" : "46",
     "domain" : "230",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "783"
   }, {
     "range" : "46",
     "domain" : "226",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "784"
   }, {
     "range" : "571",
     "domain" : "352",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "785"
   }, {
     "range" : "46",
     "domain" : "233",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "786"
   }, {
     "range" : "565",
     "domain" : "568",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "787"
   }, {
     "range" : "46",
     "domain" : "227",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "788"
   }, {
     "range" : "362",
     "domain" : "568",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "789"
   }, {
     "range" : "46",
     "domain" : "236",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "790"
   }, {
     "range" : "360",
     "domain" : "568",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "791"
   }, {
     "range" : "167",
     "domain" : "166",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "792"
   }, {
     "range" : "571",
     "domain" : "568",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "793"
   }, {
     "range" : "25",
     "domain" : "24",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "794"
   }, {
     "range" : "360",
     "domain" : "354",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "795"
   }, {
     "range" : "553",
     "domain" : "214",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "796"
   }, {
     "range" : "571",
     "domain" : "354",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "797"
   }, {
     "range" : "553",
     "domain" : "167",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "798"
   }, {
     "range" : "568",
     "domain" : "352",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "799"
   }, {
     "range" : "46",
     "domain" : "234",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "800"
   }, {
     "range" : "565",
     "domain" : "352",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "801"
   }, {
     "range" : "46",
     "domain" : "256",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "802"
   }, {
     "range" : "362",
     "domain" : "352",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "803"
   }, {
     "range" : "360",
     "domain" : "352",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "804"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/@chamberType",
@@ -10311,32 +10311,32 @@
   }, {
     "range" : "41",
     "domain" : "483",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "806"
   }, {
     "range" : "41",
     "domain" : "484",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "807"
   }, {
     "range" : "352",
     "domain" : "354",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "808"
   }, {
     "range" : "553",
     "domain" : "587",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "809"
   }, {
     "range" : "568",
     "domain" : "354",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "810"
   }, {
     "range" : "553",
     "domain" : "620",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "811"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/hasDataResourcePosixTimestamp",
@@ -10352,22 +10352,22 @@
   }, {
     "range" : "565",
     "domain" : "354",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "813"
   }, {
     "range" : "553",
     "domain" : "122",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "814"
   }, {
     "range" : "362",
     "domain" : "354",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "815"
   }, {
     "range" : "553",
     "domain" : "552",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "816"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/hasDataResourceTime",
@@ -10497,17 +10497,17 @@
   }, {
     "range" : "50",
     "domain" : "685",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "826"
   }, {
     "range" : "656",
     "domain" : "86",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "827"
   }, {
     "range" : "656",
     "domain" : "452",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "828"
   }, {
     "iri" : "https://material-digital.de/pmdco/hasSequenceNumber",
@@ -10523,7 +10523,7 @@
   }, {
     "range" : "211",
     "domain" : "212",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "830"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/hasGlassComponent",
@@ -10542,27 +10542,27 @@
   }, {
     "range" : "163",
     "domain" : "544",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "832"
   }, {
     "range" : "163",
     "domain" : "274",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "833"
   }, {
     "range" : "163",
     "domain" : "305",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "834"
   }, {
     "range" : "163",
     "domain" : "669",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "835"
   }, {
     "range" : "163",
     "domain" : "162",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "836"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/hasProcessName",
@@ -10607,57 +10607,57 @@
   }, {
     "range" : "50",
     "domain" : "612",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "840"
   }, {
     "range" : "26",
     "domain" : "25",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "841"
   }, {
     "range" : "26",
     "domain" : "76",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "842"
   }, {
     "range" : "26",
     "domain" : "77",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "843"
   }, {
     "range" : "26",
     "domain" : "78",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "844"
   }, {
     "range" : "26",
     "domain" : "79",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "845"
   }, {
     "range" : "26",
     "domain" : "80",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "846"
   }, {
     "range" : "26",
     "domain" : "81",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "847"
   }, {
     "range" : "26",
     "domain" : "82",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "848"
   }, {
     "range" : "26",
     "domain" : "83",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "849"
   }, {
     "range" : "26",
     "domain" : "84",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "850"
   }, {
     "iri" : "https://material-digital.de/pmdco/hasUcumCode",
@@ -10669,7 +10669,7 @@
     },
     "domain" : "208",
     "comment" : {
-      "en" : "In pre-release pmd ontology, this has been moved under 'has unit label'"
+      "en" : "This property is used the enrich a unit with its common used label within the UCUM vocabulary"
     },
     "attributes" : [ "external", "datatype" ],
     "id" : "851"
@@ -10690,37 +10690,37 @@
   }, {
     "range" : "26",
     "domain" : "66",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "853"
   }, {
     "range" : "26",
     "domain" : "67",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "854"
   }, {
     "range" : "26",
     "domain" : "68",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "855"
   }, {
     "range" : "26",
     "domain" : "69",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "856"
   }, {
     "range" : "26",
     "domain" : "70",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "857"
   }, {
     "range" : "26",
     "domain" : "71",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "858"
   }, {
     "range" : "26",
     "domain" : "72",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "859"
   }, {
     "iri" : "https://material-digital.de/pmdco/hasQualifyingProcessNodeAnnotation",
@@ -10732,24 +10732,24 @@
     },
     "domain" : "107",
     "comment" : {
-      "en" : "Description for Process Node's utility, e.g. \"Rear Vacuum Furnace Oil Quenching\""
+      "en" : "Newly added in pre-release pmd ontology"
     },
     "attributes" : [ "external", "datatype" ],
     "id" : "860"
   }, {
     "range" : "26",
     "domain" : "73",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "861"
   }, {
     "range" : "26",
     "domain" : "74",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "862"
   }, {
     "range" : "26",
     "domain" : "75",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "863"
   }, {
     "iri" : "https://material-digital.de/pmdco/headerFieldCharacteristic",
@@ -10776,52 +10776,52 @@
   }, {
     "range" : "26",
     "domain" : "56",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "866"
   }, {
     "range" : "26",
     "domain" : "57",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "867"
   }, {
     "range" : "26",
     "domain" : "58",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "868"
   }, {
     "range" : "26",
     "domain" : "59",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "869"
   }, {
     "range" : "26",
     "domain" : "60",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "870"
   }, {
     "range" : "26",
     "domain" : "61",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "871"
   }, {
     "range" : "26",
     "domain" : "62",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "872"
   }, {
     "range" : "26",
     "domain" : "63",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "873"
   }, {
     "range" : "26",
     "domain" : "64",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "874"
   }, {
     "range" : "26",
     "domain" : "65",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "875"
   }, {
     "iri" : "https://material-digital.de/pmdco/hasQuantitativeNominalParameter",
@@ -10864,7 +10864,7 @@
     },
     "domain" : "773",
     "comment" : {
-      "en" : "The association of a higher concept with a unit of measurement from Wikidata"
+      "en" : "label modified: replace 'has pmd quantity unit' with 'has pmd unit'"
     },
     "attributes" : [ "external", "object" ],
     "id" : "878"
@@ -10950,7 +10950,7 @@
     },
     "domain" : "148",
     "comment" : {
-      "en" : "In pre-release of heat-treatment ontology, \"hasModel\" has been moved to the \"Annotation properties\" section. Replaced by \"has process node model\""
+      "en" : "Process Node short description, e.g. \"Vacuum Furnace\""
     },
     "attributes" : [ "external", "datatype" ],
     "id" : "882"
@@ -11141,112 +11141,112 @@
   }, {
     "range" : "568",
     "domain" : "358",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "897"
   }, {
     "range" : "565",
     "domain" : "358",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "898"
   }, {
     "range" : "362",
     "domain" : "358",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "899"
   }, {
     "range" : "360",
     "domain" : "358",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "900"
   }, {
     "range" : "571",
     "domain" : "358",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "901"
   }, {
     "range" : "196",
     "domain" : "190",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "902"
   }, {
     "range" : "200",
     "domain" : "190",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "903"
   }, {
     "range" : "204",
     "domain" : "190",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "904"
   }, {
     "range" : "356",
     "domain" : "190",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "905"
   }, {
     "range" : "354",
     "domain" : "190",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "906"
   }, {
     "range" : "352",
     "domain" : "358",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "907"
   }, {
     "range" : "582",
     "domain" : "579",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "908"
   }, {
     "range" : "584",
     "domain" : "579",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "909"
   }, {
     "range" : "584",
     "domain" : "582",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "910"
   }, {
     "range" : "190",
     "domain" : "358",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "911"
   }, {
     "range" : "196",
     "domain" : "358",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "912"
   }, {
     "range" : "200",
     "domain" : "358",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "913"
   }, {
     "range" : "204",
     "domain" : "358",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "914"
   }, {
     "range" : "356",
     "domain" : "358",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "915"
   }, {
     "range" : "354",
     "domain" : "358",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "916"
   }, {
     "range" : "582",
     "domain" : "576",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "917"
   }, {
     "range" : "584",
     "domain" : "576",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "918"
   }, {
     "iri" : "https://material-digital.de/pmdco/hasProcessNodeIdentifier",
@@ -11279,7 +11279,7 @@
   }, {
     "range" : "227",
     "domain" : "256",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "921"
   }, {
     "iri" : "https://material-digital.de/pmdco/@hasNominalMetadataParameter",
@@ -11295,17 +11295,17 @@
   }, {
     "range" : "230",
     "domain" : "256",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "923"
   }, {
     "range" : "230",
     "domain" : "227",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "924"
   }, {
     "range" : "576",
     "domain" : "573",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "925"
   }, {
     "iri" : "https://material-digital.de/pmdco/hasProcessNodeManufacturer",
@@ -11317,44 +11317,44 @@
     },
     "domain" : "107",
     "comment" : {
-      "en" : "Process Node's manufacturer name, e.g.: \"Ipsen\" or \"UPC\""
+      "en" : "Newly added in pre-release pmd ontology"
     },
     "attributes" : [ "external", "datatype" ],
     "id" : "926"
   }, {
     "range" : "579",
     "domain" : "573",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "927"
   }, {
     "range" : "582",
     "domain" : "573",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "928"
   }, {
     "range" : "584",
     "domain" : "573",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "929"
   }, {
     "range" : "579",
     "domain" : "576",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "930"
   }, {
     "range" : "256",
     "domain" : "236",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "931"
   }, {
     "range" : "227",
     "domain" : "236",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "932"
   }, {
     "range" : "230",
     "domain" : "236",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "933"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/hasCrucible",
@@ -11371,37 +11371,37 @@
   }, {
     "range" : "256",
     "domain" : "233",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "934"
   }, {
     "range" : "227",
     "domain" : "233",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "935"
   }, {
     "range" : "230",
     "domain" : "233",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "936"
   }, {
     "range" : "236",
     "domain" : "234",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "937"
   }, {
     "range" : "256",
     "domain" : "234",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "938"
   }, {
     "range" : "227",
     "domain" : "234",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "939"
   }, {
     "range" : "230",
     "domain" : "234",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "940"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/hasRawMaterialName",
@@ -11427,7 +11427,7 @@
     },
     "domain" : "107",
     "comment" : {
-      "en" : "Newly created object property for Glass ontology. Possible merging with the PMD core ontology?"
+      "en" : "This property is used to indicate the process that was optionally run after the current process.\ne.g. \"cooling process\" \"has optional process\" \"crystallization process\"."
     },
     "attributes" : [ "object" ],
     "id" : "942"

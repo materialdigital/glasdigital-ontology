@@ -34,13 +34,15 @@ jobs:
       - name: Build HTML for main
         run: | 
            wget -O widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.19/widoco-1.4.19-jar-with-dependencies_JDK-17.jar
+           mkdir public
            java -jar widoco.jar -ontFile main/pmd_go.ttl -outFolder public -htaccess -uniteSections -includeAnnotationProperties -lang en  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
+           cp public/doc/index-en.html public/doc/index.html
       - name: Move Contents to Public
-        run: mv /doc/* /
+        run: mv public/doc/* /
       - name: Remove Doc Folder
-        run: rm -rf /doc
-      - name: Copy Index HTML
-        run: cp /index-en.html /index.html
+        run: rm -rf public
+      # - name: Copy Index HTML
+      #   run: cp /index-en.html /index.html
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Build with Jekyll

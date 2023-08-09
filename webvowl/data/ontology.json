@@ -21,13 +21,13 @@
       } ],
       "contributor" : [ {
         "identifier" : "contributor",
-        "language" : "en",
-        "value" : "Ya-Fan Chen",
+        "language" : "undefined",
+        "value" : "to be added",
         "type" : "label"
       }, {
         "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "to be added",
+        "language" : "en",
+        "value" : "Ya-Fan Chen",
         "type" : "label"
       } ],
       "IAO_0000116" : [ {
@@ -183,13 +183,13 @@
     "id" : "186",
     "type" : "rdfs:Literal"
   }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
     "id" : "190",
     "type" : "owl:Class"
   }, {
-    "id" : "191",
-    "type" : "owl:Class"
-  }, {
-    "id" : "75",
+    "id" : "192",
     "type" : "owl:Class"
   }, {
     "id" : "193",
@@ -462,7 +462,7 @@
     "id" : "544",
     "type" : "owl:Class"
   }, {
-    "id" : "192",
+    "id" : "191",
     "type" : "owl:Class"
   }, {
     "id" : "61",
@@ -513,7 +513,7 @@
     "id" : "56",
     "type" : "owl:Class"
   }, {
-    "id" : "245",
+    "id" : "247",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "97",
@@ -543,7 +543,7 @@
     "id" : "70",
     "type" : "owl:Class"
   }, {
-    "id" : "247",
+    "id" : "245",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "413",
@@ -567,10 +567,10 @@
     "id" : "422",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "78",
+    "id" : "79",
     "type" : "owl:Class"
   }, {
-    "id" : "79",
+    "id" : "78",
     "type" : "owl:Class"
   }, {
     "id" : "345",
@@ -612,10 +612,10 @@
     "id" : "8",
     "type" : "owl:Class"
   }, {
-    "id" : "652",
+    "id" : "195",
     "type" : "owl:Class"
   }, {
-    "id" : "195",
+    "id" : "652",
     "type" : "owl:Class"
   }, {
     "id" : "376",
@@ -669,7 +669,7 @@
     "id" : "573",
     "type" : "owl:Class"
   }, {
-    "id" : "656",
+    "id" : "657",
     "type" : "owl:Class"
   }, {
     "id" : "69",
@@ -708,10 +708,10 @@
     "id" : "399",
     "type" : "owl:Class"
   }, {
-    "id" : "378",
+    "id" : "434",
     "type" : "owl:Class"
   }, {
-    "id" : "434",
+    "id" : "378",
     "type" : "owl:Class"
   }, {
     "id" : "397",
@@ -837,10 +837,10 @@
     "id" : "538",
     "type" : "owl:Class"
   }, {
-    "id" : "155",
+    "id" : "383",
     "type" : "owl:Class"
   }, {
-    "id" : "383",
+    "id" : "155",
     "type" : "owl:Class"
   }, {
     "id" : "32",
@@ -876,10 +876,10 @@
     "id" : "565",
     "type" : "owl:Class"
   }, {
-    "id" : "49",
+    "id" : "568",
     "type" : "owl:Class"
   }, {
-    "id" : "568",
+    "id" : "49",
     "type" : "owl:Class"
   }, {
     "id" : "571",
@@ -984,10 +984,10 @@
     "id" : "29",
     "type" : "owl:Class"
   }, {
-    "id" : "30",
+    "id" : "203",
     "type" : "owl:Class"
   }, {
-    "id" : "203",
+    "id" : "30",
     "type" : "owl:Class"
   }, {
     "id" : "36",
@@ -1026,13 +1026,13 @@
     "id" : "502",
     "type" : "owl:Class"
   }, {
-    "id" : "527",
-    "type" : "owl:Class"
-  }, {
     "id" : "541",
     "type" : "owl:Class"
   }, {
     "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "527",
     "type" : "owl:Class"
   }, {
     "id" : "494",
@@ -1153,7 +1153,7 @@
     },
     "subClasses" : [ "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "25", "76", "77", "78", "79", "80", "81", "82", "83", "84" ],
     "comment" : {
-      "en" : "Modified: Physical and chemical properties of a material"
+      "en" : "Original: Physical property of a material"
     },
     "attributes" : [ "external" ],
     "id" : "26"
@@ -1165,12 +1165,12 @@
       "IAO_0000119" : [ {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "SciGlass 7.0",
+        "value" : "https://www.materials.unsw.edu.au/study-us/high-school-students-and-teachers/online-tutorials/ceramics/glass/properties",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "https://www.materials.unsw.edu.au/study-us/high-school-students-and-teachers/online-tutorials/ceramics/glass/properties",
+        "value" : "SciGlass 7.0",
         "type" : "label"
       } ],
       "IAO_0000118" : [ {
@@ -1515,26 +1515,6 @@
       "undefined" : "Literal"
     }
   }, {
-    "iri" : "https://glasdigi.cms.uni-jena.de/glass/ViscosityT10",
-    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "ViscosityT10",
-      "en" : "viscosity T10"
-    },
-    "id" : "190",
-    "superClasses" : [ "48" ]
-  }, {
-    "iri" : "https://glasdigi.cms.uni-jena.de/glass/microscopy",
-    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "microscopy",
-      "en" : "microscopy"
-    },
-    "id" : "191",
-    "superClasses" : [ "192" ]
-  }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/AnnealingRange",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
     "instances" : 0,
@@ -1555,6 +1535,26 @@
     },
     "id" : "75",
     "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://glasdigi.cms.uni-jena.de/glass/microscopy",
+    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "microscopy",
+      "en" : "microscopy"
+    },
+    "id" : "190",
+    "superClasses" : [ "191" ]
+  }, {
+    "iri" : "https://glasdigi.cms.uni-jena.de/glass/ViscosityT10",
+    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ViscosityT10",
+      "en" : "viscosity T10"
+    },
+    "id" : "192",
+    "superClasses" : [ "48" ]
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
@@ -2037,12 +2037,12 @@
       "IAO_0000119" : [ {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "https://en.wikipedia.org/wiki/Thermal_conductivity",
+        "value" : "SciGlass 7.0",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "SciGlass 7.0",
+        "value" : "https://en.wikipedia.org/wiki/Thermal_conductivity",
         "type" : "label"
       } ]
     },
@@ -2051,7 +2051,7 @@
       "en" : "thermal conductivity"
     },
     "comment" : {
-      "en" : "The thermal conductivity of a material is a measure of its ability to conduct heat."
+      "en" : "Thermal conductivity is the amount of heat transmitted per unit cross-sectional area of a body per unit time under the influence of a unit temperature gradient. In an opaque body the process of heat transmittance is obeyed to Fourier's first law.\n\nIn Sciglass databse, unit = W/(m*K)"
     },
     "id" : "40",
     "superClasses" : [ "26" ]
@@ -2197,12 +2197,12 @@
       "IAO_0000119" : [ {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "Sciglass 7.0",
+        "value" : "https://en.wikipedia.org/wiki/Shear_modulus",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "https://en.wikipedia.org/wiki/Shear_modulus",
+        "value" : "Sciglass 7.0",
         "type" : "label"
       } ],
       "IAO_0000118" : [ {
@@ -2222,7 +2222,7 @@
       "en" : "shear modulus"
     },
     "comment" : {
-      "en" : "In materials science, shear modulus or modulus of rigidity, denoted by G, or sometimes S or μ, is a measure of the elastic shear stiffness of a material and is defined as the ratio of shear stress to the shear strain."
+      "en" : "SHEAR MODULUS\nThe ratio of shear stress to shear strain. The term rigidity modulus is also used.\nIn Sciglass, Shear modulus at 20°C\nunit = GPa"
     },
     "id" : "464",
     "superClasses" : [ "51" ]
@@ -2403,12 +2403,12 @@
       "IAO_0000118" : [ {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "molar absorptivity",
+        "value" : "molar attenuation coefficient",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "molar attenuation coefficient",
+        "value" : "molar absorptivity",
         "type" : "label"
       } ]
     },
@@ -2444,12 +2444,12 @@
       "IAO_0000119" : [ {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "SciGlass 7.0",
+        "value" : "https://en.wikipedia.org/wiki/Specific_heat_capacity",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "https://en.wikipedia.org/wiki/Specific_heat_capacity",
+        "value" : "SciGlass 7.0",
         "type" : "label"
       } ]
     },
@@ -2658,12 +2658,7 @@
       }, {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "liquefaction point",
-        "type" : "label"
-      }, {
-        "identifier" : "IAO_0000118",
-        "language" : "en",
-        "value" : "melting temperature",
+        "value" : "melt point",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000118",
@@ -2673,7 +2668,12 @@
       }, {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "melt point",
+        "value" : "melting temperature",
+        "type" : "label"
+      }, {
+        "identifier" : "IAO_0000118",
+        "language" : "en",
+        "value" : "liquefaction point",
         "type" : "label"
       } ]
     },
@@ -2682,7 +2682,7 @@
       "en" : "melt temperature"
     },
     "comment" : {
-      "en" : "If time series values are contained, they are displayed as a list."
+      "en" : "The range of furnace temperatures at which melting takes place at a commercially desirable rate, and at which the resulting glass generally has a viscosity between 10^1.5 to 10^2.5 poises. For purposes of comparing glasses, it is assumed that a glass at melting temperature has a viscosity of 10^2 poises. [Standard definition (ASTM; C162-52)]\n\nunit = °C"
     },
     "id" : "451",
     "superClasses" : [ "452" ]
@@ -2780,7 +2780,7 @@
       "en" : "thermal diffusivity"
     },
     "comment" : {
-      "en" : "For solution of problems of non-stationary heat transfer it is more convenient to use instead of thermal conductivity values."
+      "en" : "In heat transfer analysis, thermal diffusivity is the thermal conductivity divided by density and specific heat capacity at constant pressure."
     },
     "id" : "33",
     "superClasses" : [ "26" ]
@@ -2824,12 +2824,12 @@
       "IRI-based" : "AnalysisProcess",
       "en" : "Analysis Process"
     },
-    "subClasses" : [ "547", "191", "219", "179", "527", "134", "494" ],
+    "subClasses" : [ "547", "190", "219", "179", "527", "134", "494" ],
     "comment" : {
       "en" : "A process that is driven by the primary intent to gain new measurements\nAn analysis process is either a transformative process or a non-transformative process."
     },
     "attributes" : [ "external" ],
-    "id" : "192",
+    "id" : "191",
     "superClasses" : [ "119" ]
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/NucleationTemperature",
@@ -3061,7 +3061,7 @@
       "IRI-based" : "Process",
       "en" : "Process"
     },
-    "subClasses" : [ "511", "192" ],
+    "subClasses" : [ "511", "191" ],
     "comment" : {
       "en" : "A series of actions or operations conducing to an end\nIn PMD, a process is conducted via process nodes and has a discernable duration as part of a workflow. A process consumes objects and parameters. A process potentially generates new objects and measurements. A process is either a transformative process or a non-transformative process with respect to objects processed via a process node. There are primarily two types of distinguishable processes: manufacture process, analysis process. A process is a series of operations that are subordinate processes."
     },
@@ -3091,7 +3091,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "245",
+    "id" : "247",
     "label" : {
       "IRI-based" : "integer"
     }
@@ -3182,7 +3182,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "247",
+    "id" : "245",
     "label" : {
       "IRI-based" : "integer"
     }
@@ -3247,27 +3247,6 @@
       "IRI-based" : "integer"
     }
   }, {
-    "iri" : "https://glasdigi.cms.uni-jena.de/glass/HeatingRate",
-    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
-    "instances" : 0,
-    "annotations" : {
-      "IAO_0000119" : [ {
-        "identifier" : "IAO_0000119",
-        "language" : "en",
-        "value" : "SciGlass 7.0",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "HeatingRate",
-      "en" : "heating rate"
-    },
-    "comment" : {
-      "en" : "Heating with a constant rate."
-    },
-    "id" : "78",
-    "superClasses" : [ "26" ]
-  }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/ThermalExpansionCoefficient",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
     "instances" : 0,
@@ -3288,6 +3267,27 @@
       "en" : "Kinds of thermal expansion coefficient"
     },
     "id" : "79",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://glasdigi.cms.uni-jena.de/glass/HeatingRate",
+    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000119" : [ {
+        "identifier" : "IAO_0000119",
+        "language" : "en",
+        "value" : "SciGlass 7.0",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HeatingRate",
+      "en" : "heating rate"
+    },
+    "comment" : {
+      "en" : "Heating with a constant rate."
+    },
+    "id" : "78",
     "superClasses" : [ "26" ]
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/LogSpecificElectricalResistivityAt300C",
@@ -3398,7 +3398,7 @@
     },
     "subClasses" : [ "363", "218" ],
     "id" : "219",
-    "superClasses" : [ "192" ]
+    "superClasses" : [ "191" ]
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/LogViscosityAt800C",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
@@ -3409,15 +3409,6 @@
     },
     "id" : "8",
     "superClasses" : [ "59" ]
-  }, {
-    "iri" : "http://wikiba.se/ontology#Item",
-    "baseIri" : "http://wikiba.se/ontology",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Item"
-    },
-    "attributes" : [ "external" ],
-    "id" : "652"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/DosingSpeed",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
@@ -3431,6 +3422,15 @@
     },
     "id" : "195",
     "superClasses" : [ "86" ]
+  }, {
+    "iri" : "http://wikiba.se/ontology#Item",
+    "baseIri" : "http://wikiba.se/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Item"
+    },
+    "attributes" : [ "external" ],
+    "id" : "652"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/LogSpecificElectricalResistivityAt100C",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
@@ -3464,7 +3464,7 @@
       "en" : "weight"
     },
     "comment" : {
-      "en" : "The actual weight of each raw material or filling step"
+      "en" : "P.S. When it contain time series values, it will be displayed as a list."
     },
     "id" : "460",
     "superClasses" : [ "452" ]
@@ -3506,7 +3506,7 @@
       "en" : "This property is used to describe a quantity value that was input of process."
     },
     "id" : "86",
-    "superClasses" : [ "656" ]
+    "superClasses" : [ "657" ]
   }, {
     "iri" : "http://wikiba.se/ontology#QuantityValue",
     "baseIri" : "http://wikiba.se/ontology",
@@ -3552,7 +3552,7 @@
       "en" : "Indentation hardness tests are used in mechanical engineering to determine the hardness of a material to deformation."
     },
     "id" : "134",
-    "superClasses" : [ "192" ]
+    "superClasses" : [ "191" ]
   }, {
     "iri" : "https://material-digital.de/pmdco/MaterialStructure",
     "baseIri" : "https://material-digital.de/pmdco",
@@ -3692,7 +3692,7 @@
     "comment" : {
       "en" : "Glass process parameters from BAM"
     },
-    "id" : "656"
+    "id" : "657"
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/CriticalCoolingRate",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
@@ -3768,7 +3768,7 @@
       "en" : "target weight"
     },
     "comment" : {
-      "en" : "If time series values are contained, they are displayed as a list."
+      "en" : "The target weight of each raw material or filling step"
     },
     "id" : "172",
     "superClasses" : [ "86" ]
@@ -3843,19 +3843,6 @@
     "id" : "399",
     "superClasses" : [ "274" ]
   }, {
-    "iri" : "https://glasdigi.cms.uni-jena.de/glass/LinearThermalExpansionCoefficientAt210C",
-    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "LinearThermalExpansionCoefficientAt210C",
-      "en" : "linear thermal expansion coefficient at 210C"
-    },
-    "comment" : {
-      "en" : "α*1e7  at 210°C"
-    },
-    "id" : "378",
-    "superClasses" : [ "210" ]
-  }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/RefractiveIndex",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
     "instances" : 0,
@@ -3869,12 +3856,12 @@
       "IAO_0000118" : [ {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "index of refraction",
+        "value" : "refraction index",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "refraction index",
+        "value" : "index of refraction",
         "type" : "label"
       } ]
     },
@@ -3888,6 +3875,19 @@
     },
     "id" : "434",
     "superClasses" : [ "25" ]
+  }, {
+    "iri" : "https://glasdigi.cms.uni-jena.de/glass/LinearThermalExpansionCoefficientAt210C",
+    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LinearThermalExpansionCoefficientAt210C",
+      "en" : "linear thermal expansion coefficient at 210C"
+    },
+    "comment" : {
+      "en" : "α*1e7  at 210°C"
+    },
+    "id" : "378",
+    "superClasses" : [ "210" ]
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/beamBendingViscometer",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
@@ -3992,12 +3992,12 @@
       "IAO_0000119" : [ {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "Sciglass 7.0",
+        "value" : "https://www.materials.unsw.edu.au/study-us/high-school-students-and-teachers/online-tutorials/ceramics/glass/properties",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "https://www.materials.unsw.edu.au/study-us/high-school-students-and-teachers/online-tutorials/ceramics/glass/properties",
+        "value" : "Sciglass 7.0",
         "type" : "label"
       } ]
     },
@@ -4115,25 +4115,15 @@
       "IAO_0000119" : [ {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "https://www.manufacturingterms.com/Softening-point-(glass).html",
+        "value" : "https://en.wikipedia.org/wiki/Softening_point",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000119",
         "language" : "en",
-        "value" : "https://en.wikipedia.org/wiki/Softening_point",
+        "value" : "https://www.manufacturingterms.com/Softening-point-(glass).html",
         "type" : "label"
       } ],
       "IAO_0000118" : [ {
-        "identifier" : "IAO_0000118",
-        "language" : "en",
-        "value" : "Littleton point",
-        "type" : "label"
-      }, {
-        "identifier" : "IAO_0000118",
-        "language" : "en",
-        "value" : "Littleton softening point",
-        "type" : "label"
-      }, {
         "identifier" : "IAO_0000118",
         "language" : "en",
         "value" : "softening temperature",
@@ -4141,7 +4131,17 @@
       }, {
         "identifier" : "IAO_0000118",
         "language" : "en",
+        "value" : "Littleton point",
+        "type" : "label"
+      }, {
+        "identifier" : "IAO_0000118",
+        "language" : "en",
         "value" : "Littleton softening temperature",
+        "type" : "label"
+      }, {
+        "identifier" : "IAO_0000118",
+        "language" : "en",
+        "value" : "Littleton softening point",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000118",
@@ -4155,7 +4155,7 @@
       "en" : "softening point"
     },
     "comment" : {
-      "en" : "The maximum temperature at which a glass piece may be handled without permanent deformation; this corresponds to a viscosity of approximately 4x 10^6 Pa -s ( 4X 10^7 or 10^7.6 P).\nunit = °C"
+      "en" : "The softening point is the temperature at which a material softens beyond some arbitrary softness."
     },
     "id" : "74",
     "superClasses" : [ "26" ]
@@ -4428,16 +4428,6 @@
     "id" : "538",
     "superClasses" : [ "35" ]
   }, {
-    "iri" : "https://glasdigi.cms.uni-jena.de/glass/MeltHoldingTime",
-    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "MeltHoldingTime",
-      "en" : "melt holding time"
-    },
-    "id" : "155",
-    "superClasses" : [ "86" ]
-  }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/Absorbance",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
     "instances" : 0,
@@ -4458,6 +4448,16 @@
     },
     "id" : "383",
     "superClasses" : [ "25" ]
+  }, {
+    "iri" : "https://glasdigi.cms.uni-jena.de/glass/MeltHoldingTime",
+    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MeltHoldingTime",
+      "en" : "melt holding time"
+    },
+    "id" : "155",
+    "superClasses" : [ "86" ]
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/SpecificElectricalResistivity",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
@@ -4582,6 +4582,16 @@
     "id" : "565",
     "superClasses" : [ "48" ]
   }, {
+    "iri" : "https://glasdigi.cms.uni-jena.de/glass/ViscosityT5",
+    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ViscosityT5",
+      "en" : "viscosity T5"
+    },
+    "id" : "568",
+    "superClasses" : [ "48" ]
+  }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/GlassTransitionTemperature",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
     "instances" : 0,
@@ -4607,16 +4617,6 @@
     },
     "id" : "49",
     "superClasses" : [ "26" ]
-  }, {
-    "iri" : "https://glasdigi.cms.uni-jena.de/glass/ViscosityT5",
-    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "ViscosityT5",
-      "en" : "viscosity T5"
-    },
-    "id" : "568",
-    "superClasses" : [ "48" ]
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/ViscosityT9",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
@@ -4812,7 +4812,7 @@
       "IRI-based" : "ViscosityTemperature",
       "en" : "viscosity temperature"
     },
-    "subClasses" : [ "190", "196", "200", "204", "352", "354", "356", "358", "360", "362", "565", "568", "571" ],
+    "subClasses" : [ "192", "196", "200", "204", "352", "354", "356", "358", "360", "362", "565", "568", "571" ],
     "comment" : {
       "en" : "Ti (log η = i)\ntemperature (°C) corresponding to viscosity (η) logarithm value equal to i.\nWhich means viscosity is equal to 10^i Pa"
     },
@@ -4848,7 +4848,7 @@
       "en" : "cooling start temperature"
     },
     "comment" : {
-      "en" : "setpoint of the first few lines of cooling section from melting json data of BAM."
+      "en" : "It contains two values in the raw melting json data of BAM, and it is displayed as a list."
     },
     "id" : "150",
     "superClasses" : [ "86" ]
@@ -4879,7 +4879,7 @@
       "en" : "optical density"
     },
     "comment" : {
-      "en" : "D=-log(I/I_0)\nwhere\nOPTICAL DENSITY\nwhere I is the intensity of light transmitted through the medium, Io the intensity of incident light, D the optical density. D = 0.4343k/d = α/d where k is the absorption coefficient, α the decimal absorption coefficient, and d the distance of transmission of light through the medium."
+      "en" : "Though optical density and absorbance both measure the absorption of light when that light passes through an optical component, these two terms are not the same. Optical density measures the amount of attenuation, or intensity lost, when light passes through an optical component. It also tracks attenuation based on the scattering of light, whereas absorbance considers only the absorption of light within the optical component. Both optical density and absorbance can be tracked through the use of a spectrometer.\nsee https://sciencing.com/difference-between-optical-density-absorbance-7842652.html"
     },
     "id" : "574",
     "superClasses" : [ "25" ]
@@ -5157,6 +5157,16 @@
     "id" : "29",
     "superClasses" : [ "26" ]
   }, {
+    "iri" : "https://glasdigi.cms.uni-jena.de/glass/TargetCoolingTemperature",
+    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TargetCoolingTemperature",
+      "en" : "target cooling temperature"
+    },
+    "id" : "203",
+    "superClasses" : [ "86" ]
+  }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/CriticalTemperature",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
     "instances" : 0,
@@ -5170,12 +5180,12 @@
       "IAO_0000118" : [ {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "critical point",
+        "value" : "critical state",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "critical state",
+        "value" : "critical point",
         "type" : "label"
       } ]
     },
@@ -5188,16 +5198,6 @@
     },
     "id" : "30",
     "superClasses" : [ "26" ]
-  }, {
-    "iri" : "https://glasdigi.cms.uni-jena.de/glass/TargetCoolingTemperature",
-    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "TargetCoolingTemperature",
-      "en" : "target cooling temperature"
-    },
-    "id" : "203",
-    "superClasses" : [ "86" ]
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/Compressibility",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
@@ -5317,12 +5317,12 @@
       "IAO_0000118" : [ {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "nu-value",
+        "value" : "V-number",
         "type" : "label"
       }, {
         "identifier" : "IAO_0000118",
         "language" : "en",
-        "value" : "V-number",
+        "value" : "nu-value",
         "type" : "label"
       } ]
     },
@@ -5414,19 +5414,6 @@
     "id" : "502",
     "superClasses" : [ "503" ]
   }, {
-    "iri" : "https://glasdigi.cms.uni-jena.de/glass/standard",
-    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "standard",
-      "en" : "standard"
-    },
-    "comment" : {
-      "en" : "Any kind of standard used in measuring glass properties\ne.g. ASTM, DIN, …"
-    },
-    "id" : "527",
-    "superClasses" : [ "192" ]
-  }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/VickersHardnessNumber",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
     "instances" : 0,
@@ -5450,6 +5437,19 @@
     "id" : "21",
     "superClasses" : [ "59" ]
   }, {
+    "iri" : "https://glasdigi.cms.uni-jena.de/glass/standard",
+    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "standard",
+      "en" : "standard"
+    },
+    "comment" : {
+      "en" : "Any kind of standard used in measuring glass properties\ne.g. ASTM, DIN, …"
+    },
+    "id" : "527",
+    "superClasses" : [ "191" ]
+  }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/ResonantFrequencyAndDampingAnalysis",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
     "instances" : 0,
@@ -5469,7 +5469,7 @@
       "en" : "Resonant Frequency and Damping Analysis (RFDA) professional system measures the resonant frequencies and internal friction or damping of samples and calculates the Young's modulus, shear modulus, Poisson's ratio of rectangular bars, cylindrical rods and discs according to the ASTM E1876-15 standard.\n\nnon-destructive test method.\n\nmeasurement of the resonance frequency and its decay behaviour after a short mechanical impulse.\n\ndetermination of elasticity and shear modulus, the lateral contraction number and damping."
     },
     "id" : "494",
-    "superClasses" : [ "192" ]
+    "superClasses" : [ "191" ]
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/oven",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
@@ -5532,7 +5532,7 @@
       "en" : "This property is used to describe a quantity value that has been measured during the execution of a process."
     },
     "id" : "452",
-    "superClasses" : [ "656" ]
+    "superClasses" : [ "657" ]
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/spectroscopy",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
@@ -5542,7 +5542,7 @@
       "en" : "spectroscopy"
     },
     "id" : "547",
-    "superClasses" : [ "192" ]
+    "superClasses" : [ "191" ]
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/LogViscosityAt2000C",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
@@ -5563,7 +5563,7 @@
     },
     "subClasses" : [ "221", "224", "178" ],
     "id" : "179",
-    "superClasses" : [ "192" ]
+    "superClasses" : [ "191" ]
   }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/TotalWeight",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
@@ -6635,7 +6635,7 @@
     "id" : "655",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "657",
+    "id" : "656",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "658",
@@ -7654,7 +7654,7 @@
     },
     "domain" : "119",
     "comment" : {
-      "en" : "The point in time a process node finished to conduct a process, represented in IEEE 1003 'Seconds since Epoch'"
+      "en" : "IRI modified typo: missing 'm', replaced with 'hasNominalEndPosixTimestamp'"
     },
     "attributes" : [ "external", "datatype" ],
     "id" : "145"
@@ -7837,23 +7837,9 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "243"
   }, {
-    "iri" : "https://glasdigi.cms.uni-jena.de/glass/hasOvenNumber",
-    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
-    "range" : "245",
-    "label" : {
-      "IRI-based" : "hasOvenNumber",
-      "en" : "has oven number"
-    },
-    "domain" : "107",
-    "comment" : {
-      "en" : "The oven number is the reference of the oven where the melting process takes place."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "244"
-  }, {
     "iri" : "https://glasdigi.cms.uni-jena.de/glass/hasMeltNumber",
     "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
-    "range" : "247",
+    "range" : "245",
     "label" : {
       "IRI-based" : "hasMeltNumber",
       "en" : "has melt number"
@@ -7861,6 +7847,20 @@
     "domain" : "119",
     "comment" : {
       "en" : "correspond to/followed after the fill number"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "244"
+  }, {
+    "iri" : "https://glasdigi.cms.uni-jena.de/glass/hasOvenNumber",
+    "baseIri" : "https://glasdigi.cms.uni-jena.de/glass",
+    "range" : "247",
+    "label" : {
+      "IRI-based" : "hasOvenNumber",
+      "en" : "has oven number"
+    },
+    "domain" : "107",
+    "comment" : {
+      "en" : "The oven number is the reference of the oven where the melting process takes place."
     },
     "attributes" : [ "datatype" ],
     "id" : "246"
@@ -8289,7 +8289,7 @@
     "id" : "343"
   }, {
     "range" : "48",
-    "domain" : "190",
+    "domain" : "192",
     "attributes" : [ "object", "anonymous" ],
     "id" : "346"
   }, {
@@ -8772,7 +8772,7 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "489"
   }, {
-    "range" : "192",
+    "range" : "191",
     "domain" : "134",
     "attributes" : [ "object", "anonymous" ],
     "id" : "490"
@@ -8782,7 +8782,7 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "491"
   }, {
-    "range" : "192",
+    "range" : "191",
     "domain" : "494",
     "attributes" : [ "object", "anonymous" ],
     "id" : "493"
@@ -8823,7 +8823,7 @@
     "id" : "510"
   }, {
     "range" : "119",
-    "domain" : "192",
+    "domain" : "191",
     "attributes" : [ "object", "anonymous" ],
     "id" : "514"
   }, {
@@ -8881,7 +8881,7 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "525"
   }, {
-    "range" : "192",
+    "range" : "191",
     "domain" : "527",
     "attributes" : [ "object", "anonymous" ],
     "id" : "526"
@@ -8946,7 +8946,7 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "545"
   }, {
-    "range" : "192",
+    "range" : "191",
     "domain" : "547",
     "attributes" : [ "object", "anonymous" ],
     "id" : "546"
@@ -8956,17 +8956,17 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "548"
   }, {
-    "range" : "192",
-    "domain" : "191",
+    "range" : "191",
+    "domain" : "190",
     "attributes" : [ "object", "anonymous" ],
     "id" : "549"
   }, {
-    "range" : "192",
+    "range" : "191",
     "domain" : "219",
     "attributes" : [ "object", "anonymous" ],
     "id" : "550"
   }, {
-    "range" : "192",
+    "range" : "191",
     "domain" : "179",
     "attributes" : [ "object", "anonymous" ],
     "id" : "551"
@@ -9426,7 +9426,7 @@
     },
     "domain" : "148",
     "comment" : {
-      "en" : "Description for Process Node's utility, e.g. \"Rear Vacuum Furnace Oil Quenching\""
+      "en" : "In pre-release of heat-treatment ontology, \"hasTypeDescription\" has been moved to the \"Annotation properties\" section.\nReplaced by type description, and moved under \"heattreatmentProcessNodeParameter\"\nNot included in pre-release of pmd core ontology."
     },
     "attributes" : [ "external", "datatype" ],
     "id" : "636"
@@ -9523,7 +9523,7 @@
       "en" : "A human-generated identifier associated with a discernible, tangible or simulated entity intended to be unique in a given scope"
     },
     "attributes" : [ "external", "datatype" ],
-    "id" : "657"
+    "id" : "656"
   }, {
     "range" : "97",
     "domain" : "105",
@@ -9549,7 +9549,7 @@
     },
     "domain" : "645",
     "comment" : {
-      "en" : "Amount of quantity."
+      "en" : "In Glass ontology, 'MaterialProperty' is also associated with quantityAmount."
     },
     "attributes" : [ "external", "datatype" ],
     "id" : "661"
@@ -9924,7 +9924,7 @@
     },
     "domain" : "107",
     "comment" : {
-      "en" : "This property is used to describe nominal parameters that are not associated to a quantity value."
+      "en" : "A qualitative nominal variable is a qualitative variable where no ordering is possible or implied in the levels. For example, the variable gender is nominal because there is no order in the levels female/male. Eye color is another example of a nominal variable because there is no order among blue, brown or green eyes.\nhttps://statsandr.com/blog/variable-types-and-examples/"
     },
     "attributes" : [ "external", "datatype" ],
     "id" : "731"
@@ -9950,7 +9950,7 @@
     "id" : "737"
   }, {
     "range" : "352",
-    "domain" : "190",
+    "domain" : "192",
     "attributes" : [ "object", "anonymous" ],
     "id" : "738"
   }, {
@@ -9960,7 +9960,7 @@
     "id" : "739"
   }, {
     "range" : "568",
-    "domain" : "190",
+    "domain" : "192",
     "attributes" : [ "object", "anonymous" ],
     "id" : "740"
   }, {
@@ -9970,7 +9970,7 @@
     "id" : "741"
   }, {
     "range" : "565",
-    "domain" : "190",
+    "domain" : "192",
     "attributes" : [ "object", "anonymous" ],
     "id" : "742"
   }, {
@@ -9980,7 +9980,7 @@
     "id" : "743"
   }, {
     "range" : "362",
-    "domain" : "190",
+    "domain" : "192",
     "attributes" : [ "object", "anonymous" ],
     "id" : "744"
   }, {
@@ -9990,7 +9990,7 @@
     "id" : "745"
   }, {
     "range" : "360",
-    "domain" : "190",
+    "domain" : "192",
     "attributes" : [ "object", "anonymous" ],
     "id" : "746"
   }, {
@@ -10000,7 +10000,7 @@
     "id" : "747"
   }, {
     "range" : "571",
-    "domain" : "190",
+    "domain" : "192",
     "attributes" : [ "object", "anonymous" ],
     "id" : "748"
   }, {
@@ -10500,12 +10500,12 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "826"
   }, {
-    "range" : "656",
+    "range" : "657",
     "domain" : "86",
     "attributes" : [ "object", "anonymous" ],
     "id" : "827"
   }, {
-    "range" : "656",
+    "range" : "657",
     "domain" : "452",
     "attributes" : [ "object", "anonymous" ],
     "id" : "828"
@@ -10732,7 +10732,7 @@
     },
     "domain" : "107",
     "comment" : {
-      "en" : "Newly added in pre-release pmd ontology"
+      "en" : "Description for Process Node's utility, e.g. \"Rear Vacuum Furnace Oil Quenching\""
     },
     "attributes" : [ "external", "datatype" ],
     "id" : "860"
@@ -11165,27 +11165,27 @@
     "id" : "901"
   }, {
     "range" : "196",
-    "domain" : "190",
+    "domain" : "192",
     "attributes" : [ "object", "anonymous" ],
     "id" : "902"
   }, {
     "range" : "200",
-    "domain" : "190",
+    "domain" : "192",
     "attributes" : [ "object", "anonymous" ],
     "id" : "903"
   }, {
     "range" : "204",
-    "domain" : "190",
+    "domain" : "192",
     "attributes" : [ "object", "anonymous" ],
     "id" : "904"
   }, {
     "range" : "356",
-    "domain" : "190",
+    "domain" : "192",
     "attributes" : [ "object", "anonymous" ],
     "id" : "905"
   }, {
     "range" : "354",
-    "domain" : "190",
+    "domain" : "192",
     "attributes" : [ "object", "anonymous" ],
     "id" : "906"
   }, {
@@ -11209,7 +11209,7 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "910"
   }, {
-    "range" : "190",
+    "range" : "192",
     "domain" : "358",
     "attributes" : [ "object", "anonymous" ],
     "id" : "911"
@@ -11317,7 +11317,7 @@
     },
     "domain" : "107",
     "comment" : {
-      "en" : "Newly added in pre-release pmd ontology"
+      "en" : "Process Node's manufacturer name, e.g.: \"Ipsen\" or \"UPC\""
     },
     "attributes" : [ "external", "datatype" ],
     "id" : "926"
@@ -11427,7 +11427,7 @@
     },
     "domain" : "107",
     "comment" : {
-      "en" : "This property is used to indicate the process that was optionally run after the current process.\ne.g. \"cooling process\" \"has optional process\" \"crystallization process\"."
+      "en" : "Newly created object property for Glass ontology. Possible merging with the PMD core ontology?"
     },
     "attributes" : [ "object" ],
     "id" : "942"

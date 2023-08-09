@@ -20,7 +20,10 @@ on:
 concurrency:
   group: "pages"
   cancel-in-progress: false
-
+  
+permissions:
+  contents: write
+  
 jobs:
   deploy:
     environment:

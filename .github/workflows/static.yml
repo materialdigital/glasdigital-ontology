@@ -48,6 +48,9 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
+      - name: List Files Directory
+        run: |
+          ls -R .
 
   # Deployment job
   deploy:
@@ -57,9 +60,12 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: List Files Directory
+        run: |
+          ls -R .
       - name: Deploy to GitHub Pages
         if: success()
         # uses: actions/deploy-pages@v2
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: public # The folder the action should deploy.
+          folder: ./public # The folder the action should deploy.

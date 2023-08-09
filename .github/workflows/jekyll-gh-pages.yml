@@ -37,12 +37,6 @@ jobs:
            mkdir public
            java -jar widoco.jar -ontFile main/pmd_go.ttl -outFolder public -htaccess -uniteSections -includeAnnotationProperties -lang en  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
            cp public/doc/index-en.html public/doc/index.html
-      - name: Move Contents to Public
-        run: sudo mv public/doc/* /
-      - name: Remove Doc Folder
-        run: sudo rm -rf public
-      # - name: Copy Index HTML
-      #   run: cp /index-en.html /index.html
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Build with Jekyll
@@ -50,8 +44,8 @@ jobs:
         with:
           source: ./
           destination: ./_site
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+      # - name: Upload artifact
+      #   uses: actions/upload-pages-artifact@v2
 
   # Deployment job
   deploy:
@@ -69,4 +63,4 @@ jobs:
         #   build_dir: public
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: . # The folder the action should deploy.
+          folder: public/doc # The folder the action should deploy.

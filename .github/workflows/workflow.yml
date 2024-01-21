@@ -38,9 +38,9 @@ jobs:
            mkdir public 
            mkdir public/v$ONTO_VERSION
            java -jar widoco.jar -ontFile deploy_main/$ONTOLOGY_FILE_NAME -outFolder public/v$ONTO_VERSION -htaccess -uniteSections -includeAnnotationProperties -lang en-de -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
-           ls -l doc # list files in 'doc' directory
+           ls -l public/doc # list files in 'public/doc' directory
            ls -l doc/v$ONTO_VERSION # list files in 'doc/vONTO_VERSION' directory
-           cp doc/v$ONTO_VERSION/index-en.html public/v$ONTO_VERSION/index.html
+           cp public/doc/v$ONTO_VERSION/index-en.html public/doc/v$ONTO_VERSION/index.html
     ## Fourth step: Publish HTML docs and ontology serializations to gh pages
     ##              maintaining other versions and
     ##              replacing the current version (if existing)

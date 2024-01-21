@@ -37,13 +37,17 @@ jobs:
            wget -O widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.17/java-11-widoco-1.4.17-jar-with-dependencies.jar
            mkdir public 
            mkdir public/v$ONTO_VERSION
-           java -jar widoco.jar -ontFile deploy_main/$ONTOLOGY_FILE_NAME -outFolder public/v$ONTO_VERSION -htaccess -uniteSections -includeAnnotationProperties -lang en-de -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
+           java -jar widoco.jar -ontFile deploy_main/$ONTOLOGY_FILE_NAME -outFolder public -htaccess -uniteSections -includeAnnotationProperties -lang en-de -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
 
-           # have to move all contents from the "doc" folder, which is not specified in the PMD example
-           mv public/v$ONTO_VERSION/doc/* public/v$ONTO_VERSION/
-           rm -r public/v$ONTO_VERSION/doc
+           # TODO: I did not create a version directory this time, otherwise .htaccess has to be modified.
+           # I have to move all contents from the "doc" folder, which is not specified in the PMD example
+           # mv public/v$ONTO_VERSION/doc/* public/v$ONTO_VERSION/
+           # rm -r public/v$ONTO_VERSION/doc
+           # cp public/v$ONTO_VERSION/index-en.html public/v$ONTO_VERSION/index.html
+           mv public/doc/* public/
+           rm -r public/doc
+           cp public/index-en.html public/index.html
            
-           cp public/v$ONTO_VERSION/index-en.html public/v$ONTO_VERSION/index.html
     ## Fourth step: Publish HTML docs and ontology serializations to gh pages
     ##              maintaining other versions and
     ##              replacing the current version (if existing)

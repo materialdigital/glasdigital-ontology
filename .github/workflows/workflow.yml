@@ -31,15 +31,6 @@ jobs:
       run: |
        echo "Ontology Version: $ONTO_VERSION"
     
-    # Step to list files in 'public' directory
-    - name: List files in public directory
-      run: ls -l public
-
-    # Step to list files in 'public/v1.0.1' directory
-    - name: List files in public/v1.0.1 directory
-      run: ls -l public/v$ONTO_VERSION
-    
-    
     ## Third step: Build HTML and ontology serializations for the current version
     - name: Build HTML for main
       run: | 
@@ -47,6 +38,8 @@ jobs:
            mkdir public 
            mkdir public/v$ONTO_VERSION
            java -jar widoco.jar -ontFile deploy_main/$ONTOLOGY_FILE_NAME -outFolder public/v$ONTO_VERSION -htaccess -uniteSections -includeAnnotationProperties -lang en-de -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
+           ls -l public # list files in 'public' directory
+           ls -l public/v$ONTO_VERSION # list files in 'public/vONTO_VERSION' directory
            cp public/v$ONTO_VERSION/index-en.html public/v$ONTO_VERSION/index.html
     ## Fourth step: Publish HTML docs and ontology serializations to gh pages
     ##              maintaining other versions and

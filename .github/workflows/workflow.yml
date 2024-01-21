@@ -25,6 +25,21 @@ jobs:
       run: |
            pip install rdflib
            echo "ONTO_VERSION=$(python deploy_main/.github/workflows/get_ontoversion.py deploy_main/$ONTOLOGY_FILE_NAME)" >> "$GITHUB_ENV"
+    
+    # Step to print the ONTO_VERSION 
+    - name: Print ontology version
+      run: |
+       echo "Ontology Version: $ONTO_VERSION"
+    
+    # Step to list files in 'public' directory
+    - name: List files in public directory
+      run: ls -l public
+
+    # Step to list files in 'public/v1.0.1' directory
+    - name: List files in public/v1.0.1 directory
+      run: ls -l public/v$ONTO_VERSION
+    
+    
     ## Third step: Build HTML and ontology serializations for the current version
     - name: Build HTML for main
       run: | 

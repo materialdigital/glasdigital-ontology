@@ -13,16 +13,23 @@
 @prefix pmdco: <https://material-digital.de/pmdco/> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix wikiba: <http://wikiba.se/ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @base <https://glasdigi.cms.uni-jena.de/glass/> .
 
 <https://glasdigi.cms.uni-jena.de/glass/> rdf:type owl:Ontology ;
                                            owl:versionIRI <https://glasdigi.cms.uni-jena.de/glass/1.0.0> ;
-                                           obo:IAO_0000116 "References/definitions are mostly came from SciGlass database (https://github.com/epam/SciGlass), INTERGLAD database (https://www.newglass.jp/interglad_n/gaiyo/info_e.html) (to be added), Bundesanstalt für Materialforschung und -prüfung (BAM) and Platform MaterialDigital (PMD)"@en ,
-                                                           "This glass ontology was developed based on the PMD Core Ontology (PMDco) v1. Migration to v2 is planned."@en ;
-                                           dc:contributor "to be added" ;
-                                           terms:contributor "Ya-Fan Chen"@en ;
-                                           terms:creator "Ya-Fan Chen"@en ;
-                                           terms:license "https://creativecommons.org/licenses/by/4.0/legalcode"@en ;
+                                           obo:IAO_0000116 "References/definitions are mostly came from SciGlass database (https://github.com/epam/SciGlass), Bundesanstalt für Materialforschung und -prüfung (BAM) and Platform MaterialDigital (PMD). INTERGLAD database (https://www.newglass.jp/interglad_n/gaiyo/info_e.html) may also be adopted in the future."@en ;
+                                           dc:creator "Simon Stier (https://orcid.org/0000-0003-0410-3616)" ;
+                                           dcterms:created "21.01.2024" ;
+                                           dcterms:creator "Ya-Fan Chen (https://orcid.org/0000-0003-4295-7815)" ;
+                                           dcterms:license "https://creativecommons.org/licenses/by/4.0/"@en ;
+                                           dcterms:title "GlasDigital Ontology"@en ;
+                                           rdfs:comment """The GlasDigital Ontology was developed for the GlasDigital project (https://www.materialdigital.de/project/4). It describes the robotic melting process at Bundesanstalt für Materialforschung und -prüfung (BAM), Berlin and also contains the terminology of the SciGlass database (The data has become open source since 2019. See: https://github.com/epam/SciGlass).
+
+A practical use case of the ontology is the Semantic Knowledge Base (SKB) developed with Fast Ontodocker (https://git.material-digital.de/ya-fanchen/fast-ontodocker), which covers the entire glass manufacturing process parameters and glass property searching, as well as the integration of SciGlass data.
+
+It is based on the PMD Core Ontology (PMDco) v1 and a migration to the latest PMDco is planned.""" ;
+                                           owl:versionIRI "https://w3id.org/pmd/glass-ontology/"@en ;
                                            owl:versionInfo "1.0.0" .
 
 #################################################################
@@ -58,17 +65,29 @@ dc:creator rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/contributor
-terms:contributor rdf:type owl:AnnotationProperty ;
-                  rdfs:subPropertyOf dc:contributor .
+dcterms:contributor rdf:type owl:AnnotationProperty ;
+                    rdfs:subPropertyOf dc:contributor .
+
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/creator
-terms:creator rdf:type owl:AnnotationProperty ;
-              rdfs:subPropertyOf dc:creator .
+dcterms:creator rdf:type owl:AnnotationProperty ;
+                rdfs:subPropertyOf dc:creator .
 
 
 ###  http://purl.org/dc/terms/license
-terms:license rdf:type owl:AnnotationProperty .
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionIRI
+owl:versionIRI rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#altLabel

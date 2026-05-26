@@ -1,0 +1,59 @@
+Prefix(:=<https://w3id.org/pmd/go.owl#>)
+Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(dcterms:=<http://purl.org/dc/terms/>)
+
+
+Ontology(<https://w3id.org/pmd/go.owl>
+Import(<https://w3id.org/pmd/go/imports/pmdco_import.owl>)
+Annotation(<http://purl.obolibrary.org/obo/IAO_0000116> "References/definitions are mostly came from SciGlass database (https://github.com/epam/SciGlass), Bundesanstalt für Materialforschung und -prüfung (BAM) and Platform MaterialDigital (PMD). INTERGLAD database (https://www.newglass.jp/interglad_n/gaiyo/info_e.html) may also be adopted in the future.")
+Annotation(dcterms:contributor "Simon Stier (https://orcid.org/0000-0003-0410-3616)")
+Annotation(dcterms:contributor "Ya-Fan Chen (https://orcid.org/0000-0003-4295-7815)")
+Annotation(dcterms:creator "Azin Mazloom Jalali (https://orcid.org/0000-0003-4015-8905)")
+Annotation(dcterms:creator "Hossein Beygi Nasrabadi (https://orcid.org/0000-0002-3092-0532)")
+Annotation(dcterms:description "None")
+Annotation(dcterms:license <https://creativecommons.org/licenses/by/4.0/>)
+Annotation(dcterms:title "Glass Ontology")
+Annotation(rdfs:comment "The GlasDigital Ontology was developed for the GlasDigital project (https://www.materialdigital.de/project/4). It describes the robotic melting process at Bundesanstalt für Materialforschung und -prüfung (BAM), Berlin and also contains the terminology of the SciGlass database (The data has become open source since 2019. See: https://github.com/epam/SciGlass).
+
+A practical use case of the ontology is the Semantic Knowledge Base (SKB) developed with Fast Ontodocker (https://git.material-digital.de/ya-fanchen/fast-ontodocker), which covers the entire glass manufacturing process parameters and glass property searching, as well as the integration of SciGlass data.
+
+It is based on the PMD Core Ontology (PMDco) v1 and a migration to the latest PMDco is planned.")
+
+Declaration(Class(<https://w3id.org/pmd/glass-ontology/GO_0000000>))
+Declaration(AnnotationProperty(dcterms:description))
+Declaration(AnnotationProperty(dcterms:license))
+Declaration(AnnotationProperty(dcterms:title))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: dcterms:description (description)
+
+AnnotationAssertion(rdfs:label dcterms:description "description")
+
+# Annotation Property: dcterms:license (dcterms:license)
+
+AnnotationAssertion(rdfs:label dcterms:license "license")
+
+# Annotation Property: dcterms:title (title)
+
+AnnotationAssertion(rdfs:label dcterms:title "title")
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <https://w3id.org/pmd/glass-ontology/GO_0000000> (test)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/glass-ontology/GO_0000000> "test"@en)
+SubClassOf(<https://w3id.org/pmd/glass-ontology/GO_0000000> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+
+)

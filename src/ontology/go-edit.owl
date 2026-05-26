@@ -25,6 +25,8 @@ A practical use case of the ontology is the Semantic Knowledge Base (SKB) develo
 It is based on the PMD Core Ontology (PMDco) v1 and a migration to the latest PMDco is planned.")
 
 Declaration(Class(<https://w3id.org/pmd/glass-ontology/GO_0000000>))
+Declaration(Class(<https://w3id.org/pmd/glass-ontology/GO_1000000>))
+Declaration(Class(<https://w3id.org/pmd/glass-ontology/GO_1000001>))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
@@ -54,6 +56,16 @@ AnnotationAssertion(rdfs:label dcterms:title "title")
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/glass-ontology/GO_0000000> "test"@en)
 SubClassOf(<https://w3id.org/pmd/glass-ontology/GO_0000000> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: <https://w3id.org/pmd/glass-ontology/GO_1000000> (test2)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/glass-ontology/GO_1000000> "test2"@en)
+SubClassOf(<https://w3id.org/pmd/glass-ontology/GO_1000000> <https://w3id.org/pmd/glass-ontology/GO_0000000>)
+
+# Class: <https://w3id.org/pmd/glass-ontology/GO_1000001> (test3)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/glass-ontology/GO_1000001> "test3"@en)
+SubClassOf(<https://w3id.org/pmd/glass-ontology/GO_1000001> <https://w3id.org/pmd/glass-ontology/GO_1000000>)
 
 
 )

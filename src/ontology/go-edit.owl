@@ -10,19 +10,27 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 Ontology(<https://w3id.org/pmd/go.owl>
 Import(<https://w3id.org/pmd/go/imports/pmdco_import.owl>)
-Annotation(<http://purl.obolibrary.org/obo/IAO_0000116> "References/definitions are mostly came from SciGlass database (https://github.com/epam/SciGlass), Bundesanstalt für Materialforschung und -prüfung (BAM) and Platform MaterialDigital (PMD). INTERGLAD database (https://www.newglass.jp/interglad_n/gaiyo/info_e.html) may also be adopted in the future.")
-Annotation(dcterms:contributor "Simon Stier (https://orcid.org/0000-0003-0410-3616)")
-Annotation(dcterms:contributor "Ya-Fan Chen (https://orcid.org/0000-0003-4295-7815)")
+Annotation(<http://purl.obolibrary.org/obo/IAO_0000116> "The initial terminology and definitions were derived mainly from the SciGlass database(https://github.com/epam/SciGlass), the GlasDigital project,  Bundesanstalt für Materialforschung und -prüfung (BAM) robotic melting and analysis workflows, and Platform MaterialDigital (PMD) Core Ontology concepts.
+
+In the GlasAgent extension, additional terminology and relations are being curated from relevant DIN and ISO standards, accredited testing procedures, industrial glass manufacturing workflows, simulation methods, recycling processes, and SciGlass Next use cases. The ontology will be continuously updated through a curation process, including the addition of new concepts, refinement of existing definitions, removal of obsolete concepts, and alignment with future PMDco versions.
+
+Potential future alignments include QUDT for units and ChEBI or related chemical ontologies for the representation of chemical species and glass compositions.")
 Annotation(dcterms:creator "Azin Mazloom Jalali (https://orcid.org/0000-0003-4015-8905)")
 Annotation(dcterms:creator "Hossein Beygi Nasrabadi (https://orcid.org/0000-0002-3092-0532)")
-Annotation(dcterms:description "None")
+Annotation(dcterms:creator "Simon Stier (https://orcid.org/0000-0003-0410-3616)")
+Annotation(dcterms:creator "Ya-Fan Chen (https://orcid.org/0000-0003-4295-7815)")
+Annotation(dcterms:description "A domain ontology for glass materials and glass-related processes, developed to support semantic data integration, standardization, and interoperability in digital glass research. The ontology covers glass compositions, raw materials, material properties, process parameters, manufacturing and analysis workflows, and links to SciGlass-derived data.
+
+In the GlasAgent project, the ontology is extended with concepts for DIN and ISO standards, testing and characterization procedures, simulation workflows, industrial glass manufacturing, recycling processes, and life-cycle representation. It supports the development of a machine-readable knowledge structure for specification-driven, data-driven, and simulation-supported glass development.")
 Annotation(dcterms:license <https://creativecommons.org/licenses/by/4.0/>)
 Annotation(dcterms:title "Glass Ontology")
-Annotation(rdfs:comment "The GlasDigital Ontology was developed for the GlasDigital project (https://www.materialdigital.de/project/4). It describes the robotic melting process at Bundesanstalt für Materialforschung und -prüfung (BAM), Berlin and also contains the terminology of the SciGlass database (The data has become open source since 2019. See: https://github.com/epam/SciGlass).
+Annotation(rdfs:comment "The Glass Ontology was originally developed in the GlasDigital project to provide an ontology-based digital infrastructure for data-driven glass development. It represents glass-related terminology, material properties, process parameters, manufacturing steps, analysis procedures, and SciGlass-derived data in a semantic and interoperable form.
 
-A practical use case of the ontology is the Semantic Knowledge Base (SKB) developed with Fast Ontodocker (https://git.material-digital.de/ya-fanchen/fast-ontodocker), which covers the entire glass manufacturing process parameters and glass property searching, as well as the integration of SciGlass data.
+Within the GlasAgent project, the ontology is being extended to cover the full digital representation of glass development, including relevant DIN and ISO standards, raw materials, industrial glass manufacturing processes, analytical and testing methods, computer simulation workflows, recycling processes, and the life cycle of prototypical glass products.
 
-It is based on the PMD Core Ontology (PMDco) v1 and a migration to the latest PMDco is planned.")
+A practical use case of the ontology is its integration with the SciGlass Next platform and semantic data infrastructure, enabling structured search, data harmonization, metadata representation, and future connection to software-agent-based workflows for glass design and optimization.
+
+The ontology is based on PMD Core Ontology concepts and is intended to remain aligned with future PMDco developments.")
 
 Declaration(Class(<https://w3id.org/pmd/glass-ontology/GO_0000000>))
 Declaration(Class(<https://w3id.org/pmd/glass-ontology/GO_1000000>))

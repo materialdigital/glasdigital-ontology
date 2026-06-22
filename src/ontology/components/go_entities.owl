@@ -1,0 +1,1118 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/pmd/glass-ontology/go-template.owl#"
+     xml:base="https://w3id.org/pmd/glass-ontology/go-template.owl"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="https://w3id.org/pmd/glass-ontology/go-template.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#comment -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#comment"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000054 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000054"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000066 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000066"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000052 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0009006 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0009006"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0025006 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/PMD_0025006"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000017"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000023"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000070 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000070"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000245 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000245"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000005 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000005"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000008 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000008"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000506 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000506"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000530 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000530"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000546 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000546"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000554 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000554"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000597 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000597"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000614 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000614"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000618 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000618"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000661 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000661"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000779 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000779"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000848 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000848"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000849 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000849"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000877 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000877"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000878 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000878"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000942 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000942"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000949 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000949"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000957 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000957"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000967 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000967"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000981 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000981"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000982 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000982"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000987 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000987"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0001005 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0001005"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0001010 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0001010"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0020005 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020005"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0020131 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020131"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0020164 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020164"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0020194 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020194"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0020195 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020195"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0025010 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0025010"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0025011 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0025011"/>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000001 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000001">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000877"/>
+        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Abbe_number@en</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Abbe number</rdfs:label>
+        <skos:altLabel> &quot;Vd-number&quot;@en</skos:altLabel>
+        <skos:definition xml:lang="en">Abbe number is an approximate measure of the materials dispersion (change of refractive index versus wavelength), with high values of V indicating low dispersion. It is named after Ernst Abbe (1840–1905), the German physicist who defined it. Expressed by the Greek letter ν or by the English letter V. Designates reciprocal dispersive power as follows: ν = (n_D - 1)/ (n_F - n_C) [Standard definition (ASTM; C162-52)] In Sciglass database, Abbes number at 20°C@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000002 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000002">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000506"/>
+        <rdfs:label xml:lang="en">sound absorption</rdfs:label>
+        <skos:definition xml:lang="en">An acoustic quality that inheres in a material by virtue of its capacity to absorb sound energy and attenuate a propagating sound wave.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000003 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000003">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000008"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0025006"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000530"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">bending rate</rdfs:label>
+        <skos:definition xml:lang="en">Increase of bending deformation per time.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000004 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000004">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000848"/>
+        <obo:IAO_0000119>SciGlass 7.0@en</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">compressibility</rdfs:label>
+        <skos:definition xml:lang="en">The inverse of bulk modulus.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000005 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0025011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000119>SciGlass 7.0@en</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">critical cooling rate</rdfs:label>
+        <skos:definition xml:lang="en">The minimal cooling rate of a substance initially existing in a liquid state which ensures obtaining this substance in a glassy state without visible signs of crystallization. The higher the tendency of the substance to crystallize, the higher its critical cooling rate.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000006 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000006">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020164"/>
+        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Critical_point_(thermodynamics)@en</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">critical temperature</rdfs:label>
+        <skos:altLabel> &quot;critical point&quot;@en &quot;critical state&quot;@en</skos:altLabel>
+        <skos:definition xml:lang="en">In thermodynamics, a critical point (or critical state) is the end point of a phase equilibrium curve.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000007 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000007">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000005"/>
+        <obo:IAO_0000119>SciGlass 7.0@en</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">diffusion coefficient</rdfs:label>
+        <skos:definition xml:lang="en">Diffusion coefficient is a material property that quantifies the rate at which particles (atoms, molecules, ions) migrate through a material under the influence of a concentration gradient, defined as the proportionality constant in Fick’s first law.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000008 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000661"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000119>SciGlass 7.0@en</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">dilatometric softening temperature</rdfs:label>
+        <skos:definition xml:lang="en">The temperature at which the length of a sample in a dilatometer, with considerable external force applied to the sample in the course of heating at constant rate, reaches a maximal value and begins to decrease with further increases in temperature. The appearance of the maximum on the dilatometric curve is connected with the parallel influence of sample dilatation with increasing temperature and sample deformation due to the viscous flow. The position of the maximum can correspond approximately to a certain viscosity of the studied glass. Usually this viscosity is assumed to be equal to 10^11 P. However this value depends a great deal on the external load applied to the sample (the greater the load the higher corresponding viscosity), on the area of sample section (the greater the area the lower viscosity), on the value of TEC for the studied substance in its liquid state (the higher TEC the lower viscosity), on the rate of heating and on the previous thermal history of the sample (the higher the heating rate the lower viscosity; the lower the fictive temperature of the substance the lower viscosity). Thus the actual  viscosity  values at dilatometric softening temperatures could differ from the value stated above as greatly as  one order of magnitude. See also deformation point. unit = °C, symbol = Mg@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000009 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000009">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000949"/>
+        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Elastic_modulus@en</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">elastic constant</rdfs:label>
+        <skos:altLabel> &quot;elastic modulus&quot;@en  &quot;modulus of elasticity&quot;@en</skos:altLabel>
+        <skos:definition xml:lang="en">a mechanical property that quantifies the linear relationship between stress and strain in a material, typically expressed as a component of the stiffness tensor or compliance tensor.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000010 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000010">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000618"/>
+        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Shear_modulus@en &quot;SciGlass 7.0&quot;@en</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">shear modulus</rdfs:label>
+        <skos:altLabel>modulus of rigidity@en&quot;rigidity modulus&quot;@en</skos:altLabel>
+        <skos:comment>The ratio of shear stress to shear strain. The term rigidity modulus is also used. In Sciglass, Shear modulus at 20°C unit = GPa@en</skos:comment>
+        <skos:definition xml:lang="en">In materials science, shear modulus or modulus of rigidity, denoted by G, or sometimes S or μ, is a measure of the elastic shear stiffness of a material and is defined as the ratio of shear stress to the shear strain.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000011 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000011">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000848"/>
+        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Poisson%27s_ratio@en</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Poisson ratio</rdfs:label>
+        <skos:definition xml:lang="en">a mechanical property that quantifies the ratio of lateral strain to axial strain in a material under uniaxial tensile or compressive load, within the linear elastic region.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000012 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000012">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000877"/>
+        <obo:IAO_0000119>SciGlass 7.0@en</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">extinction coefficient</rdfs:label>
+        <skos:definition xml:lang="en">an optical property that quantifies the attenuation of light as it passes through a material, defined as the imaginary part of the complex refractive index, representing absorption and scattering losses.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000013 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000013">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000967"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000661"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000119>SciGlass 7.0@en</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">fictive temperature</rdfs:label>
+        <skos:definition xml:lang="en">&quot;a temperature that characterises the structural state of a glass, defined as the temperature at which the glass would be in equilibrium with the supercooled liquid if it were cooled infinitely slowly.&quot;@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000014 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000014">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000848"/>
+        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Fracture_toughness@en</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">fracture toughness</rdfs:label>
+        <skos:definition xml:lang="en">In materials science, fracture toughness is the critical stress intensity factor of a sharp crack where propagation of the crack suddenly becomes rapid and unlimited.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000015 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000015">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020131"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000661"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">glass homogeneity</rdfs:label>
+        <skos:definition xml:lang="en">an intensive quality of a glass portion of matter that describes the uniformity of chemical composition and structural features (e.g., absence of cords, striae, or bubbles) throughout its volume.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000016 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000016">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000967"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000661"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000119>https://www.sciencedirect.com/topics/chemistry/glass-transition-temperature@en &quot;SciGlass 7.0&quot;@en</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">glass transition temperature</rdfs:label>
+        <skos:definition xml:lang="en">The glass transition temperature (Tg) is the temperature range where the polymer substrate changes from a rigid glassy material to a soft (not melted) material (unit = °C).@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000017 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000017">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000008"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0025006"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0025010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000119>SciGlass 7.0@en</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">heating rate</rdfs:label>
+        <skos:definition xml:lang="en">Heating rate is a process attribute that quantifies the increase in temperature per unit time during a heating process, typically expressed in degrees Celsius per minute or Kelvin per second.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000018 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000018">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020195"/>
+        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Crystal_growth@en</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Internal friction</rdfs:label>
+        <skos:definition xml:lang="en">Characteristic of the loss of energy of sinusoidal vibrations in a substance due to its inelastic deformations. It is equal to 2*pi*tanδ, where tanδ is the loss tangent (see quality factor&quot;&quot;).&quot;@en	SciGlass 7.0@en			pmd:mechanical property	co:PMD_0000848								
+https://w3id.org/pmd/glass-ontology/GO_0000019	the highest temperature at which crystals can coexist with the melt in equilibrium; above this temperature the material is completely liquid	liquidus temperature	Liquidus temperature is a state of matter boundary realised by the transition from a mixture of solid crystals and liquid to a completely liquid state upon heating, or the inverse upon cooling, in a multi‑component system.@en	SciGlass 7.0@en			pmd:state of matter boundary	co:PMD_0020164	characteristic of&apos; some &apos;glass&apos;		co:PMD_0000661					
+https://w3id.org/pmd/glass-ontology/GO_0000020	In the usual glass/materials context, this is a damping-response quantity under oscillatory mechanical loading.	loss angle	Loss angle is a mechanical property that quantifies the phase lag between applied stress and resulting strain in a viscoelastic material under cyclic loading, expressed as the angle δ where tan δ equals the ratio of loss modulus to storage modulus.@en	SciGlass 7.0@en			pmd:mechanical property	co:PMD_0000848								
+https://w3id.org/pmd/glass-ontology/GO_0000021	This is a time-dependent kinetic behavior of the material system, so pmd:temporal property is the best available PMD subclass.	crystal growth rate	crystal growth rate is a process attribute that specifies the linear growth velocity of crystals during a crystallisation process, typically expressed in micrometres per second, occurring at a characteristic temperature.@en	SciGlass 7.0@en			pmd:process attribute	co:PMD_0000008	process attribute of&apos; some &apos;crystallization process&apos;					co:PMD_0020195		
+https://w3id.org/pmd/glass-ontology/GO_0000022	In PMD, hardness belongs to the mechanical-property branch, and microhardness is best treated as an indentation-hardness subtype. pmd:realizable entity &gt; pmd:material property &gt; pmd:mechanical property &gt; pmd:hardness &gt; pmd:indentation hardness	microhardness	Microhardness is a hardness measured under low indentation loads (typically 1‑1000 gf) using a diamond indenter, where the indentation size is measured microscopically.@en	SciGlass 7.0@en	microindentation hardness@en		pmd:hardness	co:PMD_0000773								
+https://w3id.org/pmd/glass-ontology/GO_0000023	PMD explicitly notes that method-differentiated hardness types such as Vickers-type classes are subclasses of indentation hardness, not just numbers. For the actual numeric result, it would instead be a measurement datum.	Knoop hardness	Knoop hardness is a microhardness value obtained with a rhombic‑based diamond pyramid indenter under a specified load, expressed as the ratio of load to the projected indentation area.@en ;				pmd:indentation hardness	co:PMD_0000789								
+https://w3id.org/pmd/glass-ontology/GO_0000024	It is a distinct optical property (depends on concentration).	molar extinction coefficient	Molar extinction coefficient is an optical property that quantifies the absorbance of light per unit concentration and path length for a given substance at a specified wavelength, typically expressed in L·mol⁻¹·cm⁻¹.@en	https://en.wikipedia.org/wiki/Molar_attenuation_coefficient@en	molar absorptivity@en&quot;molar attenuation coefficient&quot;@en		pmd:optical property	co:PMD_0000877								
+https://w3id.org/pmd/glass-ontology/GO_0000025	It is a dimensionless material property related to internal friction.	loss tangent	Loss tangent is a mechanical property that quantifies the damping capacity of a viscoelastic material, defined as the ratio of loss modulus to storage modulus under cyclic loading.@en	SciGlass 7.0@en			pmd:mechanical property	co:PMD_0000848								
+https://w3id.org/pmd/glass-ontology/GO_0000026	This is an inherent amount/composition-related characteristic, not a response-capacity. There is no better shown PMD subclass in your screenshot, so pmd:intensive quality is the safest precise placement.	molar mass	Molar mass is an intensive quality of a pure substance that expresses the mass per amount of substance, typically in grams per mole.@en	SciGlass 7.0@en	molar weight@en		pmd:intensive quality	co:PMD_0020131								
+https://w3id.org/pmd/glass-ontology/GO_0000027	This is an inherent intensive physical characteristic, not a response-capacity.	molar volume	Molar volume is an intensive quality of a pure substance that expresses the volume occupied by one mole of the substance under specified conditions.@en	SciGlass 7.0@en			pmd:intensive quality	co:PMD_0020131								
+https://w3id.org/pmd/glass-ontology/GO_0000028	This is exactly a composition proportion on a molar basis, so this is one of the clearest quality cases.	mole percent	Mole percent is a molar proportion expressed as a percentage, i.e., the number of moles of a component divided by the total number of moles, multiplied by 100.@en				pmd:molar proportion	co:PMD_0020103								
+https://w3id.org/pmd/glass-ontology/GO_0000029	It describes time-dependent kinetic behavior realized in a nucleation process, not a static state-like quality.	nucleation rate	Nucleation rate is a process attribute that quantifies the number of stable nuclei formed per unit volume per unit time during a phase transformation or crystallisation process.@en ;	SciGlass 7.0@en			pmd:process attribute	co:PMD_0000008	process attribute of&apos; some &apos;crystallization process&apos;					co:PMD_0020195		
+https://w3id.org/pmd/glass-ontology/GO_0000030	No existing class for absorbance. It is a fundamental optical property (related to extinction coefficient).	absorbance	Absorbance is an optical property that quantifies the attenuation of light passing through a material, defined as the base‑10 logarithm of the ratio of incident to transmitted radiant power.@en ;	https://en.wikipedia.org/wiki/Absorbance@en		Though optical density and absorbance both measure the absorption of light when that light passes through an optical component, these two terms are not the same. Optical density measures the amount of attenuation, or intensity lost, when light passes through an optical component. It also tracks attenuation based on the scattering of light, whereas absorbance considers only the absorption of light within the optical component. Both optical density and absorbance can be tracked through the use of a spectrometer. see https://sciencing.com/difference-between-optical-density-absorbance-7842652.html@en	pmd:optical property	co:PMD_0000877								
+https://w3id.org/pmd/glass-ontology/GO_0000031	It is a specific measure of dispersion. Could be considered a subclass of pmd:PMD_0020247 (dispersion).	mean dispersion	Mean dispersion is an optical property that quantifies the difference in refractive index between the blue (F, 486.1 nm) and red (C, 656.3 nm) spectral lines, used to characterise chromatic dispersion in optical materials.@en				pmd:dispersion	co:PMD_0020247								
+https://w3id.org/pmd/glass-ontology/GO_2000032	PMD does not have a dedicated class for refractive index. There is pmd:PMD_0000790 (refraction (optical)) which is a property, but refractive index is the quantitative measure of refraction.	refractive index	Refractive index is an optical property that quantifies the reduction in the speed of light as it passes through a material, defined as the ratio of the speed of light in vacuum to the phase velocity of light in the material.@en	SciGlass 7.0@en	index of refraction@en &quot;refraction index&quot;@en		pmd:optical property	co:PMD_0000877								
+https://w3id.org/pmd/glass-ontology/GO_0000033	it is a mechanical property related to damping.	quality factor	Quality factor is a mechanical property that quantifies the damping of a material or resonator, defined as the reciprocal of the loss tangent (Q = 1/tan δ), where higher Q indicates lower energy dissipation.@en	https://en.wikipedia.org/wiki/Q_factor@en			pmd:mechanical property	co:PMD_0000848								
+https://w3id.org/pmd/glass-ontology/GO_0000034	it is a disposition of a material to exhibit time‑dependent response.	relaxation time	Relaxation time is a material property that quantifies the characteristic time for a material to respond to a stimulus, defined as the time required for a property (e.g., stress or polarisation) to decay to 1/e of its initial value under constant conditions.@en	SciGlass 7.0@en			pmd:material property	co:PMD_0000005								
+https://w3id.org/pmd/glass-ontology/GO_0000035		electrical resistivity	Electrical resistivity is the resistance of a material of unit length and unit cross‑sectional area@en				pmd:electrical property	co:PMD_0000621								
+https://w3id.org/pmd/glass-ontology/GO_0000036	Electrical resistivity is the resistance of a material of unit length and unit cross‑sectional area; specific resistivity is the reciprocal of conductivity.	specific electrical resistivity	Specific electrical resistivity is an electrical property that quantifies a material’s opposition to electric current, defined as the reciprocal of electrical conductivity, typically expressed in ohm·metres.@en	SciGlass 7.0@en			pmd:electrical property	co:PMD_0000621								
+https://w3id.org/pmd/glass-ontology/GO_0000037	In PMD terms this fits the thermal-property branch better than quality, because it describes thermal response behavior of the material. The standards material also lists it under thermal analysis / calorimetry.	specific heat capacity	Specific heat capacity is a thermal property that quantifies the amount of heat required to raise the temperature of unit mass of a material by one degree, typically expressed in J·kg⁻¹·K⁻¹.@en	https://en.wikipedia.org/wiki/Specific_heat_capacity@en &quot;SciGlass 7.0&quot;@en		In thermodynamics, the specific heat capacity (symbol c_p) of a substance is the heat capacity of a sample of the substance divided by the mass of the sample.@en	pmd:thermal property	co:PMD_0000981								
+https://w3id.org/pmd/glass-ontology/GO_0000038	This is an inherent intensive physical characteristic, like an inverse-density-type quantity. 	specific volume	Specific volume is an intensive quality that expresses the volume occupied by unit mass of a material, defined as the reciprocal of density.@en	SciGlass 7.0@en			pmd:intensive quality	co:PMD_0020131								
+https://w3id.org/pmd/glass-ontology/GO_0000039	The stress‑optic coefficient relates the induced birefringence to the applied stress in a material (photoelasticity).	stress-optic coefficient	Stress‑optic coefficient is an optical property that quantifies the linear relationship between mechanical stress and induced birefringence in a material, typically expressed in Br (brewsters).@en	SciGlass 7.0@en	Brewsters constant@en		pmd:optical property	co:PMD_0000877								
+https://w3id.org/pmd/glass-ontology/GO_0000040	Electrical conductivity measured along the surface of a material, often influenced by adsorbed moisture or surface states.	surface electrical conductivity	Surface electrical conductivity is an electrical property that quantifies the ability of a material’s surface layer to conduct electric current, often distinguished from bulk conductivity.@en	SciGlass 7.0@en			pmd:electrical conductivity	co:PMD_0000620								
+https://w3id.org/pmd/glass-ontology/GO_0000041	 It is a material property of interfaces.	surface tension	Surface tension is a material property that quantifies the cohesive energy at the interface between a liquid and a gas, defined as the force per unit length acting along the surface, typically expressed in N·m⁻¹.@en	SciGlass 7.0@en			pmd:material property	co:PMD_0000005								
+https://w3id.org/pmd/glass-ontology/GO_2000042	It is a thermal property.	thermal expansion coefficient	Thermal expansion coefficient is a thermal property that quantifies the relative change in a material’s dimension per unit change in temperature.@en	https://en.wikipedia.org/wiki/Thermal_expansion@en		Thermal expansion is the tendency of matter to change its shape, area, volume, and density in response to a change in temperature, usually not including phase transitions.@en	pmd:thermal property	co:PMD_0000981								
+https://w3id.org/pmd/glass-ontology/GO_0000043	The linear CTE is the fractional change in length per unit temperature change.	linear thermal expansion coefficient	Linear thermal expansion coefficient is a thermal property that quantifies the fractional change in length of a material per unit change in temperature, typically expressed in K⁻¹.@en	SciGlass 7.0@en	coefficient of linear thermal expansion@en		go:thermal expansion coefficient	GO:2000042								
+https://w3id.org/pmd/glass-ontology/GO_0000044	The volume CTE is the fractional change in volume per unit temperature change, approximately 3αₗ for isotropic materials.	volume thermal expansion coefficient	Volume thermal expansion coefficient is a thermal property that quantifies the fractional change in volume of a material per unit change in temperature, typically expressed in K⁻¹.@en	SciGlass 7.0@en	volumetric thermal expansion coefficient@en		go:thermal expansion coefficient	GO:2000042								
+https://w3id.org/pmd/glass-ontology/GO_2000045	A material property combining strength, thermal expansion, elastic modulus, and Poisson’s ratio.Not a fundamental property but can be represented as a class.	thermal shock resistance	Thermal shock resistance is a material property that quantifies the ability of a material to withstand sudden temperature changes without cracking, typically expressed as a figure of merit derived from mechanical and thermal properties.@en	SciGlass 7.0@en	thermal endurance@en		pmd:material property	co:PMD_0000005								
+https://w3id.org/pmd/glass-ontology/GO_2000046	Viscosity is a material response/rheological property. I would keep it under pmd:material property because the shown PMD subclasses do not offer a better rheology-specific branch. GlasDigital and the standards material explicitly treat viscosities as determined by viscometry.	viscosity	Viscosity is a material property that quantifies a fluid’s resistance to shear flow, defined as the ratio of shear stress to shear rate, typically expressed in Pa·s.@en	https://en.wikipedia.org/wiki/Viscosity@en &quot;SciGlass 7.0&quot;@en			pmd:material property	co:PMD_0000005								
+https://w3id.org/pmd/glass-ontology/GO_0000047	PMD v3 explicitly uses rates like cooling rate as examples of subclasses of process attribute.	cooling rate	Cooling at a constant rate.@en			It contains two values in the raw melting json data of BAM, and it is displayed as a list.@en	pmd:process attribute	co:PMD_0000008	process attribute of&apos; some &apos;cooling process&apos;					co:PMD_0025011		
+	Processes															
+https://w3id.org/pmd/glass-ontology/GO_0000049	In practice this is an umbrella of inspection/testing activities, so analysis process is the safest PMD-side placement.	quality control	A planned process that has the objective to recover and reprocess waste materials for reuse as input material or for manufacture into new products.@en				cob:completely executed planned process	obo:COB_0000035								
+https://w3id.org/pmd/glass-ontology/GO_0000050		recycling	A planned thermal treatment process that has the objective to bond and densify a shaped particulate body by heating it, typically below complete melting, in order to develop its final structure and properties.@en				cob:completely executed planned process	obo:COB_0000035								
+https://w3id.org/pmd/glass-ontology/GO_0000051	name to be changed Crystal Growth Stage and it was defined as the subclass of crystallization process in the original ontology GO.	crystal Growth	Crystal growth is a major stage of a crystallization process, and consists in the addition of new atoms, ions, or polymer strings into the characteristic arrangement of the crystalline lattice.[1][2] The growth typically follows an initial stage of either homogeneous or heterogeneous (surface catalyzed) nucleation, unless a seed&quot;&quot; crystal, purposely added to start the growth, was already present.&quot;@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000052 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000052">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020195"/>
+        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Nucleation@en</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">nucleation</rdfs:label>
+        <skos:definition xml:lang="en">Nucleation is the first step in the formation of either a new thermodynamic phase or a new structure via self-assembly or self-organization. Nucleation is typically defined to be the process that determines how long an observer has to wait before the new phase or self-organized structure appears.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000053 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000053">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000614"/>
+        <rdfs:label xml:lang="en">cutting</rdfs:label>
+        <skos:definition xml:lang="en">A planned process that has the objective to reduce or eliminate the release of harmful substances from a source into the atmosphere.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000054 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000054">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000779"/>
+        <rdfs:label xml:lang="en">tempering</rdfs:label>
+        <skos:definition xml:lang="en">a heat-treatment process used to improve the toughness and reduce the brittleness of hardened metals, especially steel, by reheating them to a controlled temperature and then cooling them.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000055 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000055">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0001010"/>
+        <rdfs:label xml:lang="en">Abrasion resistance testing process</rdfs:label>
+        <skos:definition xml:lang="en">An abrasion resistance testing process is a wear testing process that measures the resistance of a material to surface wear caused by abrasive action, typically by subjecting a specimen to a defined abrasive medium under controlled load and cycles, and quantifying the loss of mass, thickness, or optical clarity.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000056 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000056">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000554"/>
+        <rdfs:label xml:lang="en">Chemical durability analyzing process</rdfs:label>
+        <skos:definition xml:lang="en">A chemical durability analyzing process is a chemical property analyzing process that evaluates the resistance of a glass, ceramic, glass‑ceramic, or refractory material to chemical attack by exposing a specimen to a specified reagent (e.g., water, acid, alkali) under defined conditions (e.g., temperature, duration) and quantifying the degradation by mass loss, ion extraction, or surface alteration.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000057 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000057">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000878"/>
+        <rdfs:label xml:lang="en">Color analyzing process</rdfs:label>
+        <skos:definition xml:lang="en">A color analyzing process is an optical property analyzing process that quantifies the color of a material by measuring its spectral reflectance or transmittance under a specified illuminant and observer, and expressing the result in a standard color space (e.g., CIE L*a*b*, CIE XYZ).@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000058 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000058">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000070"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0009006"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000597"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Density analyzing process</rdfs:label>
+        <skos:definition xml:lang="en">A density analyzing process is an assay that determines the density (mass per unit volume) of a solid material by measuring the mass of a specimen and its volume, typically using buoyancy (Archimedes method), gas pycnometry, or dimensional measurement for regular shapes.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000059 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000059">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000957"/>
+        <rdfs:label xml:lang="en">Gas permeability analyzing process</rdfs:label>
+        <skos:definition xml:lang="en">A gas permeability analyzing process is a chemical property analyzing process that measures the rate of gas flow through a porous material under a defined pressure gradient, and calculates the permeability coefficient (e.g., in darcy or m²) according to Darcy’s law, typically using a permeameter.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000060 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000060">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000878"/>
+        <rdfs:label xml:lang="en">Gloss measurement analyzing process</rdfs:label>
+        <skos:definition xml:lang="en">A gloss measurement analyzing process is an optical property analyzing process that quantifies the specular reflectance (gloss) of a surface by directing a light beam at a specified angle (e.g., 20°, 60°, or 85°) onto the specimen, measuring the reflected luminous flux, and comparing it to a calibrated standard (e.g., a black glass reference).@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000061 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000061">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000878"/>
+        <rdfs:label xml:lang="en">Light transmission analyzing process</rdfs:label>
+        <skos:definition xml:lang="en">An optical property analyzing process is an assay that assesses the optical characteristics of materials, such as refractive index, absorption, transmission, reflectivity, and luminescence.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000062 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000062">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000554"/>
+        <rdfs:label xml:lang="en">Photocatalytic activity analyzing process</rdfs:label>
+        <skos:definition xml:lang="en">A photocatalytic activity analyzing process is a chemical property analyzing process that measures the ability of a material to accelerate a photochemical reaction upon light irradiation (typically UV or visible), by quantifying the degradation rate of a probe molecule (e.g., methylene blue, stearic acid) or the change in surface wettability under specified light intensity and wavelength conditions.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000063 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000063">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000878"/>
+        <rdfs:label xml:lang="en">Polariscopic analyzing process</rdfs:label>
+        <skos:definition xml:lang="en">A polariscopic analyzing process is an optical property analyzing process that measures the optical retardation (birefringence) in a transparent material by passing polarized light through the specimen and analyzing the resulting interference pattern, thereby determining the magnitude and distribution of residual stress.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000064 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000064">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000957"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0009006"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0020005"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Porosity analyzing process</rdfs:label>
+        <skos:definition xml:lang="en">A porosity analyzing process is a structural property analyzing process that determines the void fraction (open porosity, closed porosity, or total porosity) in a porous material by measuring the pore volume relative to the total volume, typically using fluid displacement (e.g., water immersion, mercury intrusion) or gas expansion (e.g., gas pycnometry) methods.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000065 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000065">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000878"/>
+        <rdfs:label xml:lang="en">Refractive index analyzing process</rdfs:label>
+        <skos:definition xml:lang="en">A refractive index analyzing process is an optical property analyzing process that determines the refractive index of a transparent material by measuring the angle of refraction or the critical angle at the interface between the material and a reference medium, typically using a refractometer (e.g., Abbe, Pulfrich, or prism coupler).@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000066 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000066">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000661"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0009006"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000942"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Specific surface area analyzing process</rdfs:label>
+        <skos:definition xml:lang="en">A specific surface area analyzing process is a structural property analyzing process that determines the total surface area of a solid per unit mass (or per unit volume) by measuring the adsorption of a gas (e.g., nitrogen, krypton) at a known relative pressure and temperature, and calculating the surface area using a standard model such as the Brunauer‑Emmett‑Teller (BET) theory.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000067 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000067">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000661"/>
+        <rdfs:label xml:lang="en">Surface roughness testing process</rdfs:label>
+        <skos:definition xml:lang="en">A surface roughness testing process is a structural property analyzing process that measures the micro‑geometric irregularities of a material surface by tracing a stylus (contact profilometry) or using optical methods (e.g., laser scanning, white light interferometry), and calculates standard roughness parameters such as Ra, Rz, or Rq.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000068 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000068">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000982"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0009006"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000981"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Thermal diffusivity analyzing process</rdfs:label>
+        <skos:definition xml:lang="en">A thermal diffusivity analyzing process is a thermal property analyzing process that determines the rate at which heat diffuses through a material by applying a short heat pulse (e.g., laser or flash lamp) to one face of a specimen, measuring the temperature rise on the opposite face over time, and calculating the thermal diffusivity from the thermal response curve, typically using the laser flash method (LFA).@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000069 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000069">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000849"/>
+        <rdfs:label xml:lang="en">Thermal shock resistance analyzing process</rdfs:label>
+        <skos:definition xml:lang="en">A thermal shock resistance analyzing process is a mechanical property analyzing process that evaluates the ability of a material to withstand rapid temperature changes by subjecting a specimen to a defined thermal cycle (e.g., heating followed by quenching in a liquid medium), and assessing the resulting damage such as cracking, strength loss, or mass loss, often determining the critical temperature difference (ΔT) that causes failure.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000070 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000070">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000957"/>
+        <rdfs:label xml:lang="en">Water absorption analyzing process</rdfs:label>
+        <skos:definition xml:lang="en">A water absorption analyzing process is a structural property analyzing process that determines the water absorption of a porous material by measuring the mass increase of a dried specimen after immersion in water under defined conditions (e.g., boiling, vacuum saturation), and calculates the absorption as a percentage of the dry mass.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000071 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000071">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000957"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0009006"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000618"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000119>https://www.imce.eu/products/rfda-professional@en</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">resonant frequency and damping analysis</rdfs:label>
+        <skos:definition xml:lang="en">Resonant Frequency and Damping Analysis (RFDA) professional system measures the resonant frequencies and internal friction or damping of samples and calculates the Youngs modulus, shear modulus, Poissons ratio of rectangular bars, cylindrical rods and discs according to the ASTM E1876-15 standard. non-destructive test method. measurement of the resonance frequency and its decay behaviour after a short mechanical impulse. determination of elasticity and shear modulus, the lateral contraction number and damping.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000072 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000072">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000982"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0009006"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000981"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Calorimetry@en</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">calorimetry</rdfs:label>
+        <skos:definition xml:lang="en">Calorimetry is the science or act of measuring changes in state variables of a body for the purpose of deriving the heat transfer associated with changes of its state due, for example, to chemical reactions, physical changes, or phase transitions under specified constraints. Calorimetry is performed with a calorimeter.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000073 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000073">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000987"/>
+        <rdfs:label xml:lang="en">dilatometry</rdfs:label>
+        <skos:definition xml:lang="en">A planned process that has the objective to determine the dimensional change or thermal expansion of a material as a function of temperature under controlled conditions.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000074 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000074">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0001005"/>
+        <rdfs:label xml:lang="en">beam bending viscometry</rdfs:label>
+        <skos:definition xml:lang="en">A planned viscometry process that has the objective to determine the viscosity of glass by measuring the rate of viscous bending of a loaded glass beam.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000075 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000075">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0001005"/>
+        <rdfs:label xml:lang="en">parallel plate viscometry</rdfs:label>
+        <skos:definition xml:lang="en">A planned viscometry process that has the objective to determine the viscosity of glass by measuring the rate of change in thickness of a cylindrical specimen compressed between parallel plates.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000076 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000076">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0001005"/>
+        <rdfs:label xml:lang="en">rotational viscometry</rdfs:label>
+        <skos:definition xml:lang="en">A planned viscometry process that has the objective to determine the viscosity of glass above the softening point by measuring spindle torque generated by differential rotation in molten glass.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000077 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000077">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000245"/>
+        <rdfs:label xml:lang="en">Standard issuer</rdfs:label>
+        <skos:definition xml:lang="en">An organization that develops, approves, or publishes standards for common and repeated use within a recognized standardization framework.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000078 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000078">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/glass-ontology/GO_0000077"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">standard issuer role</rdfs:label>
+        <skos:definition xml:lang="en">A role that inheres in an organization by virtue of its recognized responsibility to develop, approve, or publish standards.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000079 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000079">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020194"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000661"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">ion diffusion</rdfs:label>
+        <skos:comment>SciGlass 7.0@en</skos:comment>
+        <skos:definition xml:lang="en">Diffusion of ions inside the glass or into the glass bulk from the surface.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000080 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000080">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:label xml:lang="en">standard issuing process</rdfs:label>
+        <skos:definition xml:lang="en">A planned process that has the objective to develop, review, approve, and publish a standard through the procedures of a recognized standards body and consensus-based standardization workflow.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000081 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000081">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/glass-ontology/GO_0000077"/>
+        <rdfs:label xml:lang="en">Brazilian Association of Technical Standard</rdfs:label>
+        <skos:altLabel>ABNT</skos:altLabel>
+        <skos:definition xml:lang="en">The Brazilian national standards body responsible for developing and publishing technical standards in Brazil and representing the country in international standardization organizations.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000082 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000082">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/glass-ontology/GO_0000077"/>
+        <rdfs:label xml:lang="en">Standards Australia / Standards New Zealand</rdfs:label>
+        <skos:altLabel>AS/NZS</skos:altLabel>
+        <skos:definition xml:lang="en">Joint standardization framework administered by Standards Australia and Standards New Zealand for developing and publishing technical standards used in Australia and New Zealand.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000083 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000083">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/glass-ontology/GO_0000077"/>
+        <rdfs:label xml:lang="en">ASTM International</rdfs:label>
+        <skos:altLabel>ASTM</skos:altLabel>
+        <skos:definition xml:lang="en">An international standards organization that develops and publishes voluntary consensus technical standards for materials, products, systems, and services across a wide range of industries.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000084 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000084">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/glass-ontology/GO_0000077"/>
+        <rdfs:label xml:lang="en">British Standards Institution</rdfs:label>
+        <skos:altLabel>BS</skos:altLabel>
+        <skos:definition xml:lang="en">The United KinGOm’s national standards body responsible for developing and publishing British Standards and representing the UK in international standardization organizations.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000085 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000085">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/glass-ontology/GO_0000077"/>
+        <rdfs:label xml:lang="en">German Institute for Standardization</rdfs:label>
+        <skos:altLabel>DIN</skos:altLabel>
+        <skos:definition xml:lang="en">The national standards organization of Germany responsible for developing and publishing German standards and representing Germany in European and international standardization bodies.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000086 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000086">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/glass-ontology/GO_0000077"/>
+        <rdfs:label xml:lang="en">Electronic Industries Alliance</rdfs:label>
+        <skos:altLabel>EIA</skos:altLabel>
+        <skos:definition xml:lang="en">A former U.S. standards organization that developed technical standards for electronic components, telecommunications equipment, and electronic systems.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000087 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000087">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/glass-ontology/GO_0000077"/>
+        <rdfs:label xml:lang="en">International Organization for Standardization</rdfs:label>
+        <skos:altLabel>ISO</skos:altLabel>
+        <skos:definition xml:lang="en">An independent international organization that develops and publishes international standards to ensure quality, safety, efficiency, and interoperability across industries and technologies.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000088 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000088">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/glass-ontology/GO_0000077"/>
+        <rdfs:label xml:lang="en">National Electrical Manufacturers Association</rdfs:label>
+        <skos:altLabel>NEMA</skos:altLabel>
+        <skos:definition xml:lang="en">A U.S.-based industry association that develops technical standards for electrical equipment, systems, and components used in power generation, transmission, and industrial applications.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000089 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000089">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/glass-ontology/GO_0000077"/>
+        <rdfs:label xml:lang="en">Association Française de Normalisation</rdfs:label>
+        <skos:altLabel>NF</skos:altLabel>
+        <skos:definition xml:lang="en">The French national standards organization responsible for developing and publishing French standards and representing France in European and international standardization activities.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000090 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000090">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/glass-ontology/GO_0000077"/>
+        <rdfs:label xml:lang="en">Austrian Standards International</rdfs:label>
+        <skos:altLabel>OENORM</skos:altLabel>
+        <skos:definition xml:lang="en">The Austrian national standards body responsible for developing and publishing Austrian standards (ÖNORM) and representing Austria in international standardization organizations.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000091 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000091">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/glass-ontology/GO_0000077"/>
+        <rdfs:label xml:lang="en">Austrian Electrotechnical Association</rdfs:label>
+        <skos:altLabel>OVE</skos:altLabel>
+        <skos:definition xml:lang="en">The Austrian standards organization responsible for developing electrotechnical standards and contributing to international standardization in electrical engineering and related fields.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000092 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000092">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/glass-ontology/GO_0000077"/>
+        <rdfs:label xml:lang="en">SAE International</rdfs:label>
+        <skos:altLabel>SAE</skos:altLabel>
+        <skos:definition xml:lang="en">A global professional association and standards organization that develops technical standards for the aerospace, automotive, and commercial vehicle industries.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000093 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000093">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/glass-ontology/GO_0000077"/>
+        <rdfs:label xml:lang="en">Swiss Association for Standardization</rdfs:label>
+        <skos:altLabel>SN</skos:altLabel>
+        <skos:definition xml:lang="en">The Swiss national standards organization responsible for developing Swiss standards and representing Switzerland in international standardization bodies.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000094 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000094">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/glass-ontology/GO_0000077"/>
+        <rdfs:label xml:lang="en">Spanish Association for Standardization</rdfs:label>
+        <skos:altLabel>UNE</skos:altLabel>
+        <skos:definition xml:lang="en">The national standards body of Spain responsible for developing and publishing Spanish standards and representing Spain in international standardization organizations.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000095 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000095">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/glass-ontology/GO_0000077"/>
+        <rdfs:label xml:lang="en">Association of German Engineers</rdfs:label>
+        <skos:altLabel>VDI</skos:altLabel>
+        <skos:definition xml:lang="en">A German professional engineering association that develops technical guidelines and standards, particularly in engineering, manufacturing, and industrial processes.@en</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/glass-ontology/GO_0000096 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/glass-ontology/GO_0000096">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000546"/>
+        <rdfs:label xml:lang="en">refractory ceramic</rdfs:label>
+        <skos:definition xml:lang="en">Ceramic refractories are inorganic, non-metallic materials—primarily oxide or non-oxide ceramics—designed to withstand very high temperatures while maintaining mechanical strength, chemical stability, and resistance to thermal shock, typically used for lining furnaces, kilns, and other high-temperature industrial equipment.</skos:definition>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+

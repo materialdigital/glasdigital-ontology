@@ -1,0 +1,40 @@
+id: go
+title: "Glass Ontology"
+github_org: materialdigital
+git_main_branch: main
+repo: glasdigital-ontology
+uribase: https://w3id.org/pmd
+uribase_suffix: go
+
+release_artefacts:
+  - base
+  - full
+  - simple
+primary_release: full
+export_formats:
+  - owl
+  - ttl
+remove_owl_nothing: true
+
+import_group:
+  products:
+  - id: pmdco
+    mirror_from: https://materialdigital.github.io/core-ontology/ontology.owl
+    module_type: mirror
+#  - id: mwo
+#   mirror_from: https://raw.githubusercontent.com/ISE-FIZKarlsruhe/mwo/refs/heads/main/mwo.owl
+    #module_type: custom
+#  - id: iao
+#    module_type: custom
+#  - id: obi
+#    module_type: custom
+#  - id: log
+#    mirror_from: http://raw.githubusercontent.com/materialdigital/logistics-application-ontology/refs/heads/main/log.owl
+#    module_type: custom
+#  - id: tto
+#    mirror_from: https://materialdigital.github.io/tensile-test-ontology/ontology.owl
+#    module_type: custom 
+namespaces:
+  - https://w3id.org/pmd/glass-ontology/
+
+

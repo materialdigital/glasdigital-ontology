@@ -1,0 +1,58 @@
+# CQ1 — Which simulation processes — and of which simulation family (atomistic,
+#        thermochemical, data-driven) — can determine a given glass property
+#        (density, glass transition temperature, viscosity, elastic moduli)?
+#
+# STATUS: DRAFT (PLAN Step 3). Syntax-checked only; NOT an executed validation
+#         result. Execution against the demonstration A-Box belongs to Steps 7-8
+#         (blocked by D-021 toolchain approval).
+# SOURCE: PLAN.md §6 CQ1; documented instance paths: PLAN.md §7.4.1 patterns 1-2,
+#         MODELING.md §5.1-§5.2 and §7 (CQ1 contract).
+# PATH:   simulation run --rdf:type--> family subclass (subclass closure)
+#         run --obo:OBI_0000299 (has specified output)--> simulated property datum
+#         datum --obo:IAO_0000136 (is about)--> property INSTANCE
+#         property --rdf:type--> property class (class lifted only via typing).
+# EXPECTED ANSWER COLUMNS:
+#         ?familyClass  - one of go:GO_0000301 (atomistic glass simulation),
+#                         go:GO_0000303 (thermochemical glass simulation),
+#                         go:GO_0000305 (data-driven glass property prediction)
+#         ?simClass     - the asserted process class of the run (e.g. go:GO_0000302)
+#         ?propertyClass- the property class the datum is about (e.g. co:PMD_0000597)
+# FIXTURE REQUIREMENTS (Step 7): at least one melt-quench run with a simulated
+#         density datum about a density instance (thesis §2.2.5); the class-level
+#         answer is derived exclusively from rdf:type plus rdfs:subClassOf*.
+# GRAPH ASSUMPTION: expected answers assume the ASSERTED graph only -
+#         rdfs:subClassOf* traverses asserted subclass axioms; no OWL reasoning
+#         (including owl:equivalentClass-based classification) is assumed or
+#         claimed; D-021 is pending, so no reasoning result may be claimed.
+# LIMITS: viscosity is now COVERED (approved amendment D-041, 2026-08-29):
+#         GO_0000046 was recovered from the runaway GO_0000018 literal by the
+#         approved D-039 additive repair (declared in baseline_repairs.ttl,
+#         Step 6) and is included in the property VALUES below; it resolves
+#         ONLY through the repair file - the protected baseline is untouched.
+#         Elastic modulus uses the verified baseline class co:PMD_0000618.
+#         Class IRIs occur only in rdf:type / rdfs:subClassOf* / VALUES positions,
+#         never as object-property targets.
+
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX co:   <https://w3id.org/pmd/co/>
+PREFIX go:   <https://w3id.org/pmd/glass-ontology/>
+
+SELECT DISTINCT ?familyClass ?simClass ?propertyClass
+WHERE {
+  # the three Tier-1 family classes (PLAN §7.1; terms_simulation.csv)
+  VALUES ?familyClass { go:GO_0000301 go:GO_0000303 go:GO_0000305 }
+
+  # Tier-1 property targets; viscosity via the approved D-039 repair (activated by D-041)
+  VALUES ?propertyClass { co:PMD_0000597 go:GO_0000016 co:PMD_0000618 go:GO_0000046 }
+
+  ?run      rdf:type ?simClass .
+  ?simClass rdfs:subClassOf* ?familyClass .
+
+  ?run      obo:OBI_0000299 ?simDatum .                     # has specified output
+  ?simDatum rdf:type/rdfs:subClassOf* go:GO_0000318 .       # simulated property datum
+  ?simDatum obo:IAO_0000136 ?property .                     # is about (an instance)
+  ?property rdf:type/rdfs:subClassOf* ?propertyClass .
+}
+ORDER BY ?familyClass ?simClass ?propertyClass

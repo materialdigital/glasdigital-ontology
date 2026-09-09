@@ -1,0 +1,85 @@
+# CQ5 — Which simulated property values of a glass were compared against which
+#        analysis-process (assay) results?
+#
+# STATUS: DRAFT (PLAN Step 3; assay-result provenance corrected 2026-08-27 per
+#         the independent post-integration review — WORK_LOG.md Entry 29).
+#         Syntax-checked only; NOT an executed validation result. Execution
+#         belongs to Steps 7-8 (blocked by D-021).
+# SOURCE: PLAN.md §6 CQ5; documented instance paths: PLAN.md §7.4.1 patterns 2-3,
+#         MODELING.md §5.2-§5.3 (required form of 2026-08-27).
+# PATH:   validation occurrence (obo:OBI_0302911) --obo:OBI_0000293--> BOTH the
+#         simulated property datum (go:GO_0000318) AND the measurement datum
+#         (obo:IAO_0000109); the simulated/measured distinction is carried by
+#         TYPING, never by a naming convention. REQUIRED shared-property bridge:
+#         both compared data are obo:IAO_0000136 about the SAME property
+#         instance; the assay obo:RO_0009006-measures that property instance
+#         AND has the compared measurement datum as its obo:OBI_0000299
+#         specified output.
+# PROVENANCE REQUIREMENT (corrected 2026-08-27): the integrated draft left the
+#         property/assay bridge OPTIONAL and never linked the assay to the
+#         measurement datum - a validation with no assay-produced result still
+#         counted as an answer, and an assay measuring the property could be
+#         paired with a measurement datum it never produced. The draft now
+#         REQUIRES the selected assay to have produced the exact measurement
+#         datum consumed by the validation (?assay obo:OBI_0000299 ?measDatum;
+#         domain-compatible: obo:OBI_0000299 has domain obo:COB_0000035 planned
+#         process, and assays are planned processes) and REQUIRES both compared
+#         data items to be about the shared property instance. A validation
+#         whose measured input lacks assay provenance is NOT a CQ5 answer -
+#         that is what "compared against analysis-process results" means.
+# EXPECTED ANSWER COLUMNS:
+#         ?validation  - the validation occurrence
+#         ?simDatum    - simulated property datum (typed go:GO_0000318)
+#         ?measDatum   - measurement datum (typed obo:IAO_0000109), specified
+#                        output of ?assay
+#         ?property ?propertyClass - the shared property instance and its class
+#         ?assay ?assayClass       - the analysis process and its class
+#                                    (subclass of obo:OBI_0000070 "assay")
+# FIXTURE REQUIREMENTS (Step 7, corrected 2026-08-27 - all REQUIRED):
+#         one validation joining the simulated density datum (thesis §2.2.5)
+#         and a BAM density measurement datum (thesis ch. 4); the assay typed
+#         with the existing baseline class GO_0000058 "Density analyzing
+#         process" (subclass of obo:OBI_0000070, verified); AND the assertions
+#           ex:assay-001            obo:OBI_0000299 ex:meas-density-datum-001 .
+#           ex:sim-density-datum-001  obo:IAO_0000136 ex:density-001 .
+#           ex:meas-density-datum-001 obo:IAO_0000136 ex:density-001 .
+#         (MODELING.md §6.1).
+# GRAPH ASSUMPTION: expected answers assume the ASSERTED graph only -
+#         rdfs:subClassOf* traverses asserted subclass axioms; no OWL reasoning
+#         (including owl:equivalentClass-based classification) is assumed or
+#         claimed; D-021 is pending, so no reasoning result may be claimed.
+# LIMITS: viscosity comparisons wait for the D-017 repair - GO_0000046 is
+#         trapped inside the runaway skos:definition literal of GO_0000018 and
+#         is NOT a usable declared class until the repair is approved and
+#         executed (MODELING.md §3). Graded agreement and named metric data
+#         (screening Batches 1-6) are documented as instance-level additions in
+#         MODELING.md §8.6 - a metric datum can be attached as a further
+#         specified output of ?validation without new classes; the draft does
+#         not require it.
+
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX co:   <https://w3id.org/pmd/co/>
+PREFIX go:   <https://w3id.org/pmd/glass-ontology/>
+
+SELECT DISTINCT ?validation ?simDatum ?measDatum ?property ?propertyClass ?assay ?assayClass
+WHERE {
+  ?validation rdf:type/rdfs:subClassOf* obo:OBI_0302911 .   # validation
+  ?validation obo:OBI_0000293 ?simDatum , ?measDatum .      # has specified input (both data)
+
+  ?simDatum  rdf:type/rdfs:subClassOf* go:GO_0000318 .      # simulated property datum
+  ?measDatum rdf:type/rdfs:subClassOf* obo:IAO_0000109 .    # measurement datum
+  FILTER (?simDatum != ?measDatum)
+
+  ?simDatum  obo:IAO_0000136 ?property .                    # is about - REQUIRED: both compared
+  ?measDatum obo:IAO_0000136 ?property .                    # data are about the SAME property instance
+  ?property  rdf:type ?propertyClass .
+
+  ?assay obo:RO_0009006  ?property .                        # assay measures characteristic
+  ?assay obo:OBI_0000299 ?measDatum .                       # REQUIRED: the assay produced the exact
+                                                            # measurement datum consumed by the validation
+  ?assay rdf:type ?assayClass .
+  ?assayClass rdfs:subClassOf* obo:OBI_0000070 .            # assay
+}
+ORDER BY ?validation ?simDatum

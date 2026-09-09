@@ -1,0 +1,84 @@
+# CQ4 — Which software (and, in the A-Box, which version) executed a given
+#        simulation?
+#
+# STATUS: DRAFT (PLAN Step 3; process-root scope corrected 2026-08-27 per the
+#         independent post-integration review — WORK_LOG.md Entry 29).
+#         Syntax-checked only; NOT an executed validation result. Execution
+#         belongs to Steps 7-8 (blocked by D-021).
+# SOURCE: PLAN.md §6 CQ4; documented instance path: MODELING.md §5.6, §5.8.
+# PATH:   permitted process --obo:STATO_0000102 (executes)--> software INSTANCE.
+#         The baseline declares STATO_0000102 as the relation "between a planned
+#         process and the plan specification that it carries out", equivalent to
+#         the chain realizes o concretizes (verified in go.ttl). Software
+#         (obo:IAO_0000010, here nfdi:NFDI_0001048) is a plan specification, so
+#         the A-Box asserts the executes edge directly; no reasoner or property-
+#         chain inference is assumed by this draft.
+# PROCESS SCOPE (corrected 2026-08-27): the integrated draft anchored on
+#         co:PMD_0000583 "computing process" and thereby treated every computing
+#         process - including non-simulation analyses and data transformations
+#         (e.g. co:PMD_0025012 analytical calculation) - as a simulation. The
+#         query now closes over the explicit justified root set of MODELING.md
+#         §5.8: co:PMD_0000933 simulation process (asserted subtree incl.
+#         GO_0000300-305, GO_0000310 via co:PMD_0000821, and the reused MD/MC/
+#         optimization classes), go:GO_0000306 density functional theory
+#         calculation, go:GO_0000307 phase equilibrium calculation.
+# VERSION SEMANTICS (D-023): each software individual denotes exactly ONE
+#         released version - e.g. ex:lammps-29sep2021 "LAMMPS release
+#         29 September 2021" and ex:gulp-6.0 "GULP 6.0" (thesis pp. 9, 16).
+#         The version is part of the individual's identity and rdfs:label;
+#         no mutable product individual with a version annotation exists.
+# EXPECTED ANSWER COLUMNS:
+#         ?simulation ?simClass - the run and its asserted class
+#         ?software             - the version-specific software individual
+#         ?softwareLabel        - its release-identifying label
+# FIXTURE REQUIREMENTS (Step 7): the melt-quench run executes
+#         ex:lammps-29sep2021 - the promised CQ4 row. NO GULP ROW IS PROMISED
+#         (corrected 2026-08-27): the thesis' GULP 6.0 property evaluation
+#         computes the elastic constants analytically from second derivatives
+#         of the potential energy (Hessian), after an energy minimization of
+#         the structure (thesis, Theorie und Methoden, PDF p. 24); under
+#         MODELING.md §8 #12 that analytical computation types as
+#         co:PMD_0025012 analytical calculation, which lies OUTSIDE the
+#         permitted root set. The fixture still asserts the executes edge to
+#         ex:gulp-6.0 as software provenance; whether any GULP-executed process
+#         is faithfully typeable as a permitted class (e.g. its minimization
+#         component as co:PMD_0000956 structural optimization simulation,
+#         asserted subclass of co:PMD_0000933) is an explicit Step-7 typing
+#         decision - until it is taken, no GULP row is a promised CQ4
+#         simulation result (MODELING.md §5.8).
+# GRAPH ASSUMPTION: expected answers assume the ASSERTED graph only -
+#         rdfs:subClassOf* traverses asserted subclass axioms; no OWL reasoning
+#         (including owl:equivalentClass-based classification and the declared
+#         realizes/concretizes property chain of STATO_0000102) is assumed or
+#         claimed - the A-Box asserts the executes edge directly; D-021 is
+#         pending, so no reasoning result may be claimed.
+# LANGUAGE HANDLING: the returned rdfs:label is filtered with
+#         FILTER(lang(?x) = "" || langMatches(lang(?x), "en")) to prevent
+#         duplicate English/German rows from multilingual PMDco labels while
+#         still admitting untagged fixture literals.
+# NOTES:  the type anchor is the directly reused external class
+#         nfdi:NFDI_0001048 "simulation software" (D-028/D-029) - no GO mint.
+
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX co:   <https://w3id.org/pmd/co/>
+PREFIX go:   <https://w3id.org/pmd/glass-ontology/>
+PREFIX nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/>
+
+SELECT DISTINCT ?simulation ?simClass ?software ?softwareLabel
+WHERE {
+  VALUES ?processRoot { co:PMD_0000933 go:GO_0000306 go:GO_0000307 }   # explicit root set (MODELING.md §5.8)
+
+  ?simulation rdf:type ?simClass .
+  ?simClass   rdfs:subClassOf* ?processRoot .          # closure from permitted roots only
+
+  ?simulation obo:STATO_0000102 ?software .            # executes
+  ?software   rdf:type/rdfs:subClassOf* nfdi:NFDI_0001048 .  # simulation software (direct reuse)
+
+  OPTIONAL {
+    ?software rdfs:label ?softwareLabel .
+    FILTER ( lang(?softwareLabel) = "" || langMatches(lang(?softwareLabel), "en") )
+  }
+}
+ORDER BY ?simulation ?software

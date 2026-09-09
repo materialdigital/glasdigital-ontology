@@ -1,0 +1,85 @@
+# CQ8 — For a given phase-equilibrium or devitrification-kinetics simulation:
+#        which thermodynamic model does it use, and which measured data were
+#        specified inputs of the CALPHAD assessment that produced that model?
+#
+# STATUS: DRAFT (PLAN Step 3). Syntax-checked only; NOT an executed validation
+#         result. Execution belongs to Steps 7-8 (blocked by D-021).
+#
+# EVIDENCE LIMITATION AND OWNER-APPROVED STRATEGY (DECISIONS.md D-035, wording
+#         precised by D-036; per-batch assessments: Batch 3 §8, Batch 4 §9,
+#         Batch 5 §9, Batch 6 §9). The corpus evidence situation is stated PER
+#         TERM (MODELING.md §9):
+#         - GO_0000307 phase equilibrium calculation: no positive corpus evidence;
+#         - GO_0000303 thermochemical glass simulation: boundary/negative
+#           evidence only;
+#         - GO_0000304 devitrification kinetics simulation: boundary evidence
+#           and a physical crystallization link target, but no positive evidence
+#           for the simulation class;
+#         - GO_0000308 CALPHAD assessment process: no positive CALPHAD evidence;
+#           the corpus calibration examples are explicitly NOT CALPHAD;
+#         - GO_0000316 thermodynamic model: ONE positive, non-CALPHAD, pattern-
+#           level example - SOURCE_EVIDENCE_MATRIX.csv row 46 (Flory-Huggins
+#           model, Chen dissertation p. 63 / PDF 75, §4.3.2, medium confidence)
+#           - genus-level support only, no CALPHAD or phase-equilibrium content.
+#         This query's CALPHAD/phase-equilibrium content therefore rests on the
+#         approved project anchor documents:
+#         - GLASAGENT_Abgabeversion.md (Doc B): GTT-Calphad Optimizer, GTOx /
+#           GTT-Masterdatenbank, PrecipiSage, Entglasungskinetik, kinetic
+#           parameters derived from experimental data, and measured data used
+#           "als Modellparameter" for thermochemical simulations (AP 4);
+#         - GLASAGENT_TVB-FSU_final.md (Doc A) p. 10: "thermodynamische Modelle".
+#         The later Step-7 fixture for this query will be SYNTHETIC/ILLUSTRATIVE
+#         and anchor-grounded unless partner evidence is supplied; it must NOT
+#         be presented as a screened-corpus result, and no thermochemical values
+#         are invented - fixture individuals stay value-free skeletons labelled
+#         as illustrative. The whole branch (GO_0000303/304/307/308/316) requires
+#         later GTT/SCHOTT expert validation (PLAN §15 risk R-2).
+#
+# GRAPH ASSUMPTION: expected answers assume the ASSERTED graph only -
+#         rdfs:subClassOf* traverses asserted subclass axioms; no OWL reasoning
+#         (including owl:equivalentClass-based classification) is assumed or
+#         claimed; D-021 is pending, so no reasoning result may be claimed.
+#
+# SOURCE: PLAN.md §6 CQ8; documented instance path: PLAN.md §7.4.1 pattern 4
+#         (CALPHAD data flow), MODELING.md §5.4 and §6.3.
+# PATH:   simulation (go:GO_0000307 phase equilibrium calculation OR
+#         go:GO_0000304 devitrification kinetics simulation, subclass closure)
+#         --obo:OBI_0000293--> thermodynamic model INSTANCE (go:GO_0000316);
+#         CALPHAD assessment (go:GO_0000308) --obo:OBI_0000299--> the same model;
+#         assessment --obo:OBI_0000293--> measurement datum (obo:IAO_0000109).
+# MEASURED VS SIMULATED: the assessment inputs are required to be typed
+#         obo:IAO_0000109 (measurement datum) - Doc B's "Messdaten ... als
+#         Modellparameter"; simulated data play no input role in this pattern.
+# EXPECTED ANSWER COLUMNS:
+#         ?simulation ?simClass - the thermochemical computation and its class
+#         ?thermoModel          - the thermodynamic model individual
+#         ?assessment           - the CALPHAD assessment occurrence
+#         ?measDatum            - measured datum used as assessment input
+# FIXTURE REQUIREMENTS (Step 7, synthetic and anchor-grounded per D-035):
+#         one GO_0000307 or GO_0000304 instance; one GO_0000316 model instance
+#         as its specified input and as specified output of one GO_0000308
+#         assessment; at least one obo:IAO_0000109 datum (e.g. labelled
+#         "calorimetric measurement datum (illustrative)") as assessment input.
+
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX go:   <https://w3id.org/pmd/glass-ontology/>
+
+SELECT DISTINCT ?simulation ?simClass ?thermoModel ?assessment ?measDatum
+WHERE {
+  VALUES ?simRoot { go:GO_0000307 go:GO_0000304 }
+
+  ?simulation rdf:type ?simClass .
+  ?simClass   rdfs:subClassOf* ?simRoot .
+
+  ?simulation obo:OBI_0000293 ?thermoModel .                # has specified input
+  ?thermoModel rdf:type/rdfs:subClassOf* go:GO_0000316 .    # thermodynamic model
+
+  ?assessment obo:OBI_0000299 ?thermoModel .                # assessment produced the model
+  ?assessment rdf:type/rdfs:subClassOf* go:GO_0000308 .     # CALPHAD assessment process
+
+  ?assessment obo:OBI_0000293 ?measDatum .                  # measured data as model parameters
+  ?measDatum  rdf:type/rdfs:subClassOf* obo:IAO_0000109 .   # measurement datum
+}
+ORDER BY ?simulation ?thermoModel ?measDatum

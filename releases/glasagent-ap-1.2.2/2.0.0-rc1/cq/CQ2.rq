@@ -1,0 +1,74 @@
+# CQ2 — Which computational model (interatomic potential, thermodynamic model,
+#        data-driven model) was used in a given simulation?
+#
+# STATUS: DRAFT (PLAN Step 3; process-root scope corrected 2026-08-27 per the
+#         independent post-integration review — WORK_LOG.md Entry 29).
+#         Syntax-checked only; NOT an executed validation result. Execution
+#         belongs to Steps 7-8 (blocked by D-021).
+# SOURCE: PLAN.md §6 CQ2; documented instance path: PLAN.md §7.4.1 pattern 4
+#         (model as specified input), MODELING.md §5.4, §5.8 and §7 (CQ2 contract).
+# PATH:   permitted process --obo:OBI_0000293 (has specified input)--> model INSTANCE
+#         model --rdf:type--> model class, closed under rdfs:subClassOf* to
+#         go:GO_0000313 (computational model).
+# PROCESS SCOPE (corrected 2026-08-27): the integrated draft anchored on
+#         co:PMD_0000583 "computing process", whose subtree also covers
+#         non-simulation analyses and data transformations (e.g. co:PMD_0025012
+#         analytical calculation) - it treated every computing process as a
+#         simulation. The query now closes over an explicit justified root set
+#         (MODELING.md §5.8):
+#           co:PMD_0000933  simulation process - the CQ's subject; its asserted
+#                           subtree covers the glass branch (GO_0000300-305),
+#                           machine-learning potential training (GO_0000310 via
+#                           co:PMD_0000821, asserted subclass of PMD_0000933),
+#                           and the reused MD/MC/optimization classes;
+#           go:GO_0000306   density functional theory calculation - Tier-1
+#                           atomistic-branch calculation asserted outside the
+#                           PMD_0000933 subtree (generic, under PMD_0000583);
+#           go:GO_0000307   phase equilibrium calculation - by its Step-2
+#                           definition it determines phase assemblages FROM a
+#                           thermodynamic model; the CQ8 fixture variant makes
+#                           go:GO_0000316 its specified input.
+#         Deliberately excluded (MODELING.md §5.8): go:GO_0000308 CALPHAD
+#         assessment process (the model is its specified OUTPUT - production,
+#         not use; CQ8's subject), go:GO_0000309 feature generation process
+#         (consumes structures/datasets, not computational models), and all
+#         remaining co:PMD_0000583 content (non-simulation computations).
+# EXPECTED ANSWER COLUMNS:
+#         ?simulation  - the run individual (e.g. ex:run-001)
+#         ?simClass    - its asserted class (inside the permitted root-set closure)
+#         ?model       - the model individual (e.g. the BMP force-field individual, D-023-style)
+#         ?modelClass  - its class (go:GO_0000314, go:GO_0000315, go:GO_0000316,
+#                        go:GO_0000317, or go:GO_0000313 itself)
+# FIXTURE REQUIREMENTS (Step 7): the melt-quench run must carry the BMP
+#         force-field individual (thesis §2.2.1, pp. 10-11) as specified input,
+#         typed go:GO_0000314; the CQ8 fixture adds a thermodynamic-model
+#         instance (go:GO_0000316; synthetic, anchor-grounded per D-035/D-036)
+#         as specified input of a go:GO_0000307 or go:GO_0000304 run - both
+#         classes lie inside the corrected root-set closure.
+# GRAPH ASSUMPTION: expected answers assume the ASSERTED graph only -
+#         rdfs:subClassOf* traverses asserted subclass axioms; no OWL reasoning
+#         (including owl:equivalentClass-based classification) is assumed or
+#         claimed; D-021 is pending, so no reasoning result may be claimed.
+# NOTES:  Batch-2/4 screening evidence ("effective model input": dispersion
+#         corrections, potential components) is handled at instance level -
+#         each model or model component that acts as an input is its own
+#         individual; no new class or relation is introduced (MODELING.md §8).
+
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX co:   <https://w3id.org/pmd/co/>
+PREFIX go:   <https://w3id.org/pmd/glass-ontology/>
+
+SELECT DISTINCT ?simulation ?simClass ?model ?modelClass
+WHERE {
+  VALUES ?processRoot { co:PMD_0000933 go:GO_0000306 go:GO_0000307 }   # explicit root set (MODELING.md §5.8)
+
+  ?simulation rdf:type ?simClass .
+  ?simClass   rdfs:subClassOf* ?processRoot .     # closure from permitted roots only
+
+  ?simulation obo:OBI_0000293 ?model .            # has specified input
+  ?model      rdf:type ?modelClass .
+  ?modelClass rdfs:subClassOf* go:GO_0000313 .    # computational model
+}
+ORDER BY ?simulation ?model

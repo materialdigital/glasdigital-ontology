@@ -27,3 +27,5 @@ Please use this GitHub repository's [Issue tracker](https://github.com/materiald
 ## Acknowledgements
 
 This ontology repository was created using the [Ontology Development Kit (ODK)](https://github.com/INCATools/ontology-development-kit).
+
+A presentation-stage release candidate of the GlasAgent AP 1.2.2 simulation extension (ontology, synthetic demonstration ABox and competency-question queries) is available under [releases/glasagent-ap-1.2.2/2.0.0-rc1](releases/glasagent-ap-1.2.2/2.0.0-rc1/README.md).

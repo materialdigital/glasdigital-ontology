@@ -1,38 +1,30 @@
-# CQ1 — Which simulation processes — and of which simulation family (atomistic,
-#        thermochemical, data-driven) — can determine a given glass property
+# CQ1 - Which simulation processes - and of which simulation family (atomistic,
+#        thermochemical, data-driven) - can determine a given glass property
 #        (density, glass transition temperature, viscosity, elastic moduli)?
 #
-# STATUS: DRAFT (PLAN Step 3). Syntax-checked only; NOT an executed validation
-#         result. Execution against the demonstration A-Box belongs to Steps 7-8
-#         (blocked by D-021 toolchain approval).
-# SOURCE: PLAN.md §6 CQ1; documented instance paths: PLAN.md §7.4.1 patterns 1-2,
-#         MODELING.md §5.1-§5.2 and §7 (CQ1 contract).
-# PATH:   simulation run --rdf:type--> family subclass (subclass closure)
-#         run --obo:OBI_0000299 (has specified output)--> simulated property datum
-#         datum --obo:IAO_0000136 (is about)--> property INSTANCE
+# PATH:   simulation run --rdf:type--> family subclass (subclass closure);
+#         run --obo:OBI_0000299 (has specified output)--> simulated property datum;
+#         datum --obo:IAO_0000136 (is about)--> property INSTANCE;
 #         property --rdf:type--> property class (class lifted only via typing).
-# EXPECTED ANSWER COLUMNS:
-#         ?familyClass  - one of go:GO_0000301 (atomistic glass simulation),
-#                         go:GO_0000303 (thermochemical glass simulation),
-#                         go:GO_0000305 (data-driven glass property prediction)
-#         ?simClass     - the asserted process class of the run (e.g. go:GO_0000302)
-#         ?propertyClass- the property class the datum is about (e.g. co:PMD_0000597)
-# FIXTURE REQUIREMENTS (Step 7): at least one melt-quench run with a simulated
-#         density datum about a density instance (thesis §2.2.5); the class-level
-#         answer is derived exclusively from rdf:type plus rdfs:subClassOf*.
-# GRAPH ASSUMPTION: expected answers assume the ASSERTED graph only -
-#         rdfs:subClassOf* traverses asserted subclass axioms; no OWL reasoning
-#         (including owl:equivalentClass-based classification) is assumed or
-#         claimed; D-021 is pending, so no reasoning result may be claimed.
-# LIMITS: viscosity is now COVERED (approved amendment D-041, 2026-08-29):
-#         GO_0000046 was recovered from the runaway GO_0000018 literal by the
-#         approved D-039 additive repair (declared in baseline_repairs.ttl,
-#         Step 6) and is included in the property VALUES below; it resolves
-#         ONLY through the repair file - the protected baseline is untouched.
-#         Elastic modulus uses the verified baseline class co:PMD_0000618.
-#         Class IRIs occur only in rdf:type / rdfs:subClassOf* / VALUES positions,
-#         never as object-property targets.
-
+# EXPECTED RESULT COLUMNS:
+#         ?familyClass   - go:GO_0000301 (atomistic glass simulation),
+#                          go:GO_0000303 (thermochemical glass simulation) or
+#                          go:GO_0000305 (data-driven glass property prediction)
+#         ?simClass      - the asserted process class of the run
+#         ?propertyClass - the property class the datum is about
+# EXPECTED ROW COUNT on the 2.0.0-rc1 package: 3 - (GO_0000301, GO_0000302, PMD_0000597),
+#         (GO_0000301, GO_0000302, GO_0000046) and (GO_0000305, GO_0000305, PMD_0000597).
+# GRAPH ASSUMPTION: answers are computed on the ASSERTED graph only - rdfs:subClassOf*
+#         traverses asserted subclass axioms; no OWL reasoning (including
+#         owl:equivalentClass-based classification) is required or claimed. A reasoner
+#         may widen the answer set; the expected count below refers to the asserted union.
+# LIMITS: viscosity (go:GO_0000046) resolves through the additive baseline repair
+#         contained in go_v2_candidate.ttl. Elastic modulus uses the baseline class
+#         co:PMD_0000618. Class IRIs occur only in rdf:type / rdfs:subClassOf* / VALUES
+#         positions, never as object-property targets.
+# VALIDATION: executed for the presentation-stage 2.0.0-rc1 package against the asserted
+#         union of go_v2_candidate.ttl and the synthetic abox_meltquench_example.ttl
+#         (Apache Jena arq and RDFLib, identical results).
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX obo:  <http://purl.obolibrary.org/obo/>

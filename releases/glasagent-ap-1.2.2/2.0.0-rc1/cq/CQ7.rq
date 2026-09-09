@@ -1,46 +1,37 @@
-# CQ7 — For a given data-driven glass property model or machine-learning
+# CQ7 - For a given data-driven glass property model or machine-learning
 #        potential: which training datasets were used, which processes generated
 #        those datasets (simulations, feature generation, or measurements), and
 #        which training process produced the model?
 #
-# STATUS: DRAFT (PLAN Step 3). Syntax-checked only; NOT an executed validation
-#         result. Execution belongs to Steps 7-8 (blocked by D-021).
-# SOURCE: PLAN.md §6 CQ7; documented instance path: PLAN.md §7.4.1 pattern 4
-#         (data flows), MODELING.md §5.4; screening evidence: Batch-2 report
-#         (CQ7 chain demonstrated collectively; DFT -> training data -> training
-#         -> potential -> MD), Arendt crosswalk (MD -> V14/V18 datasets ->
-#         SVM/RF/NN/GPR models).
-# PATH:   training process --obo:OBI_0000299--> model INSTANCE (go:GO_0000317
-#         data-driven glass property model, or go:GO_0000315 machine-learning
-#         potential); training --obo:OBI_0000293--> dataset INSTANCE(s)
-#         (obo:IAO_0000100 closure; go:GO_0000319 marks simulation-produced
-#         datasets); OPTIONAL: generator --obo:OBI_0000299--> dataset, where the
-#         generator is a simulation (co:PMD_0000933), a DFT calculation
-#         (go:GO_0000306), a feature generation process (go:GO_0000309), or an
-#         assay/measurement (obo:OBI_0000070).
-# TRAINING-PROCESS TYPING: go:GO_0000310 (machine-learning potential training)
-#         for potentials; property-model training runs are typed at instance
-#         level with the reused baseline class co:PMD_0000821 "machine learning"
-#         (D-019: GO_0000305 itself is NOT under PMD_0000821; ML-based runs get
-#         the extra instance-level type).
-# MEASURED VS SIMULATED: ?datasetKind distinguishes simulation datasets
-#         (go:GO_0000319) from measured/other datasets BY TYPING, not naming.
-# GRAPH ASSUMPTION: expected answers assume the ASSERTED graph only -
-#         rdfs:subClassOf* traverses asserted subclass axioms; no OWL reasoning
-#         (including owl:equivalentClass-based classification) is assumed or
-#         claimed; D-021 is pending, so no reasoning result may be claimed.
-# EXPECTED ANSWER COLUMNS:
+# PATH:   training process --obo:OBI_0000299--> model INSTANCE (go:GO_0000317 data-driven
+#         glass property model, or go:GO_0000315 machine-learning potential);
+#         training --obo:OBI_0000293--> dataset INSTANCE(s) (obo:IAO_0000100 closure;
+#         go:GO_0000319 marks simulation-produced datasets);
+#         OPTIONAL: generator --obo:OBI_0000299--> dataset, where the generator is a
+#         simulation (co:PMD_0000933), a DFT calculation (go:GO_0000306), a feature
+#         generation process (go:GO_0000309) or an assay/measurement (obo:OBI_0000070).
+# TRAINING-PROCESS TYPING: go:GO_0000310 (machine-learning potential training) for
+#         potentials; property-model training runs are typed at instance level with the
+#         reused baseline class co:PMD_0000821 "machine learning" (go:GO_0000305 itself is
+#         NOT under PMD_0000821).
+# MEASURED VS SIMULATED: ?datasetKind distinguishes simulation datasets (go:GO_0000319)
+#         from measured/other datasets BY TYPING, not naming.
+# EXPECTED RESULT COLUMNS:
 #         ?model ?modelClass ?training ?trainingClass
 #         ?dataset ?datasetKind ?generator ?generatorClass
-# FIXTURE REQUIREMENTS (Step 7): thesis-anchored chain - one simulation dataset
-#         (V14/V18-style, go:GO_0000319) produced by melt-quench simulation
-#         runs; one training process producing a data-driven glass property
-#         model; the ML-potential side may be exercised with a Batch-2-anchored
-#         example only if its release identifiers are verified (PLAN §9
-#         discipline); fine-tuning is represented as a further GO_0000310
-#         instance whose specified inputs include the pretrained potential
-#         (MODELING.md §8.3 disposition - no new class).
-
+# EXPECTED ROW COUNT on the 2.0.0-rc1 package: 4 - the machine-learning potential chain
+#         (DFT dataset) and the property-model chain (descriptor dataset from feature
+#         generation; simulation dataset from the melt-quench run, one row per asserted
+#         run class).
+# GRAPH ASSUMPTION: answers are computed on the ASSERTED graph only - rdfs:subClassOf*
+#         traverses asserted subclass axioms; no OWL reasoning (including
+#         owl:equivalentClass-based classification) is required or claimed. A reasoner
+#         may widen the answer set; the expected count below refers to the asserted union.
+# NOTES:  fine-tuning is represented as a further go:GO_0000310 instance whose specified
+#         inputs include the pretrained potential; no additional class is needed.
+# VALIDATION: executed for the presentation-stage 2.0.0-rc1 package against the asserted
+#         union of go_v2_candidate.ttl and the synthetic abox_meltquench_example.ttl
+#         (Apache Jena arq and RDFLib, identical results).
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX obo:  <http://purl.obolibrary.org/obo/>

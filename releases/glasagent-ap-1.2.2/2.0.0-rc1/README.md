@@ -44,8 +44,9 @@ term exists; no new object properties were introduced.
 | `go_v2_candidate.ttl` | Self-contained release-candidate ontology (Turtle): the Glass Ontology baseline merged with the AP 1.2.2 simulation module and one additive repair of the baseline viscosity declaration. Ontology IRI `https://w3id.org/pmd/go.owl`, version IRI `https://w3id.org/pmd/go.owl/2.0.0-rc1`. 11,284 triples. |
 | `abox_meltquench_example.ttl` | Synthetic demonstration ABox (Turtle): 61 illustrative individuals, 252 triples, in the reserved example namespace `https://example.org/glasagent/ap122/demo#`. |
 | `cq/CQ1.rq` … `cq/CQ8.rq` | The eight competency questions as SPARQL 1.1 SELECT queries. Each file's header comment states the question, the instance path used and the expected answer columns. |
+| `DATASPACE_NOTES.md` | Data-space notes: delivery status, what to load and how, competency-question smoke test, licence and contact, open items. |
 | `LICENSE_AND_ATTRIBUTION.md` | Licence, attribution and reuse notices. |
-| `SHA256SUMS` | SHA-256 checksums of every other file in this package. |
+| `SHA256SUMS` | SHA-256 checksums of every other file in this package (13 entries). |
 
 ### The ABox is synthetic demonstration content
 
@@ -58,11 +59,11 @@ value-free skeletons.
 
 ### Notes on the query files
 
-The query files are copied unchanged from the reviewed source repository. Their header comments
-therefore still contain working notes of that repository (references to its internal planning and
-modelling documents and to numbered project decisions, and a `STATUS: DRAFT` line written before the
-queries were executed). Those notes do not affect execution. The queries were executed with the
-results recorded below.
+Only the publication-facing header comments of the eight query files (the comment block before the
+first `PREFIX` line) were written for this package. The executable SPARQL content of every query,
+from its first `PREFIX` line to the end of the file, is identical to the reviewed source. Each header
+states the competency question, the instance path, the graph assumption, the expected result columns,
+the expected row count on this package and any scientifically meaningful limitation.
 
 ## 4 How to load and query the package
 
@@ -166,9 +167,11 @@ CQ8 returns the single value-free thermochemical skeleton.
 
 - Source repository and reviewed commit:
   https://github.com/AzinMazloomJalali/Simulation/commit/a450424004a1da42a8e046a8e0948d29ab4c15a4
-- The ontology, ABox and query files in this package are byte-identical copies of the files
-  `AP_1.2.2/go_v2_candidate.ttl`, `AP_1.2.2/abox_meltquench_example.ttl` and
-  `AP_1.2.2/cq/CQ1.rq`–`CQ8.rq` at that commit.
+- `go_v2_candidate.ttl` and `abox_meltquench_example.ttl` are byte-identical copies of
+  `AP_1.2.2/go_v2_candidate.ttl` and `AP_1.2.2/abox_meltquench_example.ttl` at that commit.
+- `cq/CQ1.rq`–`cq/CQ8.rq`: the executable portion of each query, from its first `PREFIX` line to
+  the end of the file, is byte-identical to `AP_1.2.2/cq/CQ1.rq`–`CQ8.rq` at that commit. Only the
+  header comments before the first `PREFIX` line were replaced by publication-facing headers.
 - SHA-256 of `go_v2_candidate.ttl`: `f1cda6cffc879eb6679cbbf7342d9b68ea160f25f59b2f72c6bede9c886ec562`
   (all checksums: `SHA256SUMS`).
 - The candidate header records the merge inputs (baseline `go.ttl`, module

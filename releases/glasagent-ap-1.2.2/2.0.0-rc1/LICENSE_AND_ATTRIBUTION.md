@@ -5,7 +5,7 @@
 The contents of this package that were created in the GlasAgent project – the AP 1.2.2 simulation
 module contained in `go_v2_candidate.ttl`, the synthetic demonstration ABox
 `abox_meltquench_example.ttl`, the competency-question queries `cq/CQ1.rq`–`cq/CQ8.rq`, and the
-accompanying documentation (`README.md`, this file) – are released under the
+accompanying documentation (`README.md`, `DATASPACE_NOTES.md`, this file) – are released under the
 
 **Creative Commons Attribution 4.0 International licence (CC BY 4.0)**
 https://creativecommons.org/licenses/by/4.0/

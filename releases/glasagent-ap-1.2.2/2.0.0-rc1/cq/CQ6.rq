@@ -1,41 +1,33 @@
-# CQ6 — Which manufacturing or analysis process classes are connected to at
+# CQ6 - Which manufacturing or analysis process classes are connected to at
 #        least one glass simulation, and through which path?
-#        (the "besondere Herausforderung" demonstrator, Doc A p. 10)
 #
-# STATUS: DRAFT (PLAN Step 3). Syntax-checked only; NOT an executed validation
-#         result. Execution belongs to Steps 7-8 (blocked by D-021).
-# SOURCE: PLAN.md §6 CQ6, §7.4.1 (incl. the CQ6 lifting sketch); MODELING.md
-#         §5.1-§5.4, §5.7; screening evidence for the path shapes: Batch-5
-#         report §7.1 (three manufacturing-link shapes), Batch-5/-6 reports
-#         (simulation of an analysis process is systematic).
-# CLASS LIFTING RULE: the manufacturing/analysis CLASS is a query answer derived
-#         from rdf:type plus rdfs:subClassOf* on instances - class IRIs are
-#         never object-property targets in the data (PLAN §7.4.1 formal rule).
-# GRAPH ASSUMPTION: expected answers assume the ASSERTED graph only -
-#         rdfs:subClassOf* traverses asserted subclass axioms; no OWL reasoning
-#         is assumed or claimed, and in particular NO classification through
-#         the owl:equivalentClass definition of co:PMD_0000833 is inferred;
-#         D-021 is pending, so no reasoning result may be claimed. Whether a
-#         reasoned graph widens the answer set is a Step-8 question.
-# ANCHOR-SET NOTE (verified against go.ttl in Step 3): the asserted baseline
-#         hierarchy places melting (co:PMD_0000053), crystallization
-#         (co:PMD_0020195), heating (co:PMD_0025010), and cooling (co:PMD_0025011)
-#         OUTSIDE the co:PMD_0000833 manufacturing subtree (PMD_0000833 has an
-#         equivalentClass definition that only a reasoner could apply). A
-#         reasoner-free draft therefore enumerates the process-root set
-#         explicitly; see MODELING.md §5.7.
-# EXPECTED ANSWER COLUMNS:
+# CLASS LIFTING RULE: the manufacturing/analysis CLASS is derived from rdf:type plus
+#         rdfs:subClassOf* on instances - class IRIs are never object-property targets.
+# PATHS:  1 - simulation output datum is about a manufacturing/processing occurrence;
+#         2 - simulated property datum and assay share one property instance;
+#         3 - assay measurement datum is a specified input of the simulation;
+#         4 - simulation output datum is about an assay occurrence
+#             (simulation of an analysis process).
+# GRAPH ASSUMPTION: answers are computed on the ASSERTED graph only - rdfs:subClassOf*
+#         traverses asserted subclass axioms; no OWL reasoning (including
+#         owl:equivalentClass-based classification) is required or claimed. A reasoner
+#         may widen the answer set; the expected count below refers to the asserted union.
+# ANCHOR-SET NOTE: the asserted baseline hierarchy places melting (co:PMD_0000053),
+#         crystallization (co:PMD_0020195), heating (co:PMD_0025010) and cooling
+#         (co:PMD_0025011) OUTSIDE the co:PMD_0000833 manufacturing subtree (PMD_0000833
+#         has an owl:equivalentClass definition that only a reasoner could apply). The
+#         reasoner-free query therefore enumerates the process-root set explicitly.
+# EXPECTED RESULT COLUMNS:
 #         ?targetClass - the manufacturing/processing or assay class reached
-#         ?path        - literal naming the documented instance path used
+#         ?path        - literal naming the instance path used
 #         ?simulation ?simClass - the glass simulation and its asserted class
-# FIXTURE REQUIREMENTS (Step 7): path 1 needs the devitrification datum about a
-#         crystallization occurrence (synthetic, anchor-grounded per D-035);
-#         path 2 the density property/assay bridge (thesis-grounded); path 3 a
-#         measured datum entering a simulation as specified input (Batch-4/5
-#         direction-agnostic data-flow evidence); path 4 a simulation whose
-#         output datum is about an assay occurrence (Batch-5/6 pattern;
-#         fixture element optional in the first release).
-
+# EXPECTED ROW COUNT on the 2.0.0-rc1 package: 4 - path 1 (crystallization occurrence of
+#         the devitrification-kinetics simulation), path 2 twice (density assay linked to
+#         the melt-quench run and to the data-driven prediction) and path 3 (measured
+#         datum entering a melt-quench run). Path 4 has no fixture in this release.
+# VALIDATION: executed for the presentation-stage 2.0.0-rc1 package against the asserted
+#         union of go_v2_candidate.ttl and the synthetic abox_meltquench_example.ttl
+#         (Apache Jena arq and RDFLib, identical results).
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX obo:  <http://purl.obolibrary.org/obo/>

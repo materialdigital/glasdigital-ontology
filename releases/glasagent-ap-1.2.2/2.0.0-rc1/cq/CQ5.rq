@@ -1,62 +1,35 @@
-# CQ5 — Which simulated property values of a glass were compared against which
+# CQ5 - Which simulated property values of a glass were compared against which
 #        analysis-process (assay) results?
 #
-# STATUS: DRAFT (PLAN Step 3; assay-result provenance corrected 2026-08-27 per
-#         the independent post-integration review — WORK_LOG.md Entry 29).
-#         Syntax-checked only; NOT an executed validation result. Execution
-#         belongs to Steps 7-8 (blocked by D-021).
-# SOURCE: PLAN.md §6 CQ5; documented instance paths: PLAN.md §7.4.1 patterns 2-3,
-#         MODELING.md §5.2-§5.3 (required form of 2026-08-27).
-# PATH:   validation occurrence (obo:OBI_0302911) --obo:OBI_0000293--> BOTH the
-#         simulated property datum (go:GO_0000318) AND the measurement datum
-#         (obo:IAO_0000109); the simulated/measured distinction is carried by
-#         TYPING, never by a naming convention. REQUIRED shared-property bridge:
-#         both compared data are obo:IAO_0000136 about the SAME property
-#         instance; the assay obo:RO_0009006-measures that property instance
-#         AND has the compared measurement datum as its obo:OBI_0000299
+# PATH:   validation occurrence (obo:OBI_0302911) --obo:OBI_0000293--> BOTH the simulated
+#         property datum (go:GO_0000318) AND the measurement datum (obo:IAO_0000109);
+#         the simulated/measured distinction is carried by TYPING, never by naming.
+#         REQUIRED shared-property bridge: both compared data are obo:IAO_0000136 about
+#         the SAME property instance; the assay obo:RO_0009006-measures that property
+#         instance AND has the compared measurement datum as its obo:OBI_0000299
 #         specified output.
-# PROVENANCE REQUIREMENT (corrected 2026-08-27): the integrated draft left the
-#         property/assay bridge OPTIONAL and never linked the assay to the
-#         measurement datum - a validation with no assay-produced result still
-#         counted as an answer, and an assay measuring the property could be
-#         paired with a measurement datum it never produced. The draft now
-#         REQUIRES the selected assay to have produced the exact measurement
-#         datum consumed by the validation (?assay obo:OBI_0000299 ?measDatum;
-#         domain-compatible: obo:OBI_0000299 has domain obo:COB_0000035 planned
-#         process, and assays are planned processes) and REQUIRES both compared
-#         data items to be about the shared property instance. A validation
-#         whose measured input lacks assay provenance is NOT a CQ5 answer -
-#         that is what "compared against analysis-process results" means.
-# EXPECTED ANSWER COLUMNS:
-#         ?validation  - the validation occurrence
-#         ?simDatum    - simulated property datum (typed go:GO_0000318)
-#         ?measDatum   - measurement datum (typed obo:IAO_0000109), specified
-#                        output of ?assay
+# PROVENANCE REQUIREMENT: a validation whose measured input lacks assay provenance is
+#         NOT an answer - "compared against analysis-process results" means the assay
+#         must have produced the exact measurement datum consumed by the validation.
+# EXPECTED RESULT COLUMNS:
+#         ?validation ?simDatum ?measDatum
 #         ?property ?propertyClass - the shared property instance and its class
 #         ?assay ?assayClass       - the analysis process and its class
 #                                    (subclass of obo:OBI_0000070 "assay")
-# FIXTURE REQUIREMENTS (Step 7, corrected 2026-08-27 - all REQUIRED):
-#         one validation joining the simulated density datum (thesis §2.2.5)
-#         and a BAM density measurement datum (thesis ch. 4); the assay typed
-#         with the existing baseline class GO_0000058 "Density analyzing
-#         process" (subclass of obo:OBI_0000070, verified); AND the assertions
-#           ex:assay-001            obo:OBI_0000299 ex:meas-density-datum-001 .
-#           ex:sim-density-datum-001  obo:IAO_0000136 ex:density-001 .
-#           ex:meas-density-datum-001 obo:IAO_0000136 ex:density-001 .
-#         (MODELING.md §6.1).
-# GRAPH ASSUMPTION: expected answers assume the ASSERTED graph only -
-#         rdfs:subClassOf* traverses asserted subclass axioms; no OWL reasoning
-#         (including owl:equivalentClass-based classification) is assumed or
-#         claimed; D-021 is pending, so no reasoning result may be claimed.
-# LIMITS: viscosity comparisons wait for the D-017 repair - GO_0000046 is
-#         trapped inside the runaway skos:definition literal of GO_0000018 and
-#         is NOT a usable declared class until the repair is approved and
-#         executed (MODELING.md §3). Graded agreement and named metric data
-#         (screening Batches 1-6) are documented as instance-level additions in
-#         MODELING.md §8.6 - a metric datum can be attached as a further
-#         specified output of ?validation without new classes; the draft does
-#         not require it.
-
+# EXPECTED ROW COUNT on the 2.0.0-rc1 package: 1 - the density validation joining the
+#         simulated density datum, the measured density datum and the density analyzing
+#         process (GO_0000058).
+# GRAPH ASSUMPTION: answers are computed on the ASSERTED graph only - rdfs:subClassOf*
+#         traverses asserted subclass axioms; no OWL reasoning (including
+#         owl:equivalentClass-based classification) is required or claimed. A reasoner
+#         may widen the answer set; the expected count below refers to the asserted union.
+# SEMANTIC LIMITATION: the synthetic viscosity elements are value-free and have no measured
+#         counterpart or assay, so they correctly produce no CQ5 row. Graded agreement or
+#         named metric data can be added as specified outputs of the validation at instance
+#         level; the query does not require them.
+# VALIDATION: executed for the presentation-stage 2.0.0-rc1 package against the asserted
+#         union of go_v2_candidate.ttl and the synthetic abox_meltquench_example.ttl
+#         (Apache Jena arq and RDFLib, identical results).
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX obo:  <http://purl.obolibrary.org/obo/>

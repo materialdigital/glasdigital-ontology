@@ -1,0 +1,82 @@
+# CQ6 - Which manufacturing or analysis process classes are connected to at
+#        least one glass simulation, and through which path?
+#
+# CLASS LIFTING RULE: the manufacturing/analysis CLASS is derived from rdf:type plus
+#         rdfs:subClassOf* on instances - class IRIs are never object-property targets.
+# PATHS:  1 - simulation output datum is about a manufacturing/processing occurrence;
+#         2 - simulated property datum and assay share one property instance;
+#         3 - assay measurement datum is a specified input of the simulation;
+#         4 - simulation output datum is about an assay occurrence
+#             (simulation of an analysis process).
+# GRAPH ASSUMPTION: answers are computed on the ASSERTED graph only - rdfs:subClassOf*
+#         traverses asserted subclass axioms; no OWL reasoning (including
+#         owl:equivalentClass-based classification) is required or claimed. A reasoner
+#         may widen the answer set; the expected count below refers to the asserted union.
+# ANCHOR-SET NOTE: the asserted baseline hierarchy places melting (co:PMD_0000053),
+#         crystallization (co:PMD_0020195), heating (co:PMD_0025010) and cooling
+#         (co:PMD_0025011) OUTSIDE the co:PMD_0000833 manufacturing subtree (PMD_0000833
+#         has an owl:equivalentClass definition that only a reasoner could apply). The
+#         reasoner-free query therefore enumerates the process-root set explicitly.
+# EXPECTED RESULT COLUMNS:
+#         ?targetClass - the manufacturing/processing or assay class reached
+#         ?path        - literal naming the instance path used
+#         ?simulation ?simClass - the glass simulation and its asserted class
+# EXPECTED ROW COUNT on the 2.0.0-rc1 package: 4 - path 1 (crystallization occurrence of
+#         the devitrification-kinetics simulation), path 2 twice (density assay linked to
+#         the melt-quench run and to the data-driven prediction) and path 3 (measured
+#         datum entering a melt-quench run). Path 4 has no fixture in this release.
+# VALIDATION: executed for the presentation-stage 2.0.0-rc1 package against the asserted
+#         union of go_v2_candidate.ttl and the synthetic abox_meltquench_example.ttl
+#         (Apache Jena arq and RDFLib, identical results).
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX co:   <https://w3id.org/pmd/co/>
+PREFIX go:   <https://w3id.org/pmd/glass-ontology/>
+
+SELECT DISTINCT ?targetClass ?path ?simulation ?simClass
+WHERE {
+  ?simulation rdf:type ?simClass .
+  ?simClass   rdfs:subClassOf* go:GO_0000300 .              # glass simulation process anchor
+
+  {
+    # Path 1 - simulation output datum is about a manufacturing/processing occurrence
+    VALUES ?processRoot { co:PMD_0000833 co:PMD_0000053 co:PMD_0020195 co:PMD_0025010 co:PMD_0025011 }
+    ?simulation obo:OBI_0000299 ?datum .                    # has specified output
+    ?datum      obo:IAO_0000136 ?occurrence .               # is about (an instance)
+    ?occurrence rdf:type ?targetClass .
+    ?targetClass rdfs:subClassOf* ?processRoot .
+    BIND("output datum is about a manufacturing/processing occurrence" AS ?path)
+  }
+  UNION
+  {
+    # Path 2 - simulated property datum and assay share one property instance
+    ?simulation obo:OBI_0000299 ?simDatum .
+    ?simDatum   rdf:type/rdfs:subClassOf* go:GO_0000318 .   # simulated property datum
+    ?simDatum   obo:IAO_0000136 ?property .
+    ?assay      obo:RO_0009006 ?property .                  # assay measures characteristic
+    ?assay      rdf:type ?targetClass .
+    ?targetClass rdfs:subClassOf* obo:OBI_0000070 .         # assay
+    BIND("simulated property datum and assay share one property instance" AS ?path)
+  }
+  UNION
+  {
+    # Path 3 - assay result flows into the simulation as a specified input
+    ?assay      obo:OBI_0000299 ?measDatum .
+    ?measDatum  rdf:type/rdfs:subClassOf* obo:IAO_0000109 . # measurement datum
+    ?simulation obo:OBI_0000293 ?measDatum .                # has specified input
+    ?assay      rdf:type ?targetClass .
+    ?targetClass rdfs:subClassOf* obo:OBI_0000070 .
+    BIND("assay measurement datum is a specified input of the simulation" AS ?path)
+  }
+  UNION
+  {
+    # Path 4 - simulation of an analysis process (output datum about an assay occurrence)
+    ?simulation obo:OBI_0000299 ?datum .
+    ?datum      obo:IAO_0000136 ?assayOccurrence .
+    ?assayOccurrence rdf:type ?targetClass .
+    ?targetClass rdfs:subClassOf* obo:OBI_0000070 .
+    BIND("output datum is about an assay occurrence" AS ?path)
+  }
+}
+ORDER BY ?path ?targetClass ?simulation

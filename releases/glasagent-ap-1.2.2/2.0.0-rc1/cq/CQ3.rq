@@ -1,0 +1,108 @@
+# CQ3 - What are the ordered steps of the melt-quench protocol, with their
+#        ensemble, temperature, duration, and cooling rate?
+#
+# PATH:   run --obo:RO_0000059 (concretizes)--> melt-quench protocol INSTANCE
+#         (BFO 2020 allows a process to concretize a generically dependent continuant);
+#         run --obo:BFO_0000051 (has part)--> step processes, ordered pairwise by
+#         obo:BFO_0000063 (precedes);
+#         step --obo:OBI_0000293--> ONE parameter specification per result row: either a
+#         statistical ensemble specification (go:GO_0000320) or a further parameter
+#         specification (co:PMD_0000013), each --co:PMD_0000077 (specified by value)-->
+#         obo:OBI_0001933 value specification carrying obo:OBI_0002135 (has specified
+#         value) / obo:OBI_0001937 (has specified numeric value) and obo:IAO_0000039
+#         (has measurement unit label).
+# EXPECTED RESULT COLUMNS:
+#         ?protocol ?workflow ?run ?step ?stepLabel ?priorStep
+#         ?ensembleValue - "NVT" | "NPT" (an A-Box value, not a T-Box individual)
+#         ?paramLabel ?paramNumericValue ?paramUnitLabel
+#         Each row binds AT MOST ONE parameter branch (ensemble OR parameter group).
+# EXPECTED ROW COUNT on the 2.0.0-rc1 package: 21 - 8 steps with pairwise precedes
+#         edges and one row per parameter specification (NVT/NPT ensembles, 100 ps
+#         segment durations, 300 K and 3000 K temperatures, target pressure, and the
+#         5 K/ps cooling rate with a typed unit).
+# ORDERING: the query returns pairwise ?priorStep/?step edges; the total order is
+#         reconstructed by the consumer (or a query using transitive closure).
+# GRAPH ASSUMPTION: answers are computed on the ASSERTED graph only - rdfs:subClassOf*
+#         traverses asserted subclass axioms; no OWL reasoning (including
+#         owl:equivalentClass-based classification) is required or claimed. A reasoner
+#         may widen the answer set; the expected count below refers to the asserted union.
+# SEMANTIC LIMITATION: the cooling rate is answered through the ordinary parameter-
+#         specification branch. The direct process-attribute route via a dedicated
+#         cooling-rate attribute class (GO_0000047) is not used in this release, because
+#         that class is not a usable declared class in the current baseline; the route is
+#         kept below as comments only.
+# LANGUAGE HANDLING: returned rdfs:labels are filtered to untagged or English literals to
+#         avoid duplicate rows from multilingual PMDco labels.
+# NOTES:  every unit individual referenced by obo:IAO_0000039 is typed obo:IAO_0000003
+#         "measurement unit label", the declared range of that functional property.
+#         go:GO_0000312 (glass simulation workflow) enters through the OPTIONAL block.
+# VALIDATION: executed for the presentation-stage 2.0.0-rc1 package against the asserted
+#         union of go_v2_candidate.ttl and the synthetic abox_meltquench_example.ttl
+#         (Apache Jena arq and RDFLib, identical results).
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX co:   <https://w3id.org/pmd/co/>
+PREFIX go:   <https://w3id.org/pmd/glass-ontology/>
+
+SELECT ?protocol ?workflow ?run ?step ?stepLabel ?priorStep
+       ?ensembleValue ?paramLabel ?paramNumericValue ?paramUnitLabel
+WHERE {
+  ?protocol rdf:type/rdfs:subClassOf* go:GO_0000311 .       # melt-quench protocol
+  ?run      obo:RO_0000059 ?protocol .                      # run concretizes protocol
+  ?run      rdf:type/rdfs:subClassOf* go:GO_0000302 .       # glass melt-quench simulation
+
+  OPTIONAL {                                                # workflow definition context
+    ?workflow rdf:type/rdfs:subClassOf* go:GO_0000312 .     # glass simulation workflow
+    ?workflow obo:BFO_0000051 ?protocol .                   # has part (ICE part-hood)
+  }
+
+  ?run obo:BFO_0000051 ?step .                              # step executions as parts
+  OPTIONAL {
+    ?step rdfs:label ?stepLabel .
+    FILTER ( lang(?stepLabel) = "" || langMatches(lang(?stepLabel), "en") )
+  }
+
+  OPTIONAL {                                                # pairwise ordering
+    ?priorStep obo:BFO_0000063 ?step .                      # precedes
+    ?run obo:BFO_0000051 ?priorStep .
+  }
+
+  OPTIONAL {                                                # per-step parameters: ONE optional
+    ?step obo:OBI_0000293 ?paramSpec .                      # group; the two branches below are
+    ?paramSpec co:PMD_0000077 ?paramVS .                    # alternatives, so each row carries
+    ?paramVS rdf:type/rdfs:subClassOf* obo:OBI_0001933 .    # exactly one parameter specification
+    {                                                       # (a) statistical ensemble
+      ?paramSpec rdf:type/rdfs:subClassOf* go:GO_0000320 .  # statistical ensemble specification
+      ?paramVS obo:OBI_0002135 ?ensembleValue .             # has specified value ("NVT"/"NPT")
+    }
+    UNION
+    {                                                       # (b) further parameter specification
+      ?paramSpec rdf:type/rdfs:subClassOf* co:PMD_0000013 . # parameter specification
+      FILTER NOT EXISTS { ?paramSpec rdf:type/rdfs:subClassOf* go:GO_0000320 . }
+      OPTIONAL {
+        ?paramSpec rdfs:label ?paramLabel .
+        FILTER ( lang(?paramLabel) = "" || langMatches(lang(?paramLabel), "en") )
+      }
+      OPTIONAL { ?paramVS obo:OBI_0001937 ?paramNumericValue . }
+      OPTIONAL {
+        ?paramVS obo:IAO_0000039 ?unitLabelIndividual .     # has measurement unit label
+        OPTIONAL {
+          ?unitLabelIndividual rdfs:label ?paramUnitLabel .
+          FILTER ( lang(?paramUnitLabel) = "" || langMatches(lang(?paramUnitLabel), "en") )
+        }
+      }
+    }
+  }
+
+  # DEFERRED (D-017) - direct process-attribute route. NOT part of the
+  # executable pattern: an untyped co:PMD_0000009 match would return ANY
+  # process attribute of the step, and the typing class go:GO_0000047 is
+  # trapped inside the runaway GO_0000018 literal until the approved repair.
+  # Activate BOTH lines together only after the approved D-017 repair:
+  # OPTIONAL {
+  #   ?step co:PMD_0000009 ?coolingRateAttribute .          # has process attribute
+  #   ?coolingRateAttribute rdf:type go:GO_0000047 .        # cooling rate (trapped; D-017)
+  # }
+}
+ORDER BY ?run ?step

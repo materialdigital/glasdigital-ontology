@@ -1,0 +1,52 @@
+# CQ4 - Which software (and, in the A-Box, which version) executed a given
+#        simulation?
+#
+# PATH:   permitted process --obo:STATO_0000102 (executes)--> software INSTANCE typed
+#         nfdi:NFDI_0001048 "simulation software" (direct reuse, no GO mint). The
+#         A-Box asserts the executes edge directly; no property-chain inference is used.
+# PROCESS SCOPE: explicit root set (see CQ2): co:PMD_0000933 simulation process,
+#         go:GO_0000306 density functional theory calculation, go:GO_0000307 phase
+#         equilibrium calculation - not the whole co:PMD_0000583 computing-process subtree.
+# VERSION SEMANTICS: each software individual denotes exactly ONE released version
+#         (e.g. "LAMMPS release 29 September 2021", "GULP 6.0"); the version is part of
+#         the individual's identity and label.
+# EXPECTED RESULT COLUMNS:
+#         ?simulation ?simClass - the run and its asserted class
+#         ?software ?softwareLabel - the version-specific software individual and label
+# EXPECTED ROW COUNT on the 2.0.0-rc1 package: 2 - the LAMMPS individual for the
+#         melt-quench run, one row per asserted run class.
+# SEMANTIC LIMITATION: no GULP row is expected. The analytical elastic-constant
+#         evaluation executed with GULP is typed as an analytical calculation
+#         (co:PMD_0025012), which lies outside the permitted simulation root set; the
+#         A-Box still records the executes edge as software provenance.
+# GRAPH ASSUMPTION: answers are computed on the ASSERTED graph only - rdfs:subClassOf*
+#         traverses asserted subclass axioms; no OWL reasoning (including
+#         owl:equivalentClass-based classification) is required or claimed. A reasoner
+#         may widen the answer set; the expected count below refers to the asserted union.
+# LANGUAGE HANDLING: the returned rdfs:label is filtered to untagged or English literals.
+# VALIDATION: executed for the presentation-stage 2.0.0-rc1 package against the asserted
+#         union of go_v2_candidate.ttl and the synthetic abox_meltquench_example.ttl
+#         (Apache Jena arq and RDFLib, identical results).
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX co:   <https://w3id.org/pmd/co/>
+PREFIX go:   <https://w3id.org/pmd/glass-ontology/>
+PREFIX nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/>
+
+SELECT DISTINCT ?simulation ?simClass ?software ?softwareLabel
+WHERE {
+  VALUES ?processRoot { co:PMD_0000933 go:GO_0000306 go:GO_0000307 }   # explicit root set (MODELING.md §5.8)
+
+  ?simulation rdf:type ?simClass .
+  ?simClass   rdfs:subClassOf* ?processRoot .          # closure from permitted roots only
+
+  ?simulation obo:STATO_0000102 ?software .            # executes
+  ?software   rdf:type/rdfs:subClassOf* nfdi:NFDI_0001048 .  # simulation software (direct reuse)
+
+  OPTIONAL {
+    ?software rdfs:label ?softwareLabel .
+    FILTER ( lang(?softwareLabel) = "" || langMatches(lang(?softwareLabel), "en") )
+  }
+}
+ORDER BY ?simulation ?software

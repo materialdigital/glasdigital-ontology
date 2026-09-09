@@ -1,0 +1,49 @@
+# CQ2 - Which computational model (interatomic potential, thermodynamic model,
+#        data-driven model) was used in a given simulation?
+#
+# PATH:   permitted process --obo:OBI_0000293 (has specified input)--> model INSTANCE;
+#         model --rdf:type--> model class, closed under rdfs:subClassOf* to
+#         go:GO_0000313 (computational model).
+# PROCESS SCOPE: the query closes over an explicit root set instead of the whole
+#         co:PMD_0000583 "computing process" subtree, so that non-simulation
+#         computations (e.g. co:PMD_0025012 analytical calculation) are not treated
+#         as simulations: co:PMD_0000933 simulation process (asserted subtree incl.
+#         GO_0000300-305 and GO_0000310 via co:PMD_0000821), go:GO_0000306 density
+#         functional theory calculation and go:GO_0000307 phase equilibrium
+#         calculation. Deliberately excluded: go:GO_0000308 CALPHAD assessment
+#         (the model is its specified OUTPUT; see CQ8) and go:GO_0000309 feature
+#         generation (consumes structures/datasets, not computational models).
+# EXPECTED RESULT COLUMNS:
+#         ?simulation ?simClass - the run individual and its asserted class
+#         ?model ?modelClass    - the model individual and its class
+#                                 (go:GO_0000314 / 315 / 316 / 317 or go:GO_0000313)
+# EXPECTED ROW COUNT on the 2.0.0-rc1 package: 4 - the force field of the melt-quench run
+#         (one row per asserted run class), the thermodynamic model of the
+#         devitrification-kinetics simulation and the data-driven property model.
+# GRAPH ASSUMPTION: answers are computed on the ASSERTED graph only - rdfs:subClassOf*
+#         traverses asserted subclass axioms; no OWL reasoning (including
+#         owl:equivalentClass-based classification) is required or claimed. A reasoner
+#         may widen the answer set; the expected count below refers to the asserted union.
+# NOTES:  model components acting as inputs (e.g. dispersion corrections) are represented
+#         at instance level as their own individuals; no extra class or relation is needed.
+# VALIDATION: executed for the presentation-stage 2.0.0-rc1 package against the asserted
+#         union of go_v2_candidate.ttl and the synthetic abox_meltquench_example.ttl
+#         (Apache Jena arq and RDFLib, identical results).
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX co:   <https://w3id.org/pmd/co/>
+PREFIX go:   <https://w3id.org/pmd/glass-ontology/>
+
+SELECT DISTINCT ?simulation ?simClass ?model ?modelClass
+WHERE {
+  VALUES ?processRoot { co:PMD_0000933 go:GO_0000306 go:GO_0000307 }   # explicit root set (MODELING.md §5.8)
+
+  ?simulation rdf:type ?simClass .
+  ?simClass   rdfs:subClassOf* ?processRoot .     # closure from permitted roots only
+
+  ?simulation obo:OBI_0000293 ?model .            # has specified input
+  ?model      rdf:type ?modelClass .
+  ?modelClass rdfs:subClassOf* go:GO_0000313 .    # computational model
+}
+ORDER BY ?simulation ?model

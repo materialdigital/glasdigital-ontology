@@ -1,0 +1,342 @@
+# AP 1.2.2 demonstration A-Box (PLAN Step 7; PLAN section 7.5; MODELING.md sections 5-6).
+# A-Box ONLY: individuals and assertions. No class declaration, no T-Box axiom, no new
+# object property (D-005), no rdfs:seeAlso (D-040). Class IRIs appear exclusively as
+# objects of rdf:type (PLAN section 7.4.1 formal rule; no OWL punning).
+#
+# Every individual is SYNTHETIC and ILLUSTRATIVE (D-007): the ex: namespace is the
+# reserved example.org domain and never enters any release namespace. Thesis-grounded
+# elements cite their thesis section in rdfs:comment; CQ8/thermochemical elements are
+# value-free skeletons per D-035 (anchor documents only; pending GTT/SCHOTT expert
+# validation); nothing here is presented as a result generated during this project.
+#
+# Deferred by owner decision D-039: GO_0000047 cooling rate is NOT used (the direct
+# process-attribute route stays inactive; the prescribed cooling-rate VALUE is carried
+# by an ordinary parameter specification, MODELING.md section 5.5 trapped-term rule).
+# GO_0000046 viscosity coverage is ACTIVATED by owner decision D-041 (2026-08-29): one
+# value-free synthetic viscosity property instance and one simulated-viscosity datum,
+# both clearly labelled in the D-035 style with no numeric value and no thesis anchor;
+# no measured counterpart, no assay, no validation occurrence (CQ5 unchanged).
+
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix co:   <https://w3id.org/pmd/co/> .
+@prefix go:   <https://w3id.org/pmd/glass-ontology/> .
+@prefix nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix ex:   <https://example.org/glasagent/ap122/demo#> .
+
+#################################################################
+#    Material, properties, and property data (patterns 1-2)
+#################################################################
+
+ex:glass-001 rdf:type co:PMD_0000661 ;
+    rdfs:label "simulated NABS glass (illustrative individual)"@en ;
+    rdfs:comment "Sodium aluminoborosilicate glass system of the melt-quench fixture; thesis section 2.2.4."@en .
+
+ex:density-001 rdf:type co:PMD_0000597 ;
+    obo:RO_0000052 ex:glass-001 ;
+    rdfs:label "density of the simulated NABS glass"@en ;
+    rdfs:comment "Shared property instance of CQ5: the simulated datum, the measured datum, and the assay all meet here (MODELING.md sections 5.2-5.3)."@en .
+
+ex:elastic-modulus-001 rdf:type co:PMD_0000618 ;
+    obo:RO_0000052 ex:glass-001 ;
+    rdfs:label "elastic modulus of the simulated NABS glass"@en ;
+    rdfs:comment "Target of the analytical GULP property evaluation; thesis Theorie und Methoden (PDF p. 24) and section 2.2.5."@en .
+
+ex:structure-datum-001 rdf:type obo:IAO_0000027 ;
+    obo:IAO_0000136 ex:glass-001 ;
+    rdfs:label "final glass structure datum"@en ;
+    rdfs:comment "Final structure from the melt-quench run; thesis section 2.2.4."@en .
+
+ex:sim-density-datum-001 rdf:type go:GO_0000318 ;
+    obo:IAO_0000136 ex:density-001 ;
+    rdfs:label "simulated density datum"@en ;
+    rdfs:comment "Density evaluated from the final NPT segment; thesis section 2.2.5."@en .
+
+ex:meas-density-datum-001 rdf:type obo:IAO_0000109 ;
+    obo:IAO_0000136 ex:density-001 ;
+    rdfs:label "measured density datum"@en ;
+    rdfs:comment "Experimental density measurement; thesis chapter 4 context. Aboutness of the SAME property instance as the simulated datum is REQUIRED for CQ5 (MODELING.md section 5.2)."@en .
+
+ex:elastic-datum-001 rdf:type go:GO_0000318 ;
+    obo:IAO_0000136 ex:elastic-modulus-001 ;
+    rdfs:label "computed elastic-constants datum"@en ;
+    rdfs:comment "Output of the analytical Hessian-based property evaluation (thesis PDF p. 24); its producing process is typed co:PMD_0025012, outside the simulation families, so this datum is deliberately NOT a CQ1 row (MODELING.md section 5.8)."@en .
+
+ex:pred-density-datum-001 rdf:type go:GO_0000318 ;
+    obo:IAO_0000136 ex:density-001 ;
+    rdfs:label "predicted density datum (data-driven)"@en ;
+    rdfs:comment "Data-driven prediction target: the thesis names density and elastic constants as ML target quantities validated against SciGlass reference data (thesis abstract and chapter 4, pp. 53-58)."@en .
+
+ex:viscosity-001 rdf:type go:GO_0000046 ;
+    obo:RO_0000052 ex:glass-001 ;
+    rdfs:label "viscosity of the simulated NABS glass (synthetic illustrative instance)"@en ;
+    rdfs:comment "Synthetic, illustrative, value-free viscosity property instance in the D-035 style, added per owner decision D-041 (2026-08-29); no thesis anchor is claimed. Its class GO_0000046 is declared only by the approved D-039 additive repair (baseline_repairs.ttl)."@en .
+
+ex:sim-viscosity-datum-001 rdf:type go:GO_0000318 ;
+    obo:IAO_0000136 ex:viscosity-001 ;
+    rdfs:label "simulated viscosity datum (synthetic illustrative instance, value-free)"@en ;
+    rdfs:comment "Synthetic, illustrative, value-free simulated-viscosity datum in the D-035 style, added per owner decision D-041 (2026-08-29); no numeric value, no thesis anchor, no measured counterpart, no assay, no validation occurrence."@en .
+
+#################################################################
+#    Melt-quench run, protocol, workflow, steps (section 5.5)
+#################################################################
+
+ex:run-001 rdf:type go:GO_0000302 , co:PMD_0000631 ;
+    rdfs:label "NABS melt-quench run 001"@en ;
+    rdfs:comment "One NABS melt-quench run; thesis section 2.2.4. Legitimate multi-typing per PLAN section 7.2 (no punning)."@en ;
+    obo:RO_0000059 ex:protocol-001 ;
+    obo:BFO_0000051 ex:step-01 , ex:step-02 , ex:step-03 , ex:step-04 ,
+                    ex:step-05 , ex:step-06 , ex:step-07 , ex:step-08 ;
+    obo:OBI_0000293 ex:bmp-forcefield-001 ;
+    obo:STATO_0000102 ex:lammps-29sep2021 ;
+    obo:OBI_0000299 ex:structure-datum-001 , ex:sim-density-datum-001 , ex:sim-dataset-001 ,
+                    ex:sim-viscosity-datum-001 .
+
+ex:protocol-001 rdf:type go:GO_0000311 ;
+    rdfs:label "melt-quench protocol 001"@en ;
+    rdfs:comment "Eight-step schedule; thesis section 2.2.4 pp. 14-15, Fig. 2.1."@en .
+
+ex:workflow-001 rdf:type go:GO_0000312 ;
+    rdfs:label "glass simulation workflow 001"@en ;
+    obo:BFO_0000051 ex:protocol-001 .
+
+ex:step-01 rdf:type co:PMD_0000956 ;
+    rdfs:label "step 01: conjugate-gradient minimization"@en ;
+    obo:BFO_0000063 ex:step-02 .
+
+ex:step-02 rdf:type co:PMD_0000933 ;
+    rdfs:label "step 02: 100 ps NVT at 300 K"@en ;
+    obo:BFO_0000063 ex:step-03 ;
+    obo:OBI_0000293 ex:ensemble-spec-nvt-01 , ex:temp-spec-300k , ex:duration-spec-100ps .
+
+ex:step-03 rdf:type co:PMD_0000933 ;
+    rdfs:label "step 03: 100 ps NPT at 300 K, target pressure 0"@en ;
+    obo:BFO_0000063 ex:step-04 ;
+    obo:OBI_0000293 ex:ensemble-spec-npt-01 , ex:temp-spec-300k , ex:duration-spec-100ps ,
+                    ex:pressure-spec-0 .
+
+ex:step-04 rdf:type co:PMD_0000933 ;
+    rdfs:label "step 04: 100 ps NVT at melt temperature"@en ;
+    obo:BFO_0000063 ex:step-05 ;
+    obo:OBI_0000293 ex:ensemble-spec-nvt-01 , ex:temp-spec-melt-3000k , ex:duration-spec-100ps .
+
+ex:step-05 rdf:type co:PMD_0000933 ;
+    rdfs:label "step 05: 100 ps NPT at melt temperature"@en ;
+    obo:BFO_0000063 ex:step-06 ;
+    obo:OBI_0000293 ex:ensemble-spec-npt-01 , ex:temp-spec-melt-3000k , ex:duration-spec-100ps .
+
+ex:step-06 rdf:type co:PMD_0000933 ;
+    rdfs:label "step 06: linear cooling to 300 K at 5 K/ps (NPT)"@en ;
+    obo:BFO_0000063 ex:step-07 ;
+    obo:OBI_0000293 ex:ensemble-spec-npt-01 , ex:temp-spec-300k , ex:cooling-rate-spec-01 .
+
+ex:step-07 rdf:type co:PMD_0000933 ;
+    rdfs:label "step 07: 100 ps NPT at 300 K"@en ;
+    obo:BFO_0000063 ex:step-08 ;
+    obo:OBI_0000293 ex:ensemble-spec-npt-01 , ex:temp-spec-300k , ex:duration-spec-100ps .
+
+ex:step-08 rdf:type co:PMD_0000956 ;
+    rdfs:label "step 08: final conjugate-gradient minimization"@en .
+
+#################################################################
+#    Parameter and ensemble specifications with value specifications
+#################################################################
+
+ex:ensemble-spec-nvt-01 rdf:type go:GO_0000320 ;
+    rdfs:label "NVT ensemble specification"@en ;
+    co:PMD_0000077 ex:vs-nvt-01 .
+
+ex:vs-nvt-01 rdf:type obo:OBI_0001933 ;
+    rdfs:label "value specification: NVT"@en ;
+    obo:OBI_0002135 "NVT" .
+
+ex:ensemble-spec-npt-01 rdf:type go:GO_0000320 ;
+    rdfs:label "NPT ensemble specification"@en ;
+    co:PMD_0000077 ex:vs-npt-01 .
+
+ex:vs-npt-01 rdf:type obo:OBI_0001933 ;
+    rdfs:label "value specification: NPT"@en ;
+    obo:OBI_0002135 "NPT" .
+
+ex:temp-spec-300k rdf:type co:PMD_0000013 ;
+    rdfs:label "temperature specification 300 K"@en ;
+    co:PMD_0000077 ex:vs-300k .
+
+ex:vs-300k rdf:type obo:OBI_0001933 ;
+    rdfs:label "value specification: 300 kelvin"@en ;
+    obo:OBI_0001937 "300.0"^^xsd:double ;
+    obo:IAO_0000039 ex:unit-kelvin .
+
+ex:temp-spec-melt-3000k rdf:type co:PMD_0000013 ;
+    rdfs:label "melt temperature specification 3000 K"@en ;
+    rdfs:comment "Melt temperature 3000 K; 5000 K applies only to compositions with SiO2 above 90 mol percent (thesis section 2.2.4) - that variant is not instantiated here."@en ;
+    co:PMD_0000077 ex:vs-3000k .
+
+ex:vs-3000k rdf:type obo:OBI_0001933 ;
+    rdfs:label "value specification: 3000 kelvin"@en ;
+    obo:OBI_0001937 "3000.0"^^xsd:double ;
+    obo:IAO_0000039 ex:unit-kelvin .
+
+ex:duration-spec-100ps rdf:type co:PMD_0000013 ;
+    rdfs:label "segment duration specification 100 ps"@en ;
+    co:PMD_0000077 ex:vs-100ps .
+
+ex:vs-100ps rdf:type obo:OBI_0001933 ;
+    rdfs:label "value specification: 100 picoseconds"@en ;
+    obo:OBI_0001937 "100.0"^^xsd:double ;
+    obo:IAO_0000039 ex:unit-picosecond .
+
+ex:pressure-spec-0 rdf:type co:PMD_0000013 ;
+    rdfs:label "target pressure specification (P = 0)"@en ;
+    rdfs:comment "The source states the target pressure as P = 0 without naming a unit (thesis section 2.2.4); no unit individual is invented."@en ;
+    co:PMD_0000077 ex:vs-p0 .
+
+ex:vs-p0 rdf:type obo:OBI_0001933 ;
+    rdfs:label "value specification: target pressure 0"@en ;
+    obo:OBI_0001937 "0.0"^^xsd:double .
+
+ex:cooling-rate-spec-01 rdf:type co:PMD_0000013 ;
+    rdfs:label "cooling rate specification (5 K/ps)"@en ;
+    rdfs:comment "Prescribed cooling rate 5 K/ps (thesis section 2.2.4), carried as an ordinary parameter specification per the trapped-term rule (MODELING.md section 5.5); the direct process-attribute route stays deferred (D-039)."@en ;
+    co:PMD_0000077 ex:vs-5kps .
+
+ex:vs-5kps rdf:type obo:OBI_0001933 ;
+    rdfs:label "value specification: 5 kelvin per picosecond"@en ;
+    obo:OBI_0001937 "5.0"^^xsd:double ;
+    obo:IAO_0000039 ex:unit-kelvin-per-picosecond .
+
+ex:unit-kelvin rdf:type obo:IAO_0000003 ;
+    rdfs:label "kelvin"@en .
+
+ex:unit-picosecond rdf:type obo:IAO_0000003 ;
+    rdfs:label "picosecond"@en .
+
+ex:unit-kelvin-per-picosecond rdf:type obo:IAO_0000003 ;
+    rdfs:label "kelvin per picosecond"@en .
+
+#################################################################
+#    Model, software, assay, validation (patterns 2-4; sections 5.2-5.6)
+#################################################################
+
+ex:bmp-forcefield-001 rdf:type go:GO_0000314 ;
+    rdfs:label "BMP force field"@en ;
+    rdfs:comment "Interatomic potential used by the melt-quench runs; thesis section 2.2.1 pp. 10-11."@en .
+
+ex:lammps-29sep2021 rdf:type nfdi:NFDI_0001048 ;
+    rdfs:label "LAMMPS release 29 September 2021"@en ;
+    rdfs:comment "Version-specific software individual (D-023); thesis pp. 9, 16."@en .
+
+ex:gulp-6.0 rdf:type nfdi:NFDI_0001048 ;
+    rdfs:label "GULP 6.0"@en ;
+    rdfs:comment "Version-specific software individual (D-023); thesis p. 16 and PDF p. 24."@en .
+
+ex:assay-001 rdf:type go:GO_0000058 ;
+    rdfs:label "density analyzing process 001"@en ;
+    rdfs:comment "Density measurement occurrence; thesis chapter 4 context."@en ;
+    obo:RO_0009006 ex:density-001 ;
+    obo:OBI_0000299 ex:meas-density-datum-001 .
+
+ex:validation-001 rdf:type obo:OBI_0302911 ;
+    rdfs:label "density validation 001"@en ;
+    rdfs:comment "Comparison of the simulated and measured density data (MODELING.md section 5.3)."@en ;
+    obo:OBI_0000293 ex:sim-density-datum-001 , ex:meas-density-datum-001 .
+
+ex:property-eval-001 rdf:type co:PMD_0025012 ;
+    rdfs:label "analytical elastic-constants evaluation (GULP)"@en ;
+    rdfs:comment "Step-7 typing decision per MODELING.md section 5.8: the GULP 6.0 property evaluation computes the elastic constants analytically from the Hessian after an energy minimization (thesis PDF p. 24), which types as co:PMD_0025012 analytical calculation - outside the CQ2/CQ4 root set, so no GULP row is a promised CQ4 result."@en ;
+    obo:STATO_0000102 ex:gulp-6.0 ;
+    obo:OBI_0000293 ex:structure-datum-001 ;
+    obo:OBI_0000299 ex:elastic-datum-001 .
+
+ex:run-002 rdf:type go:GO_0000302 ;
+    rdfs:label "melt-quench run 002 set up from a measured density (synthetic illustrative instance)"@en ;
+    rdfs:comment "Synthetic illustrative instance exercising CQ6 path 3 (a measured datum as specified input of a simulation; Batch-4 screening precedent, Fluegel-model input pattern; MODELING.md section 6.4). Not a thesis result."@en ;
+    obo:OBI_0000293 ex:meas-density-datum-001 .
+
+#################################################################
+#    CQ7 chain: datasets, feature generation, training, models (section 6.2)
+#################################################################
+
+ex:sim-dataset-001 rdf:type go:GO_0000319 ;
+    rdfs:label "MD training dataset (V14/V18-style)"@en ;
+    rdfs:comment "Simulation dataset produced by melt-quench runs; thesis p. 14 (replicate cells and Tukey QC are source facts, not modelled)."@en .
+
+ex:feature-gen-001 rdf:type go:GO_0000309 ;
+    rdfs:label "descriptor generation 001"@en ;
+    rdfs:comment "Feature generation over simulated structures; thesis descriptor sections pp. 31-36."@en ;
+    obo:OBI_0000293 ex:structure-datum-001 ;
+    obo:OBI_0000299 ex:descriptor-dataset-001 .
+
+ex:descriptor-dataset-001 rdf:type obo:IAO_0000100 ;
+    rdfs:label "descriptor dataset 001"@en ;
+    rdfs:comment "Descriptor (feature) dataset; typed obo:IAO_0000100 - feature generation is not a simulation process, so this is deliberately NOT a go:GO_0000319 individual (CQ7 datasetKind contrast)."@en .
+
+ex:training-001 rdf:type co:PMD_0000821 ;
+    rdfs:label "property-model training 001"@en ;
+    rdfs:comment "Machine-learning training run (instance-level typing co:PMD_0000821 per D-019); thesis pp. 53-58 (SVM/RF/NN/GPR)."@en ;
+    obo:OBI_0000293 ex:sim-dataset-001 , ex:descriptor-dataset-001 ;
+    obo:OBI_0000299 ex:property-model-001 .
+
+ex:property-model-001 rdf:type go:GO_0000317 ;
+    rdfs:label "data-driven glass property model 001"@en ;
+    rdfs:comment "Data-driven property model of the thesis SVM/RF/NN/GPR family, pp. 55-58."@en .
+
+ex:dft-calc-001 rdf:type go:GO_0000306 ;
+    rdfs:label "DFT calculation 001"@en ;
+    rdfs:comment "DFT run producing labelled training configurations (Batch-2 pattern; thesis VASP property database context, pp. 48-49)."@en ;
+    obo:OBI_0000299 ex:dft-dataset-001 .
+
+ex:dft-dataset-001 rdf:type go:GO_0000319 ;
+    rdfs:label "DFT-labelled training dataset 001"@en ;
+    rdfs:comment "Simulation dataset of DFT-labelled configurations (Batch-2 pattern); generic illustrative instance - no named external release, per PLAN section 9 verification discipline."@en .
+
+ex:mlp-training-001 rdf:type go:GO_0000310 ;
+    rdfs:label "machine-learning potential training 001"@en ;
+    obo:OBI_0000293 ex:dft-dataset-001 ;
+    obo:OBI_0000299 ex:ml-potential-001 .
+
+ex:ml-potential-001 rdf:type go:GO_0000315 ;
+    rdfs:label "machine-learning potential 001 (generic illustrative instance)"@en ;
+    rdfs:comment "Generic illustrative instance; concrete release identifiers (e.g. foundation-model releases) enter only after PLAN section 9 release verification."@en .
+
+ex:prediction-001 rdf:type go:GO_0000305 ;
+    rdfs:label "data-driven density prediction 001"@en ;
+    rdfs:comment "Application of the trained property model; density is a thesis-named ML target quantity (thesis abstract and chapter 4)."@en ;
+    obo:OBI_0000293 ex:property-model-001 ;
+    obo:OBI_0000299 ex:pred-density-datum-001 .
+
+#################################################################
+#    CQ8 skeleton and CQ6 path 1 - synthetic, anchor-grounded only (D-035)
+#################################################################
+
+ex:devit-sim-001 rdf:type go:GO_0000304 ;
+    rdfs:label "devitrification kinetics simulation 001 (synthetic illustrative instance)"@en ;
+    rdfs:comment "Synthetic illustrative instance grounded in GLASAGENT_Abgabeversion.md (GTT workflow: PrecipiSage, Entglasungskinetik); no screened-corpus source; pending GTT/SCHOTT expert validation (D-035/D-036)."@en ;
+    obo:OBI_0000293 ex:thermo-model-001 ;
+    obo:OBI_0000299 ex:devit-datum-001 .
+
+ex:thermo-model-001 rdf:type go:GO_0000316 ;
+    rdfs:label "thermodynamic model 001 (synthetic illustrative instance)"@en ;
+    rdfs:comment "Synthetic illustrative instance grounded in GLASAGENT_Abgabeversion.md (GTT thermodynamic modelling); no screened-corpus source; pending GTT/SCHOTT expert validation (D-035/D-036). Value-free skeleton."@en .
+
+ex:calphad-assessment-001 rdf:type go:GO_0000308 ;
+    rdfs:label "CALPHAD assessment 001 (synthetic illustrative instance)"@en ;
+    rdfs:comment "Synthetic illustrative instance grounded in GLASAGENT_Abgabeversion.md (GTT-Calphad Optimizer; measured data as Modellparameter); no screened-corpus source; pending GTT/SCHOTT expert validation (D-035/D-036)."@en ;
+    obo:OBI_0000293 ex:meas-cp-datum-001 ;
+    obo:OBI_0000299 ex:thermo-model-001 .
+
+ex:meas-cp-datum-001 rdf:type obo:IAO_0000109 ;
+    rdfs:label "calorimetric measurement datum (illustrative)"@en ;
+    rdfs:comment "Synthetic illustrative instance grounded in GLASAGENT_Abgabeversion.md (measured calorimetric data as model parameters, AP 4); no screened-corpus source; value-free skeleton (D-035)."@en .
+
+ex:devit-datum-001 rdf:type obo:IAO_0000027 ;
+    obo:IAO_0000136 ex:crystallization-001 ;
+    rdfs:label "devitrification kinetics datum 001 (synthetic illustrative instance)"@en ;
+    rdfs:comment "Synthetic illustrative instance; output datum about a crystallization occurrence (CQ6 path 1); value-free skeleton (D-035)."@en .
+
+ex:crystallization-001 rdf:type co:PMD_0020195 ;
+    rdfs:label "crystallization occurrence 001 (synthetic illustrative instance)"@en ;
+    rdfs:comment "Physical crystallization occurrence the devitrification datum is about (CQ6 path 1); synthetic illustrative instance."@en .

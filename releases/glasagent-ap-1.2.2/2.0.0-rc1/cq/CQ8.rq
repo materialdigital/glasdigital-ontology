@@ -1,0 +1,55 @@
+# CQ8 - For a given phase-equilibrium or devitrification-kinetics simulation:
+#        which thermodynamic model does it use, and which measured data were
+#        specified inputs of the CALPHAD assessment that produced that model?
+#
+# PATH:   simulation (go:GO_0000307 phase equilibrium calculation OR go:GO_0000304
+#         devitrification kinetics simulation, subclass closure)
+#         --obo:OBI_0000293--> thermodynamic model INSTANCE (go:GO_0000316);
+#         CALPHAD assessment (go:GO_0000308) --obo:OBI_0000299--> the same model;
+#         assessment --obo:OBI_0000293--> measurement datum (obo:IAO_0000109).
+# MEASURED VS SIMULATED: assessment inputs are required to be typed obo:IAO_0000109
+#         (measurement datum) - measured data used as model parameters; simulated data
+#         play no input role in this pattern.
+# EXPECTED RESULT COLUMNS:
+#         ?simulation ?simClass - the thermochemical computation and its class
+#         ?thermoModel          - the thermodynamic model individual
+#         ?assessment           - the CALPHAD assessment occurrence
+#         ?measDatum            - measured datum used as assessment input
+# EXPECTED ROW COUNT on the 2.0.0-rc1 package: 1 - the single illustrative
+#         devitrification-kinetics chain.
+# GRAPH ASSUMPTION: answers are computed on the ASSERTED graph only - rdfs:subClassOf*
+#         traverses asserted subclass axioms; no OWL reasoning (including
+#         owl:equivalentClass-based classification) is required or claimed. A reasoner
+#         may widen the answer set; the expected count below refers to the asserted union.
+# SEMANTIC LIMITATION: the thermochemical branch (GO_0000303/304/307/308/316) is a minimal
+#         branch grounded in the GlasAgent project documents (thermodynamic models, CALPHAD
+#         optimisation, devitrification kinetics, measured data as model parameters)
+#         rather than in the screened literature corpus, and it awaits validation by the
+#         designated domain experts. The A-Box fixture for this query is SYNTHETIC and
+#         value-free: no thermochemical value is asserted, and nothing in it is a
+#         screened-corpus or project simulation result.
+# VALIDATION: executed for the presentation-stage 2.0.0-rc1 package against the asserted
+#         union of go_v2_candidate.ttl and the synthetic abox_meltquench_example.ttl
+#         (Apache Jena arq and RDFLib, identical results).
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX go:   <https://w3id.org/pmd/glass-ontology/>
+
+SELECT DISTINCT ?simulation ?simClass ?thermoModel ?assessment ?measDatum
+WHERE {
+  VALUES ?simRoot { go:GO_0000307 go:GO_0000304 }
+
+  ?simulation rdf:type ?simClass .
+  ?simClass   rdfs:subClassOf* ?simRoot .
+
+  ?simulation obo:OBI_0000293 ?thermoModel .                # has specified input
+  ?thermoModel rdf:type/rdfs:subClassOf* go:GO_0000316 .    # thermodynamic model
+
+  ?assessment obo:OBI_0000299 ?thermoModel .                # assessment produced the model
+  ?assessment rdf:type/rdfs:subClassOf* go:GO_0000308 .     # CALPHAD assessment process
+
+  ?assessment obo:OBI_0000293 ?measDatum .                  # measured data as model parameters
+  ?measDatum  rdf:type/rdfs:subClassOf* obo:IAO_0000109 .   # measurement datum
+}
+ORDER BY ?simulation ?thermoModel ?measDatum

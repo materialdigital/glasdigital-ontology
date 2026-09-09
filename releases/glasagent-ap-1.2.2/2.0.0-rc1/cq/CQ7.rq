@@ -1,0 +1,68 @@
+# CQ7 - For a given data-driven glass property model or machine-learning
+#        potential: which training datasets were used, which processes generated
+#        those datasets (simulations, feature generation, or measurements), and
+#        which training process produced the model?
+#
+# PATH:   training process --obo:OBI_0000299--> model INSTANCE (go:GO_0000317 data-driven
+#         glass property model, or go:GO_0000315 machine-learning potential);
+#         training --obo:OBI_0000293--> dataset INSTANCE(s) (obo:IAO_0000100 closure;
+#         go:GO_0000319 marks simulation-produced datasets);
+#         OPTIONAL: generator --obo:OBI_0000299--> dataset, where the generator is a
+#         simulation (co:PMD_0000933), a DFT calculation (go:GO_0000306), a feature
+#         generation process (go:GO_0000309) or an assay/measurement (obo:OBI_0000070).
+# TRAINING-PROCESS TYPING: go:GO_0000310 (machine-learning potential training) for
+#         potentials; property-model training runs are typed at instance level with the
+#         reused baseline class co:PMD_0000821 "machine learning" (go:GO_0000305 itself is
+#         NOT under PMD_0000821).
+# MEASURED VS SIMULATED: ?datasetKind distinguishes simulation datasets (go:GO_0000319)
+#         from measured/other datasets BY TYPING, not naming.
+# EXPECTED RESULT COLUMNS:
+#         ?model ?modelClass ?training ?trainingClass
+#         ?dataset ?datasetKind ?generator ?generatorClass
+# EXPECTED ROW COUNT on the 2.0.0-rc1 package: 4 - the machine-learning potential chain
+#         (DFT dataset) and the property-model chain (descriptor dataset from feature
+#         generation; simulation dataset from the melt-quench run, one row per asserted
+#         run class).
+# GRAPH ASSUMPTION: answers are computed on the ASSERTED graph only - rdfs:subClassOf*
+#         traverses asserted subclass axioms; no OWL reasoning (including
+#         owl:equivalentClass-based classification) is required or claimed. A reasoner
+#         may widen the answer set; the expected count below refers to the asserted union.
+# NOTES:  fine-tuning is represented as a further go:GO_0000310 instance whose specified
+#         inputs include the pretrained potential; no additional class is needed.
+# VALIDATION: executed for the presentation-stage 2.0.0-rc1 package against the asserted
+#         union of go_v2_candidate.ttl and the synthetic abox_meltquench_example.ttl
+#         (Apache Jena arq and RDFLib, identical results).
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX co:   <https://w3id.org/pmd/co/>
+PREFIX go:   <https://w3id.org/pmd/glass-ontology/>
+
+SELECT DISTINCT ?model ?modelClass ?training ?trainingClass
+                ?dataset ?datasetKind ?generator ?generatorClass
+WHERE {
+  VALUES ?modelRoot    { go:GO_0000317 go:GO_0000315 }
+  VALUES ?trainingRoot { go:GO_0000310 co:PMD_0000821 }
+
+  ?model  rdf:type ?modelClass .
+  ?modelClass rdfs:subClassOf* ?modelRoot .
+
+  ?training obo:OBI_0000299 ?model .                        # training produced the model
+  ?training rdf:type ?trainingClass .
+  ?trainingClass rdfs:subClassOf* ?trainingRoot .
+
+  ?training obo:OBI_0000293 ?dataset .                      # training data
+  ?dataset  rdf:type/rdfs:subClassOf* obo:IAO_0000100 .     # data set
+  BIND( IF( EXISTS { ?dataset rdf:type/rdfs:subClassOf* go:GO_0000319 . },
+            "simulation dataset",
+            "measured or other dataset" ) AS ?datasetKind )
+
+  OPTIONAL {                                                # dataset provenance
+    VALUES ?generatorRoot { co:PMD_0000933 go:GO_0000306 go:GO_0000309 obo:OBI_0000070 }
+    ?generator obo:OBI_0000299 ?dataset .
+    ?generator rdf:type ?generatorClass .
+    ?generatorClass rdfs:subClassOf* ?generatorRoot .
+    FILTER (?generator != ?training)
+  }
+}
+ORDER BY ?model ?training ?dataset
